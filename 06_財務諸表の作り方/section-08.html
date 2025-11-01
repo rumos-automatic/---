@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.8 財務諸表の読み方・分析 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-07.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-09.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="pl">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          P/Lの分析
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="bs">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          B/Sの分析
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="cf">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          C/Fの分析
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="calculator">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          財務分析ツール
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-indigo-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.8 財務諸表の読み方・分析</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        財務諸表を作成しても、それを読んで分析できなければ意味がありません。
+        このセクションでは、P/L、B/S、C/Fをどう読んで、どう活用するかを学びます。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        主要な財務指標（粗利率、営業利益率、自己資本比率など）の計算方法と、業種別の目安も紹介します。
+      </p>
+    </section>
+
+    <!-- P/Lの分析 -->
+    <section id="pl" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">P/Lの分析ポイント</h2>
+
+      <div class="grid md:grid-cols-1 gap-6">
+        <!-- 粗利率 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">粗利率</h3>
+          <div class="bg-blue-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-blue-900 font-bold">
+              粗利率 = 売上総利益 ÷ 売上高 × 100
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            粗利率は、商品やサービスの稼ぐ力を示します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 font-bold mb-2">業種別目安：</p>
+            <ul class="list-disc pl-6 text-lg text-gray-700 space-y-1">
+              <li>飲食業：60-70%</li>
+              <li>小売業：30-40%</li>
+              <li>サービス業：50-70%</li>
+              <li>製造業：30-50%</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 営業利益率 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">営業利益率</h3>
+          <div class="bg-blue-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-blue-900 font-bold">
+              営業利益率 = 営業利益 ÷ 売上高 × 100
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            営業利益率は、本業での稼ぐ効率を示します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 font-bold mb-2">目安：</p>
+            <p class="text-lg text-gray-700">
+              5-10%以上が理想。3%以下は改善が必要。
+            </p>
+          </div>
+        </div>
+
+        <!-- 前月比・前年同月比 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">前月比・前年同月比</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            売上や利益の推移を確認して、成長しているか確認します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 mb-2">
+              <span class="font-bold">前月比：</span>売上が増えているか、経費が増えすぎていないか
+            </p>
+            <p class="text-lg text-gray-700">
+              <span class="font-bold">前年同月比：</span>昨年と比べて成長しているか
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B/Sの分析 -->
+    <section id="bs" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">B/Sの分析ポイント</h2>
+
+      <div class="grid md:grid-cols-1 gap-6">
+        <!-- 自己資本比率 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">自己資本比率</h3>
+          <div class="bg-green-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-green-900 font-bold">
+              自己資本比率 = 純資産 ÷ 総資産 × 100
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            自己資本比率は、財務の安全性を示します。高いほど安全です。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 font-bold mb-2">目安：</p>
+            <ul class="list-disc pl-6 text-lg text-gray-700 space-y-1">
+              <li>30%以上：安全</li>
+              <li>20-30%：やや不安</li>
+              <li>20%以下：改善が必要</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 流動比率 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">流動比率</h3>
+          <div class="bg-green-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-green-900 font-bold">
+              流動比率 = 流動資産 ÷ 流動負債 × 100
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            流動比率は、短期的な支払い能力を示します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 font-bold mb-2">目安：</p>
+            <ul class="list-disc pl-6 text-lg text-gray-700 space-y-1">
+              <li>150%以上：理想</li>
+              <li>100%以上：まずまず</li>
+              <li>100%以下：危険</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 現金比率 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">現金比率</h3>
+          <div class="bg-green-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-green-900 font-bold">
+              現金比率 = 現金預金 ÷ 総資産 × 100
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            現金比率は、手元資金の余裕を示します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700 font-bold mb-2">目安：</p>
+            <p class="text-lg text-gray-700">
+              10-20%が理想。少なすぎると資金繰りに苦しむ可能性があります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C/Fの分析 -->
+    <section id="cf" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">C/Fの分析ポイント</h2>
+
+      <div class="grid md:grid-cols-1 gap-6">
+        <!-- 営業CFがプラスか -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">営業CFがプラスか</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            営業CFがプラスなら、本業で現金を稼げています。
+            マイナスなら、本業で現金が減っており、改善が必要です。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              <span class="font-bold text-green-700">✓ プラス：</span>本業で稼げている<br>
+              <span class="font-bold text-red-700">✗ マイナス：</span>本業で現金が減っている
+            </p>
+          </div>
+        </div>
+
+        <!-- フリーキャッシュフロー -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">フリーキャッシュフロー</h3>
+          <div class="bg-orange-50 p-4 rounded mb-4">
+            <p class="text-lg md:text-xl text-orange-900 font-bold">
+              フリーCF = 営業CF + 投資CF
+            </p>
+          </div>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            フリーCFは、自由に使える現金を示します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              <span class="font-bold text-green-700">✓ プラス：</span>融資返済や配当に使える現金がある<br>
+              <span class="font-bold text-red-700">✗ マイナス：</span>融資などで資金調達が必要
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 財務分析ツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">財務分析ツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        実際に数値を入力して、各種指標を自動計算してみましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">P/L・B/Sの数値を入力</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">売上高（円）</label>
+            <input type="number" id="sales" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="10000000" value="10000000">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">売上総利益（円）</label>
+            <input type="number" id="grossProfit" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="4000000" value="4000000">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">営業利益（円）</label>
+            <input type="number" id="operatingIncome" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="1000000" value="1000000">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">総資産（円）</label>
+            <input type="number" id="totalAssets" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="6500000" value="6500000">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">純資産（円）</label>
+            <input type="number" id="equity" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="1700000" value="1700000">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">流動資産（円）</label>
+            <input type="number" id="currentAssets" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="3500000" value="3500000">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">流動負債（円）</label>
+            <input type="number" id="currentLiabilities" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="1800000" value="1800000">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">現金預金（円）</label>
+            <input type="number" id="cash" class="w-full border-2 border-indigo-300 rounded px-4 py-3 text-lg focus:border-indigo-500 focus:outline-none" placeholder="2000000" value="2000000">
+          </div>
+        </div>
+
+        <button onclick="analyzeFinancials()" class="w-full bg-indigo-600 text-white text-lg md:text-xl px-6 py-4 rounded-lg hover:bg-indigo-700 transition shadow-lg font-bold">
+          分析する
+        </button>
+      </div>
+
+      <!-- 計算結果 -->
+      <div id="result" class="bg-indigo-50 border-2 border-indigo-500 rounded-lg p-6 hidden">
+        <h3 class="text-xl md:text-2xl font-bold text-indigo-700 mb-4">分析結果</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b border-indigo-300 pb-2">
+            <span class="text-lg md:text-xl text-indigo-900 font-bold">粗利率</span>
+            <span class="text-lg md:text-xl text-indigo-900 font-bold" id="resultGrossMargin"></span>
+          </div>
+          <div class="flex justify-between border-b border-indigo-300 pb-2">
+            <span class="text-lg md:text-xl text-indigo-900 font-bold">営業利益率</span>
+            <span class="text-lg md:text-xl text-indigo-900 font-bold" id="resultOperatingMargin"></span>
+          </div>
+          <div class="flex justify-between border-b border-indigo-300 pb-2">
+            <span class="text-lg md:text-xl text-indigo-900 font-bold">自己資本比率</span>
+            <span class="text-lg md:text-xl text-indigo-900 font-bold" id="resultEquityRatio"></span>
+          </div>
+          <div class="flex justify-between border-b border-indigo-300 pb-2">
+            <span class="text-lg md:text-xl text-indigo-900 font-bold">流動比率</span>
+            <span class="text-lg md:text-xl text-indigo-900 font-bold" id="resultCurrentRatio"></span>
+          </div>
+          <div class="flex justify-between pt-2">
+            <span class="text-lg md:text-xl text-indigo-900 font-bold">現金比率</span>
+            <span class="text-lg md:text-xl text-indigo-900 font-bold" id="resultCashRatio"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        財務諸表の読み方・分析について、理解が深まったでしょうか？
+        主要な指標を定期的にチェックして、経営改善に活かしましょう。
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">P/L分析</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            粗利率、営業利益率をチェック
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">B/S分析</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            自己資本比率、流動比率をチェック
+          </p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">C/F分析</h3>
+          <p class="text-lg md:text-xl text-orange-900">
+            営業CFがプラスかチェック
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「税務申告との関係」を学んでいきます。
+        財務諸表と確定申告・法人税申告の関係を理解しましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-09.html" class="inline-block bg-indigo-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-indigo-700 transition shadow-lg">
+        次のセクションへ：6.9 税務申告との関係 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // 財務分析ツール
+    function analyzeFinancials() {
+      const sales = parseFloat(document.getElementById('sales').value) || 0;
+      const grossProfit = parseFloat(document.getElementById('grossProfit').value) || 0;
+      const operatingIncome = parseFloat(document.getElementById('operatingIncome').value) || 0;
+      const totalAssets = parseFloat(document.getElementById('totalAssets').value) || 0;
+      const equity = parseFloat(document.getElementById('equity').value) || 0;
+      const currentAssets = parseFloat(document.getElementById('currentAssets').value) || 0;
+      const currentLiabilities = parseFloat(document.getElementById('currentLiabilities').value) || 0;
+      const cash = parseFloat(document.getElementById('cash').value) || 0;
+
+      // 計算
+      const grossMargin = sales > 0 ? (grossProfit / sales * 100).toFixed(1) : 0;
+      const operatingMargin = sales > 0 ? (operatingIncome / sales * 100).toFixed(1) : 0;
+      const equityRatio = totalAssets > 0 ? (equity / totalAssets * 100).toFixed(1) : 0;
+      const currentRatio = currentLiabilities > 0 ? (currentAssets / currentLiabilities * 100).toFixed(1) : 0;
+      const cashRatio = totalAssets > 0 ? (cash / totalAssets * 100).toFixed(1) : 0;
+
+      // 結果を表示
+      document.getElementById('resultGrossMargin').textContent = grossMargin + '%';
+      document.getElementById('resultOperatingMargin').textContent = operatingMargin + '%';
+      document.getElementById('resultEquityRatio').textContent = equityRatio + '%';
+      document.getElementById('resultCurrentRatio').textContent = currentRatio + '%';
+      document.getElementById('resultCashRatio').textContent = cashRatio + '%';
+
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-indigo-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-indigo-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

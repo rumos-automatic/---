@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.3 月の利益と融資返済の関係 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-02.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col gap-4">
+      <div class="group relative">
+        <a href="#principle" class="block w-4 h-4 rounded-full bg-blue-600 hover:scale-125 transition dot-indicator" data-section="principle"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          基本原則
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#safe-example" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="safe-example"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          返済可能な例
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#danger-example" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="danger-example"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          危険な例
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#calculator" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="calculator"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          診断ツール
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#summary" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="summary"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">4.3 月の利益と融資返済の関係</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      このセクションでは、毎月の利益から融資を返済する仕組みと、返済可能な融資額の見極め方を学んでいきます。
+      返済計画を誤ると事業継続が困難になるため、非常に重要な内容です。
+    </p>
+
+    <!-- 基本原則 -->
+    <section id="principle" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">基本原則</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        融資を受ける際に絶対に守るべき基本原則があります。
+        この原則を無視すると、資金繰りが悪化し、最終的には倒産のリスクが高まります。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-red-700">絶対に守るべき原則</h3>
+        <div class="bg-white p-6 rounded-lg">
+          <p class="text-3xl md:text-4xl font-bold text-center text-red-600 mb-4">
+            月の営業利益 > 月の融資返済額
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 text-center">
+            これが成り立たないと、資金繰りが悪化します
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">なぜこの原則が重要なのか？</h3>
+        <p class="text-lg md:text-xl text-blue-900 leading-relaxed mb-4">
+          融資の返済は、売上から経費を引いた「営業利益」から行います。
+          月の営業利益よりも返済額が大きいと、毎月赤字になり、現金が減り続けます。
+        </p>
+        <p class="text-lg md:text-xl text-blue-900 leading-relaxed">
+          現金が底をつくと、仕入れや人件費の支払いができなくなり、事業が続けられなくなります。
+          これを「資金ショート」と言い、倒産の直接的な原因になります。
+        </p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-yellow-800">💡 重要なポイント</h3>
+        <p class="text-lg md:text-xl text-yellow-900 leading-relaxed">
+          融資を受ける前に、必ず「月にどれくらいの利益が出るか」を計算し、
+          その利益から無理なく返済できる額を借りるようにしましょう。
+        </p>
+      </div>
+    </section>
+
+    <!-- 返済可能な例 -->
+    <section id="safe-example" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">返済可能な例</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        具体的な数値例を使って、返済可能なケースを見ていきましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">事例：返済可能なケース ✅</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4">
+          <div>
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">事業の収支</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">月の売上</span>
+                <span class="text-lg font-bold text-gray-900">300万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">月の経費</span>
+                <span class="text-lg font-bold text-gray-900">250万円</span>
+              </div>
+              <div class="flex justify-between pt-2">
+                <span class="text-lg text-gray-700">月の営業利益</span>
+                <span class="text-lg font-bold text-green-600">50万円</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">融資の条件</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">融資額</span>
+                <span class="text-lg font-bold text-gray-900">500万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">返済期間</span>
+                <span class="text-lg font-bold text-gray-900">5年（60ヶ月）</span>
+              </div>
+              <div class="flex justify-between pt-2">
+                <span class="text-lg text-gray-700">月の返済額</span>
+                <span class="text-lg font-bold text-blue-600">約8.5万円</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-green-700">判定</h4>
+          <p class="text-2xl font-bold text-green-600 mb-2">50万円 > 8.5万円 → 返済可能 ✅</p>
+          <p class="text-lg md:text-xl text-green-900 leading-relaxed">
+            営業利益が返済額を大きく上回っているため、無理なく返済できます。
+            返済後も月41.5万円の利益が残るため、事業の成長にも投資できます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 危険な例 -->
+    <section id="danger-example" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">危険な例</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        次に、返済が困難になる危険なケースを見ていきます。
+        このような状況に陥らないように注意が必要です。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-red-700">事例：返済不可能なケース ❌</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-4">
+          <div>
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">事業の収支</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">月の売上</span>
+                <span class="text-lg font-bold text-gray-900">300万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">月の経費</span>
+                <span class="text-lg font-bold text-gray-900">290万円</span>
+              </div>
+              <div class="flex justify-between pt-2">
+                <span class="text-lg text-gray-700">月の営業利益</span>
+                <span class="text-lg font-bold text-orange-600">10万円</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">融資の条件</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">融資額</span>
+                <span class="text-lg font-bold text-gray-900">1,000万円</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-300 pb-2">
+                <span class="text-lg text-gray-700">返済期間</span>
+                <span class="text-lg font-bold text-gray-900">3年（36ヶ月）</span>
+              </div>
+              <div class="flex justify-between pt-2">
+                <span class="text-lg text-gray-700">月の返済額</span>
+                <span class="text-lg font-bold text-red-600">約28万円</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-red-50 p-4 rounded-lg">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-red-700">判定</h4>
+          <p class="text-2xl font-bold text-red-600 mb-2">10万円 < 28万円 → 返済不可能 ❌</p>
+          <p class="text-lg md:text-xl text-red-900 leading-relaxed mb-4">
+            営業利益が返済額を下回っているため、毎月18万円の赤字になります。
+          </p>
+          <div class="bg-white p-4 rounded">
+            <h5 class="text-lg md:text-xl font-bold mb-2 text-gray-800">累積損失</h5>
+            <ul class="list-disc pl-6 space-y-1">
+              <li class="text-lg text-gray-700">1年後：18万円 × 12ヶ月 = 216万円の累積赤字</li>
+              <li class="text-lg text-gray-700">2年後：216万円 × 2 = 432万円の累積赤字</li>
+              <li class="text-lg text-gray-700">3年後：216万円 × 3 = 648万円の累積赤字</li>
+            </ul>
+            <p class="text-lg md:text-xl text-red-700 mt-4 font-bold">
+              → 3年間で約650万円の現金が減り、事業継続が困難になります
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">⚠️ 危険サイン</h3>
+        <p class="text-lg md:text-xl text-orange-900 leading-relaxed mb-4">
+          このような状況に陥ると、以下の危険サインが現れます：
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-orange-900">現金残高が毎月減り続ける</li>
+          <li class="text-lg md:text-xl text-orange-900">返済日が近づくと資金不足になる</li>
+          <li class="text-lg md:text-xl text-orange-900">仕入れや人件費の支払いが遅れがち</li>
+          <li class="text-lg md:text-xl text-orange-900">追加融資を検討し始める</li>
+        </ul>
+        <p class="text-lg md:text-xl text-orange-900 leading-relaxed mt-4">
+          これらのサインが出たら、早急に経営の見直しが必要です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 返済可能性診断ツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">返済可能性診断ツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        あなたの事業で融資を受けた場合、返済が可能かどうかを診断してみましょう。
+        現状の数値と融資額を入力すると、返済可能性が判定されます。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">数値を入力してください</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">月の売上（万円）</label>
+            <input type="number" id="monthlySales" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="300" value="300">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">月の経費（万円）</label>
+            <input type="number" id="monthlyExpenses" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="250" value="250">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">融資額（万円）</label>
+            <input type="number" id="loanAmountCalc" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="500" value="500">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">返済期間（年）</label>
+            <input type="number" id="loanPeriodCalc" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="5" value="5">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">金利（%/年）</label>
+            <input type="number" id="interestRateCalc" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="2" value="2" step="0.1">
+          </div>
+        </div>
+
+        <button onclick="calculateRepayment()" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full text-lg md:text-xl font-semibold">
+          返済可能性を診断
+        </button>
+
+        <div id="repaymentResult" class="mt-6 hidden">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">診断結果</h3>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-4">
+            <div class="bg-gray-100 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-3 text-gray-800">収支状況</h4>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">月の売上</span>
+                  <span class="text-lg font-bold" id="resultSales"></span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">月の経費</span>
+                  <span class="text-lg font-bold" id="resultExpenses"></span>
+                </div>
+                <div class="flex justify-between border-t border-gray-300 pt-2">
+                  <span class="text-lg text-gray-700">月の営業利益</span>
+                  <span class="text-lg font-bold text-green-600" id="resultProfit"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-100 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-3 text-gray-800">融資返済</h4>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">融資額</span>
+                  <span class="text-lg font-bold" id="resultLoan"></span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">返済期間</span>
+                  <span class="text-lg font-bold" id="resultPeriod"></span>
+                </div>
+                <div class="flex justify-between border-t border-gray-300 pt-2">
+                  <span class="text-lg text-gray-700">月の返済額</span>
+                  <span class="text-lg font-bold text-blue-600" id="resultPayment"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="judgmentBox" class="p-6 rounded-lg">
+            <h4 class="text-xl md:text-2xl font-bold mb-2" id="judgmentTitle"></h4>
+            <p class="text-2xl font-bold mb-4" id="judgmentFormula"></p>
+            <p class="text-lg md:text-xl leading-relaxed" id="judgmentMessage"></p>
+            <div class="mt-4 bg-white p-4 rounded">
+              <h5 class="text-lg md:text-xl font-bold mb-2 text-gray-800">返済後の状況</h5>
+              <div class="space-y-2">
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">返済後の利益</span>
+                  <span class="text-lg font-bold" id="profitAfterPayment"></span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-lg text-gray-700">年間累積</span>
+                  <span class="text-lg font-bold" id="annualAccumulation"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        月の利益と融資返済の関係について、理解が深まったでしょうか？
+        ここで学んだ内容をもう一度振り返ってみましょう。
+      </p>
+
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              <strong>月の営業利益 > 月の返済額</strong> が絶対条件
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              返済額が利益を上回ると、毎月赤字になり資金ショートのリスク
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              融資を受ける前に、必ず返済可能性を診断する
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              現金残高が減り続けるなどの危険サインに注意
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次は、キャッシュフローの重要性について詳しく見ていきましょう。
+        利益と現金の違いを理解することが、資金繰り管理の第一歩です。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-04.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-semibold">
+        次のセクションへ：キャッシュフローの重要性 →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター - スムーススクロール
+    document.querySelectorAll('.dot-indicator').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = dot.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // スクロール位置に応じてドットインジケーターを更新
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 200;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('.dot-indicator').forEach(dot => {
+            dot.classList.remove('bg-blue-600');
+            dot.classList.add('bg-gray-300');
+          });
+          const activeDot = document.querySelector(`.dot-indicator[data-section="${sectionId}"]`);
+          if (activeDot) {
+            activeDot.classList.remove('bg-gray-300');
+            activeDot.classList.add('bg-blue-600');
+          }
+        }
+      });
+    });
+
+    // 返済可能性診断ツール
+    function calculateRepayment() {
+      const monthlySales = parseFloat(document.getElementById('monthlySales').value);
+      const monthlyExpenses = parseFloat(document.getElementById('monthlyExpenses').value);
+      const loanAmount = parseFloat(document.getElementById('loanAmountCalc').value);
+      const loanPeriod = parseFloat(document.getElementById('loanPeriodCalc').value);
+      const interestRate = parseFloat(document.getElementById('interestRateCalc').value);
+
+      if (isNaN(monthlySales) || isNaN(monthlyExpenses) || isNaN(loanAmount) || isNaN(loanPeriod) || isNaN(interestRate)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      // 営業利益
+      const monthlyProfit = monthlySales - monthlyExpenses;
+
+      // 月の返済額（元利均等返済の簡易計算）
+      const monthlyInterestRate = (interestRate / 100) / 12;
+      const numberOfPayments = loanPeriod * 12;
+      const monthlyPayment = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+
+      // 返済後の利益
+      const profitAfterPayment = monthlyProfit - monthlyPayment;
+      const annualAccumulation = profitAfterPayment * 12;
+
+      // 結果を表示
+      document.getElementById('resultSales').textContent = monthlySales.toFixed(1) + '万円';
+      document.getElementById('resultExpenses').textContent = monthlyExpenses.toFixed(1) + '万円';
+      document.getElementById('resultProfit').textContent = monthlyProfit.toFixed(1) + '万円';
+      document.getElementById('resultLoan').textContent = loanAmount.toFixed(0) + '万円';
+      document.getElementById('resultPeriod').textContent = loanPeriod + '年';
+      document.getElementById('resultPayment').textContent = monthlyPayment.toFixed(1) + '万円';
+      document.getElementById('profitAfterPayment').textContent = profitAfterPayment.toFixed(1) + '万円';
+      document.getElementById('annualAccumulation').textContent = annualAccumulation.toFixed(1) + '万円';
+
+      const judgmentBox = document.getElementById('judgmentBox');
+      const judgmentTitle = document.getElementById('judgmentTitle');
+      const judgmentFormula = document.getElementById('judgmentFormula');
+      const judgmentMessage = document.getElementById('judgmentMessage');
+
+      if (monthlyProfit > monthlyPayment) {
+        // 返済可能
+        judgmentBox.className = 'p-6 rounded-lg bg-green-50 border-2 border-green-500';
+        judgmentTitle.className = 'text-xl md:text-2xl font-bold mb-2 text-green-700';
+        judgmentTitle.textContent = '判定：返済可能 ✅';
+        judgmentFormula.className = 'text-2xl font-bold mb-4 text-green-600';
+        judgmentFormula.textContent = `${monthlyProfit.toFixed(1)}万円 > ${monthlyPayment.toFixed(1)}万円`;
+        judgmentMessage.className = 'text-lg md:text-xl leading-relaxed text-green-900';
+        judgmentMessage.textContent = `営業利益が返済額を上回っているため、無理なく返済できます。返済後も月${profitAfterPayment.toFixed(1)}万円の利益が残るため、事業の成長にも投資できます。`;
+      } else {
+        // 返済不可能
+        judgmentBox.className = 'p-6 rounded-lg bg-red-50 border-2 border-red-500';
+        judgmentTitle.className = 'text-xl md:text-2xl font-bold mb-2 text-red-700';
+        judgmentTitle.textContent = '判定：返済困難 ❌';
+        judgmentFormula.className = 'text-2xl font-bold mb-4 text-red-600';
+        judgmentFormula.textContent = `${monthlyProfit.toFixed(1)}万円 < ${monthlyPayment.toFixed(1)}万円`;
+        judgmentMessage.className = 'text-lg md:text-xl leading-relaxed text-red-900';
+        judgmentMessage.textContent = `営業利益が返済額を下回っているため、毎月${Math.abs(profitAfterPayment).toFixed(1)}万円の赤字になります。このままでは資金ショートのリスクが非常に高く、事業継続が困難になる可能性があります。融資額を減らすか、返済期間を延ばすか、売上を増やす対策が必要です。`;
+      }
+
+      document.getElementById('repaymentResult').classList.remove('hidden');
+    }
+
+    // 画像拡大機能
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    // 画像をクリックしたら拡大表示
+    document.querySelectorAll('img[src]').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        imageModal.classList.remove('hidden');
+        imageModal.classList.add('flex');
+      });
+    });
+
+    // モーダルを閉じる
+    closeModal.addEventListener('click', () => {
+      imageModal.classList.add('hidden');
+      imageModal.classList.remove('flex');
+    });
+
+    // 背景クリックで閉じる
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+      }
+    });
+
+    // Escキーで閉じる
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

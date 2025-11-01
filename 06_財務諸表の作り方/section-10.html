@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.10 まとめ：財務諸表を作って経営に活かそう | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-09.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="../index.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          トップページへ
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-purple-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="points">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-purple-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          重要ポイント
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="workflow">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-purple-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          作成の流れ
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="checklist">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-purple-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          実践チェックリスト
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="next">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-purple-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          次章へ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.10 まとめ：財務諸表を作って経営に活かそう</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        第6章「財務諸表の作り方」では、P/L、B/S、C/Fの作成方法を詳しく学んできました。
+        ここで、この章の重要なポイントを振り返ってみましょう。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        財務諸表は、ただ作るだけでなく、それを分析して経営改善に活かすことが大切です。
+        月次決算を習慣化して、数字で経営を見る力を養いましょう。
+      </p>
+    </section>
+
+    <!-- 重要ポイント -->
+    <section id="points" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">この章の重要ポイント</h2>
+
+      <div class="grid md:grid-cols-1 gap-6">
+        <!-- ポイント1 -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">1. P/L、B/S、C/Fはセットで見る</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            P/Lだけでは全体像は見えません。B/SとC/Fも合わせて確認することで、
+            利益と現金、財務状況の全体を把握できます。
+          </p>
+        </div>
+
+        <!-- ポイント2 -->
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">2. 月次決算で早期に問題発見</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            年度末だけでなく、毎月の月次決算を行うことで、問題を早期に発見し、
+            早めに改善策を講じることができます。
+          </p>
+        </div>
+
+        <!-- ポイント3 -->
+        <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">3. 会計ソフトを活用して効率化</h3>
+          <p class="text-lg md:text-xl text-orange-900">
+            銀行連携やレシート撮影など、会計ソフトの機能を活用することで、
+            手作業の負担を大幅に減らせます。
+          </p>
+        </div>
+
+        <!-- ポイント4 -->
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-purple-800 mb-3">4. 数字を見て改善策を考える</h3>
+          <p class="text-lg md:text-xl text-purple-900">
+            粗利率、営業利益率、自己資本比率などの指標を定期的にチェックして、
+            改善すべきポイントを見つけましょう。
+          </p>
+        </div>
+
+        <!-- ポイント5 -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-red-800 mb-3">5. 税務申告にも必須</h3>
+          <p class="text-lg md:text-xl text-red-900">
+            財務諸表は、確定申告や法人税申告にも必要です。
+            正確に作成し、期限内に申告しましょう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 財務諸表作成の流れ -->
+    <section id="workflow" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">財務諸表作成の流れ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        財務諸表の作成は、以下の流れで進めます。
+        毎月のルーティンとして定着させましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <div class="space-y-6">
+          <!-- ステップ1 -->
+          <div class="flex items-start">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              1
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">日々の取引を記録</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                会計ソフトに日々の取引を入力します。銀行連携を活用すると自動化できます。
+              </p>
+            </div>
+          </div>
+
+          <!-- ステップ2 -->
+          <div class="flex items-start">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              2
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">月末に集計・確定</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                月末に、在庫棚卸や未払金の確認を行い、取引を確定します。
+              </p>
+            </div>
+          </div>
+
+          <!-- ステップ3 -->
+          <div class="flex items-start">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              3
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">財務諸表を作成</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                P/L、B/S、C/Fを作成します。会計ソフトならワンクリックで生成されます。
+              </p>
+            </div>
+          </div>
+
+          <!-- ステップ4 -->
+          <div class="flex items-start">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              4
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">分析・改善策検討</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                各種指標を確認して、問題点を洗い出し、改善策を考えます。
+              </p>
+            </div>
+          </div>
+
+          <!-- ステップ5 -->
+          <div class="flex items-start">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              5
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">次月に活かす</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                改善策を実行し、次月の数字で効果を確認します。PDCAサイクルを回しましょう。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
+        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
+        <p class="text-lg md:text-xl text-gray-500">財務諸表作成の流れ（フロー図）</p>
+        <p class="text-base text-gray-400 mt-2">画像ファイル名: financial-statement-workflow.png</p>
+      </div>
+    </section>
+
+    <!-- 実践チェックリスト -->
+    <section id="checklist" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">実践チェックリスト</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        以下のチェックリストを使って、財務諸表作成の習慣を身につけましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">月次決算チェックリスト</h3>
+
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              銀行連携で取引を取り込み、勘定科目を確認した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              現金取引（レジ売上など）を手入力した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              在庫の棚卸を行った
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              未払金・売掛金を確認した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              減価償却費を計上した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              P/L、B/S、C/Fを作成した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              粗利率、営業利益率を確認した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              自己資本比率、流動比率を確認した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              営業CFがプラスかを確認した
+            </label>
+          </div>
+          <div class="flex items-start">
+            <input type="checkbox" class="mt-1 mr-3 w-5 h-5">
+            <label class="text-lg md:text-xl text-gray-700">
+              前月比・予算比で改善点を洗い出した
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 次章へ -->
+    <section id="next" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">次章へ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        財務諸表の作り方を学んだら、次は「実務で使える管理会計」を学びましょう。
+      </p>
+
+      <div class="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-300 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-purple-800 mb-4">第7章：実務で使える管理会計</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          財務諸表をさらに活用して、予算管理、商品別損益分析、資金繰り管理など、
+          実務で役立つ管理会計の手法を学びます。
+        </p>
+        <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+          <li>予算vs実績の管理方法</li>
+          <li>商品別・顧客別の損益分析</li>
+          <li>資金繰り表の作り方</li>
+          <li>KPI（重要業績指標）の設定</li>
+        </ul>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">ここまでの学習お疲れさまでした！</h3>
+        <p class="text-lg md:text-xl text-blue-900">
+          財務諸表の作り方を理解できたでしょうか？
+          実際に自分の事業で財務諸表を作成して、数字で経営を見る習慣を身につけましょう。
+          わからないことがあれば、何度でもこの資料を読み返してくださいね。
+        </p>
+      </div>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="../index.html" class="inline-block bg-purple-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-purple-700 transition shadow-lg">
+        トップページに戻る
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-purple-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-purple-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

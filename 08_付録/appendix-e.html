@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>付録E：よくある質問（FAQ） | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .accordion-button.active::after {
+      transform: rotate(180deg);
+    }
+    .accordion-button::after {
+      content: '▼';
+      transition: transform 0.3s ease;
+      display: inline-block;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- 読み込み進捗インジケーター -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-blue-600 z-50 transition-all duration-300" style="width: 0%;"></div>
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-40 mt-1">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-700 transition">
+          ← トップページへ
+        </a>
+        <div class="appendix-nav flex space-x-2 md:space-x-4 text-sm md:text-base">
+          <a href="appendix-a.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録A</a>
+          <a href="appendix-b.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録B</a>
+          <a href="appendix-c.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録C</a>
+          <a href="appendix-d.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録D</a>
+          <a href="appendix-e.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録E</a>
+          <a href="appendix-f.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録F</a>
+          <a href="appendix-g.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録G</a>
+          <a href="appendix-h.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録H</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-5xl">
+    <!-- ページタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-800">付録E：よくある質問（FAQ）</h1>
+
+    <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+      読者からよくある質問と回答をまとめました。<br>
+      疑問に思ったことがあれば、まずはここで確認してみてください。
+    </p>
+
+    <!-- 検索ボックス -->
+    <div class="mb-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <label for="faq-search" class="block text-xl md:text-2xl font-bold mb-3 text-gray-800">
+          🔍 質問を検索
+        </label>
+        <input type="text" id="faq-search"
+               placeholder="キーワードを入力してください（例：会計ソフト、税理士、融資）"
+               class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg text-lg md:text-xl focus:border-blue-500 focus:outline-none">
+        <p id="search-results-count" class="mt-3 text-lg text-gray-600"></p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="mb-16">
+      <div class="space-y-4">
+
+        <!-- Q1 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="会計ソフトは必須ですか"
+             data-answer="小規模事業でも会計ソフトの使用を強く推奨します 手書きやExcelよりも圧倒的に効率的 ミスも減ります 月額1000円から3000円程度 投資対効果は高い"
+             data-category="会計">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-blue-700">Q1. 会計ソフトは必須ですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 小規模事業でも会計ソフトの使用を強く推奨します。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                手書きやExcelよりも圧倒的に効率的で、ミスも減ります。月額1,000～3,000円程度なので、投資対効果は高いです。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                freeeやマネーフォワードクラウドなど、初心者でも使いやすいクラウド会計ソフトがあります。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="税理士は必ず必要ですか"
+             data-answer="個人事業主で取引が少なければ 会計ソフトで自力申告も可能 法人化したり売上が増えたら税理士を検討 月商100万円を超えたら税理士を付けるのが目安"
+             data-category="専門家">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-green-700">Q2. 税理士は必ず必要ですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 個人事業主で取引が少なければ、会計ソフトで自力申告も可能です。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                ただし、法人化したり売上が増えたら税理士を検討しましょう。月商100万円を超えたら税理士を付けるのが目安です。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                税理士に依頼すると、節税アドバイスや融資の相談もできるので、費用以上の価値があることが多いです。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="融資は必ず受けるべきですか"
+             data-answer="自己資金で回るなら無理に借りる必要はありません 事業拡大のチャンスがあるなら融資を活用すべき 必要なときに借りられないリスク 余裕があるうちに実績を作っておく"
+             data-category="融資">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-purple-700">Q3. 融資は必ず受けるべきですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> いいえ、自己資金で回るなら無理に借りる必要はありません。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                ただし、事業拡大のチャンスがあるなら融資を活用すべきです。
+                「必要なときに借りられない」リスクもあるので、余裕があるうちに実績を作っておくのも一つの戦略です。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                創業融資は、開業後すぐに受けやすいので、タイミングを逃さないようにしましょう。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="月次決算は必ずやるべきですか"
+             data-answer="はい 月次決算は強く推奨します 年に1回だけでは問題発見が遅れ 手遅れになることも 月次で確認すれば早期に改善できます"
+             data-category="会計">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-orange-700">Q4. 月次決算は必ずやるべきですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> はい、月次決算は強く推奨します。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                年に1回だけでは問題発見が遅れ、手遅れになることもあります。月次で確認すれば早期に改善できます。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                会計ソフトを使えば、月次決算も簡単にできます。最初は完璧でなくても構いません。まずは習慣化することが大切です。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="在庫はどう管理すればいいですか"
+             data-answer="最低限 月末に棚卸 在庫を数える 会計ソフトに在庫管理機能があれば活用 小売業なら販売管理ソフト POSレジ連携も検討"
+             data-category="会計">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-teal-700">Q5. 在庫はどう管理すればいいですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 最低限、月末に棚卸（在庫を数える）をしましょう。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                会計ソフトに在庫管理機能があれば活用してください。小売業なら販売管理ソフト（POSレジ連携）も検討すると良いでしょう。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                在庫は「現金」と同じように大切な資産です。過剰在庫は資金繰りを圧迫するので注意してください。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="赤字が続いています どうすればいいですか"
+             data-answer="原因を特定しましょう 売上不足なら集客強化 商品改善 経費過多なら無駄な経費をカット 原価高なら仕入先見直し 値上げ検討 改善しない場合は商工会議所や税理士に相談"
+             data-category="経営改善">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-red-700">Q6. 赤字が続いています。どうすればいいですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> まず原因を特定しましょう。
+              </p>
+              <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 leading-relaxed mb-3 space-y-2">
+                <li><strong>売上不足</strong> → 集客強化、商品改善</li>
+                <li><strong>経費過多</strong> → 無駄な経費をカット</li>
+                <li><strong>原価高</strong> → 仕入先見直し、値上げ検討</li>
+              </ul>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                改善しない場合は、商工会議所や税理士に相談してください。早めの対応が重要です。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="キャッシュフローと利益の違いがわかりません"
+             data-answer="利益は会計上の儲け キャッシュフローは実際の現金の動き 売掛金があると利益は出ているが現金はまだ入っていない 融資返済は経費ではない 利益には影響しないが現金は減る 資金繰り表で現金の動きを管理"
+             data-category="会計">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-blue-700">Q7. キャッシュフローと利益の違いがわかりません</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 利益は会計上の儲け、キャッシュフローは実際の現金の動きです。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                売掛金があると、利益は出ているが現金はまだ入っていない状態になります。
+                融資返済は経費ではないので、利益には影響しないが現金は減ります。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                資金繰り表で現金の動きを管理することが重要です。「黒字倒産」を防ぐために、キャッシュフロー管理は必須です。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="損益分岐点を下げるにはどうすればいいですか"
+             data-answer="2つの方法があります 固定費を下げる 家賃削減 人員見直しなど 限界利益率を上げる 値上げ 原価削減 固定費削減は即効性がありますが売上減のリスクも バランスを考えて判断"
+             data-category="経営改善">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-green-700">Q8. 損益分岐点を下げるにはどうすればいいですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 2つの方法があります。
+              </p>
+              <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 leading-relaxed mb-3 space-y-2">
+                <li><strong>固定費を下げる</strong>（家賃削減、人員見直しなど）</li>
+                <li><strong>限界利益率を上げる</strong>（値上げ、原価削減）</li>
+              </ul>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                固定費削減は即効性がありますが、売上減のリスクもあります。バランスを考えて判断してください。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="自己資本比率が低いです 危険ですか"
+             data-answer="自己資本比率10%以下は要注意 30%以上が健全の目安 低い場合は 借入を増やさず利益で純資産を増やすことを優先 赤字を出さない 無理な投資をしない"
+             data-category="財務">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-purple-700">Q9. 自己資本比率が低いです。危険ですか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> 自己資本比率10%以下は要注意、30%以上が健全の目安です。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                低い場合は、借入を増やさず利益で純資産を増やすことを優先してください。
+                赤字を出さない、無理な投資をしないことが大切です。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                融資を受ける際も、自己資本比率が高い方が有利です。コツコツと改善していきましょう。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden"
+             data-question="この資料だけで経営できますか"
+             data-answer="この資料は基礎知識を提供するものです 個別の状況により判断は異なるので 重要な決定は専門家に相談を 資料を読んで基礎を理解した上で 実務で活かしてください"
+             data-category="その他">
+          <button class="accordion-button w-full text-left px-6 py-5 hover:bg-gray-50 transition">
+            <h3 class="text-xl md:text-2xl font-bold text-orange-700">Q10. この資料だけで経営できますか？</h3>
+          </button>
+          <div class="accordion-content px-6 bg-gray-50">
+            <div class="py-5">
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                <strong>A.</strong> この資料は基礎知識を提供するものです。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-3">
+                個別の状況により判断は異なるので、重要な決定は専門家に相談してください。
+                資料を読んで基礎を理解した上で、実務で活かしてください。
+              </p>
+              <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                付録C（相談先一覧）で紹介した機関や専門家を活用して、さらに学びを深めてください。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section class="mb-16">
+      <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-600">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">💬 さらに質問がある場合は</h2>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          ここに載っていない質問があれば、付録C（相談先一覧）で紹介した機関や専門家に相談してみてください。
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          実際の状況に応じた適切なアドバイスを受けることが、問題解決の近道です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="flex justify-between items-center">
+      <a href="appendix-d.html"
+         class="inline-block bg-gray-500 text-white px-8 py-4 rounded-lg hover:bg-gray-600 transition">
+        ← 前へ：付録D（ツール・テンプレート集）
+      </a>
+      <a href="appendix-f.html"
+         class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition">
+        次へ：付録F（英語表記） →
+      </a>
+    </div>
+  </main>
+
+  <!-- トップへ戻るボタン -->
+  <button id="scroll-to-top"
+          class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition opacity-0 pointer-events-none">
+    ↑
+  </button>
+
+  <!-- スクリプト -->
+  <script src="../assets/js/appendix-nav.js"></script>
+  <script src="../assets/js/search.js"></script>
+  <script>
+    const scrollTopBtn = document.getElementById('scroll-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        scrollTopBtn.classList.add('opacity-100');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        scrollTopBtn.classList.remove('opacity-100');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

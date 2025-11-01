@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.9 税理士に頼むべきか | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .dot { transition: all 0.3s ease; }
+    .dot:hover .tooltip { opacity: 1; visibility: visible; }
+    .tooltip { opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページへ</a>
+        <div class="flex gap-4">
+          <a href="section-08.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+          <a href="section-10.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">次のセクションへ →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#intro" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">税理士に頼むべきか</div>
+      </a>
+      <a href="#self-management" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">自分でやる場合</div>
+      </a>
+      <a href="#hire-accountant" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">税理士に頼む場合</div>
+      </a>
+      <a href="#flowchart" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">判断フローチャート</div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">まとめ</div>
+      </a>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.9 税理士に頼むべきか</h1>
+      <p class="text-lg md:text-xl text-gray-600">自分で会計をやるか、税理士に頼むか。判断基準と、それぞれのメリット・デメリットを解説します。</p>
+    </div>
+
+    <section id="intro" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">税理士に頼むべきか</h2>
+      <p class="text-lg md:text-xl mb-6">「税理士に頼むと費用がかかるから、自分でやろう」と考える方も多いと思います。確かに、会計ソフトを使えば自分でもできますが、税理士に頼むメリットも大きいです。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">このセクションで学ぶこと</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">自分でやる場合のメリット・デメリット</li>
+          <li class="text-lg md:text-xl text-blue-900">税理士に頼む場合のメリット・デメリット</li>
+          <li class="text-lg md:text-xl text-blue-900">どちらを選ぶべきかの判断基準</li>
+          <li class="text-lg md:text-xl text-blue-900">税理士費用の相場</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="self-management" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">自分でやる場合</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-50 p-6 rounded-lg shadow-md border-2 border-green-300">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-4">メリット</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">コストが安い</p>
+                <p class="text-md text-green-900">会計ソフト代だけなので、月1,000円程度で済みます。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">お金の流れを把握できる</p>
+                <p class="text-md text-green-900">自分で記録することで、事業のお金の流れを深く理解できます。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">タイムリーに数字が見える</p>
+                <p class="text-md text-green-900">税理士を待たずに、今すぐ損益を確認できます。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-lg shadow-md border-2 border-red-300">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-4">デメリット</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">時間がかかる</p>
+                <p class="text-md text-red-900">毎月の入力や確認に時間を取られ、本業に集中できない可能性があります。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">ミスのリスク</p>
+                <p class="text-md text-red-900">税金の計算ミスや、申告漏れのリスクがあります。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">最新の税制に追いつけない</p>
+                <p class="text-md text-red-900">税制は毎年変わるため、最新情報をキャッチアップするのが大変です。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">節税のアドバイスが受けられない</p>
+                <p class="text-md text-red-900">税理士ならではの節税アドバイスが得られません。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="hire-accountant" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">税理士に頼む場合</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-50 p-6 rounded-lg shadow-md border-2 border-green-300">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-4">メリット</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">正確で安心</p>
+                <p class="text-md text-green-900">税務のプロが対応するので、ミスの心配がありません。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">時間を本業に使える</p>
+                <p class="text-md text-green-900">会計業務を任せることで、本業に集中できます。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">節税アドバイスがもらえる</p>
+                <p class="text-md text-green-900">適切な節税策を提案してもらえます。結果的に税理士費用以上の節税ができることも。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">融資に有利</p>
+                <p class="text-md text-green-900">税理士が作成した決算書は信頼性が高く、銀行の融資審査で有利です。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✓</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">経営アドバイス</p>
+                <p class="text-md text-green-900">数字を見ながら、経営のアドバイスをもらえます。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-lg shadow-md border-2 border-red-300">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-4">デメリット</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">費用がかかる</p>
+                <p class="text-md text-red-900">月2〜3万円程度の費用が必要です（個人事業主の場合）。</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-2xl mr-3">✗</span>
+              <div>
+                <p class="text-lg md:text-xl font-bold">税理士選びが重要</p>
+                <p class="text-md text-red-900">相性の悪い税理士だと、ストレスになることも。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">税理士費用の相場</h3>
+        <div class="space-y-2">
+          <p class="text-lg md:text-xl text-purple-900"><strong>個人事業主（売上1,000万円未満）:</strong> 月1.5〜2.5万円</p>
+          <p class="text-lg md:text-xl text-purple-900"><strong>個人事業主（売上1,000万円以上）:</strong> 月2.5〜4万円</p>
+          <p class="text-lg md:text-xl text-purple-900"><strong>法人（売上1,000万円未満）:</strong> 月2.5〜3.5万円</p>
+          <p class="text-lg md:text-xl text-purple-900"><strong>法人（売上1,000万円以上）:</strong> 月3.5〜5万円</p>
+          <p class="text-md text-purple-900 mt-4">※これに加えて、決算時に別途費用（月額の4〜6ヶ月分程度）がかかります。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flowchart" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">判断フローチャート</h2>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="space-y-6">
+          <div class="border-2 border-blue-500 p-6 rounded-lg bg-blue-50">
+            <p class="text-xl font-bold text-blue-700 mb-4">Q1: 売上はいくらですか？</p>
+            <div class="space-y-3">
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">月商50万円未満</p>
+                <p class="text-md text-gray-600">→ <strong>自分で会計ソフトを使う</strong>ことをおすすめします。売上が少ない間は、まず自分でやってみましょう。</p>
+              </div>
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">月商50〜100万円</p>
+                <p class="text-md text-gray-600">→ Q2へ</p>
+              </div>
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">月商100万円以上</p>
+                <p class="text-md text-gray-600">→ <strong>税理士に頼む</strong>ことをおすすめします。売上が大きくなると、会計も複雑になります。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-2 border-green-500 p-6 rounded-lg bg-green-50">
+            <p class="text-xl font-bold text-green-700 mb-4">Q2: 融資を受ける予定はありますか？</p>
+            <div class="space-y-3">
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">はい</p>
+                <p class="text-md text-gray-600">→ <strong>税理士に頼む</strong>ことをおすすめします。税理士が作成した決算書は銀行の信頼性が高いです。</p>
+              </div>
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">いいえ</p>
+                <p class="text-md text-gray-600">→ Q3へ</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-2 border-purple-500 p-6 rounded-lg bg-purple-50">
+            <p class="text-xl font-bold text-purple-700 mb-4">Q3: 会計に時間を使えますか？</p>
+            <div class="space-y-3">
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">時間がある / 会計を学びたい</p>
+                <p class="text-md text-gray-600">→ <strong>自分で会計ソフトを使う</strong>。慣れるまでは大変ですが、お金の流れを理解できます。</p>
+              </div>
+              <div class="p-4 bg-white rounded cursor-pointer hover:bg-gray-50 transition">
+                <p class="text-lg md:text-xl font-bold">本業に集中したい</p>
+                <p class="text-md text-gray-600">→ <strong>税理士に頼む</strong>。本業に集中することで、売上アップにつながります。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">売上が少ない間は自分で会計ソフトを使うのがおすすめ</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">月商100万円を超えたら税理士を検討しましょう</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">融資を受ける予定があるなら早めに税理士を付ける</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">税理士費用は月2〜3万円が相場です</span></li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">最終的なアドバイス</h4>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">まずは自分で会計ソフトを使ってみて、「これは大変だ」と感じたら税理士に相談するのが良いでしょう。</p>
+        <p class="text-lg md:text-xl text-yellow-900">税理士に頼むかどうかは、売上規模と時間的余裕で判断してください。</p>
+      </div>
+
+      <p class="text-lg md:text-xl">次は、第1章の「まとめ」です。これまで学んだことを振り返りましょう。</p>
+    </section>
+
+    <div class="text-center">
+      <a href="section-10.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">次のセクションへ →</a>
+    </div>
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    function updateDotIndicator() {
+      const sections = ['intro', 'self-management', 'hire-accountant', 'flowchart', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+      let currentSection = sections[0];
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', updateDotIndicator);
+
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.5 損益計算書（P/L）とは | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .dot { transition: all 0.3s ease; }
+    .dot:hover .tooltip { opacity: 1; visibility: visible; }
+    .tooltip { opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページへ</a>
+        <div class="flex gap-4">
+          <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+          <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">次のセクション →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#intro" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">損益計算書とは</div>
+      </a>
+      <a href="#structure" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">P/Lの構造</div>
+      </a>
+      <a href="#simulator" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">シミュレーター</div>
+      </a>
+      <a href="#how-to-read" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">見方のポイント</div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">まとめ</div>
+      </a>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.5 損益計算書（P/L）とは</h1>
+      <p class="text-lg md:text-xl text-gray-600">損益計算書は「一定期間にどれだけ儲かったか」を示す最も重要な表です。この見方をマスターすれば、事業の健康状態が一目でわかります。</p>
+    </div>
+
+    <section id="intro" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">損益計算書とは</h2>
+      <p class="text-lg md:text-xl mb-6">損益計算書（Profit and Loss Statement）は、通常<strong>「P/L」</strong>と略されます。一定期間（通常は1ヶ月、1年）の売上と費用を計算して、最終的にどれだけ利益が出たか（または損失が出たか）を示す表です。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">P/Lで何がわかるか</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">今月（今期）の売上はいくらか</li>
+          <li class="text-lg md:text-xl text-blue-900">原価や経費はいくらかかったか</li>
+          <li class="text-lg md:text-xl text-blue-900">最終的に利益は出ているか、赤字か</li>
+          <li class="text-lg md:text-xl text-blue-900">どこにお金がかかっているか</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="structure" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">損益計算書の構造</h2>
+      <p class="text-lg md:text-xl mb-6">損益計算書は階段状の構造になっています。上から順に見ていくことで、利益が計算されていく過程がわかります。</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">標準的なP/Lの構造</h3>
+        <div class="space-y-3 font-mono text-lg">
+          <div class="p-4 bg-blue-50 rounded">売上高: 1,000,000円</div>
+          <div class="pl-8 text-red-600">- 売上原価: 600,000円</div>
+          <div class="border-t-2 border-gray-300 my-2"></div>
+          <div class="p-4 bg-green-50 rounded font-bold">= 売上総利益（粗利）: 400,000円</div>
+          <div class="pl-8 text-red-600">- 販売費・一般管理費: 300,000円</div>
+          <div class="border-t-2 border-gray-300 my-2"></div>
+          <div class="p-4 bg-green-50 rounded font-bold">= 営業利益: 100,000円</div>
+          <div class="pl-8 text-red-600">- 営業外費用: 10,000円</div>
+          <div class="border-t-2 border-gray-300 my-2"></div>
+          <div class="p-4 bg-green-50 rounded font-bold">= 経常利益: 90,000円</div>
+          <div class="pl-8 text-red-600">- 税金: 30,000円</div>
+          <div class="border-t-2 border-gray-300 my-2"></div>
+          <div class="p-4 bg-yellow-50 rounded font-bold text-xl">= 当期純利益: 60,000円</div>
+        </div>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">各項目の意味</h3>
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">売上高</h4>
+          <p class="text-lg md:text-xl">商品やサービスを販売して得た金額の合計です。</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">売上原価</h4>
+          <p class="text-lg md:text-xl">売れた商品の仕入れ価格や製造原価です。</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">売上総利益（粗利）</h4>
+          <p class="text-lg md:text-xl">売上から原価を引いた利益。商品を売ることで得られる基本的な利益です。</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">販売費・一般管理費</h4>
+          <p class="text-lg md:text-xl">家賃、人件費、広告費、光熱費など、事業運営にかかる経費です。</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">営業利益</h4>
+          <p class="text-lg md:text-xl">本業で稼いだ利益です。粗利から経費を引いた金額です。</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h4 class="text-lg font-bold mb-2">当期純利益</h4>
+          <p class="text-lg md:text-xl">すべての収益・費用・税金を計算した後に残る最終的な利益です。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulator" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">P/Lシミュレーター</h2>
+      <p class="text-lg md:text-xl mb-6">実際に数値を入力して、損益計算書がどのように計算されるか体験してみましょう。</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">数値を入力してください</h3>
+        <div class="space-y-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2">売上高（円）</label>
+            <input type="number" id="revenue" class="w-full border-2 border-gray-300 rounded px-4 py-2 text-lg" value="1000000" oninput="calculatePL()">
+          </div>
+          <div>
+            <label class="block text-lg mb-2">売上原価（円）</label>
+            <input type="number" id="cogs" class="w-full border-2 border-gray-300 rounded px-4 py-2 text-lg" value="600000" oninput="calculatePL()">
+          </div>
+          <div>
+            <label class="block text-lg mb-2">販売費・一般管理費（円）</label>
+            <input type="number" id="expenses" class="w-full border-2 border-gray-300 rounded px-4 py-2 text-lg" value="300000" oninput="calculatePL()">
+          </div>
+        </div>
+
+        <div id="plResult" class="bg-blue-50 p-6 rounded-lg">
+          <h4 class="text-xl font-bold mb-4 text-blue-700">計算結果</h4>
+          <div class="space-y-2 text-lg">
+            <div class="flex justify-between p-2 bg-white rounded">
+              <span>売上高:</span>
+              <span id="resultRevenue" class="font-bold">1,000,000円</span>
+            </div>
+            <div class="flex justify-between p-2 bg-white rounded">
+              <span>売上原価:</span>
+              <span id="resultCogs" class="font-bold text-red-600">-600,000円</span>
+            </div>
+            <div class="border-t-2 border-gray-300 my-2"></div>
+            <div class="flex justify-between p-2 bg-green-50 rounded">
+              <span class="font-bold">売上総利益（粗利）:</span>
+              <span id="resultGrossProfit" class="font-bold text-green-700">400,000円</span>
+            </div>
+            <div class="flex justify-between p-2 bg-white rounded">
+              <span>販売費・一般管理費:</span>
+              <span id="resultExpenses" class="font-bold text-red-600">-300,000円</span>
+            </div>
+            <div class="border-t-2 border-gray-300 my-2"></div>
+            <div class="flex justify-between p-2 bg-yellow-50 rounded">
+              <span class="font-bold text-xl">営業利益:</span>
+              <span id="resultOperatingProfit" class="font-bold text-xl text-yellow-700">100,000円</span>
+            </div>
+            <div class="mt-4 p-4 bg-blue-100 rounded">
+              <p class="text-lg">
+                <strong>粗利率:</strong> <span id="grossMarginRate">40.0%</span>
+              </p>
+              <p class="text-lg">
+                <strong>営業利益率:</strong> <span id="operatingMarginRate">10.0%</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-read" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">見方のポイント</h2>
+
+      <div class="space-y-6">
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">1. 売上が多くても利益が少ないことがある</h3>
+          <p class="text-lg md:text-xl text-yellow-900">売上が1,000万円でも、経費が1,100万円かかっていれば赤字です。売上だけを見て安心しないようにしましょう。</p>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">2. どこにお金がかかっているかを把握する</h3>
+          <p class="text-lg md:text-xl text-yellow-900">「経費の中で一番大きいのは何か？」を確認しましょう。無駄な経費があれば削減のチャンスです。</p>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">3. 前月・前年と比較する</h3>
+          <p class="text-lg md:text-xl text-yellow-900">今月だけを見るのではなく、前月や前年同月と比較すると、改善点や問題点が見えてきます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">損益計算書（P/L）は一定期間の利益を示します</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">売上 - 原価 = 粗利、粗利 - 経費 = 営業利益</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">売上が多くても経費がかかりすぎれば赤字になります</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">前月・前年と比較して改善点を見つけましょう</span></li>
+        </ul>
+      </div>
+      <p class="text-lg md:text-xl">次は、「貸借対照表（B/S）とは」について学んでいきましょう。</p>
+    </section>
+
+    <div class="text-center">
+      <a href="section-06.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">次のセクションへ →</a>
+    </div>
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    function updateDotIndicator() {
+      const sections = ['intro', 'structure', 'simulator', 'how-to-read', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+      let currentSection = sections[0];
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    function calculatePL() {
+      const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+      const cogs = parseFloat(document.getElementById('cogs').value) || 0;
+      const expenses = parseFloat(document.getElementById('expenses').value) || 0;
+
+      const grossProfit = revenue - cogs;
+      const operatingProfit = grossProfit - expenses;
+      const grossMarginRate = revenue > 0 ? (grossProfit / revenue * 100).toFixed(1) : 0;
+      const operatingMarginRate = revenue > 0 ? (operatingProfit / revenue * 100).toFixed(1) : 0;
+
+      document.getElementById('resultRevenue').textContent = revenue.toLocaleString() + '円';
+      document.getElementById('resultCogs').textContent = '-' + cogs.toLocaleString() + '円';
+      document.getElementById('resultGrossProfit').textContent = grossProfit.toLocaleString() + '円';
+      document.getElementById('resultExpenses').textContent = '-' + expenses.toLocaleString() + '円';
+      document.getElementById('resultOperatingProfit').textContent = operatingProfit.toLocaleString() + '円';
+      document.getElementById('grossMarginRate').textContent = grossMarginRate + '%';
+      document.getElementById('operatingMarginRate').textContent = operatingMarginRate + '%';
+
+      const opProfitElem = document.getElementById('resultOperatingProfit');
+      if (operatingProfit >= 0) {
+        opProfitElem.classList.remove('text-red-600');
+        opProfitElem.classList.add('text-yellow-700');
+      } else {
+        opProfitElem.classList.remove('text-yellow-700');
+        opProfitElem.classList.add('text-red-600');
+      }
+    }
+
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', () => {
+      updateDotIndicator();
+      calculatePL();
+    });
+
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

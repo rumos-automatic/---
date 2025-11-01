@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.5 予算管理と実績管理 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dot-indicator {
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 40;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #cbd5e1;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .dot.active {
+      background-color: #3b82f6;
+      transform: scale(1.3);
+    }
+    .dot:hover {
+      background-color: #3b82f6;
+      transform: scale(1.2);
+    }
+    .dot-label {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e293b;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      font-size: 0.875rem;
+    }
+    .dot:hover .dot-label {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .dot-indicator {
+        display: none;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-700">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          ← 前のセクション
+        </a>
+        <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="dot-indicator">
+    <div class="dot active" data-target="intro">
+      <div class="dot-label">予算管理とは</div>
+    </div>
+    <div class="dot" data-target="cycle">
+      <div class="dot-label">PDCAサイクル</div>
+    </div>
+    <div class="dot" data-target="budget">
+      <div class="dot-label">予算作成のポイント</div>
+    </div>
+    <div class="dot" data-target="variance">
+      <div class="dot-label">差異分析</div>
+    </div>
+    <div class="dot" data-target="summary">
+      <div class="dot-label">まとめ</div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-800">2.5 予算管理と実績管理</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      予算管理とは、計画（予算）を立て、実績と比較して改善していく手法です。
+      計画的な経営を実現するための基本を学んでいきましょう。
+    </p>
+
+    <!-- 小セクション1: 予算管理とは -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">予算管理とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        <strong class="text-blue-600">予算管理</strong>とは、
+        事前に計画（予算）を立て、実際の結果（実績）と比較し、
+        その差を分析して改善していく仕組みです。
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6 border-l-4 border-blue-500">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">予算管理のメリット</h3>
+        <ul class="list-disc pl-6 space-y-3 text-lg md:text-xl text-blue-900">
+          <li><strong>計画的な経営：</strong>行き当たりばったりではなく、計画に基づいて行動できる</li>
+          <li><strong>早期発見：</strong>問題を早期に発見し、すぐに対応できる</li>
+          <li><strong>継続的改善：</strong>毎月振り返ることで、経営が改善される</li>
+          <li><strong>資金繰り対策：</strong>現金不足を事前に予測できる</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">💡 重要なポイント</h3>
+        <p class="text-lg md:text-xl text-yellow-900">
+          予算は「達成すべき目標」ではなく、「経営の羅針盤」です。
+          予算と実績のズレを分析することで、経営の問題点が見えてきます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション2: PDCAサイクル -->
+    <section id="cycle" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">予算管理のPDCAサイクル</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        予算管理は、<strong class="text-blue-600">PDCAサイクル</strong>で回していきます。
+      </p>
+
+      <!-- Plan -->
+      <div class="bg-blue-50 p-6 rounded-lg mb-6 border-l-4 border-blue-500">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">📝 Plan（計画）</h3>
+        <p class="text-lg md:text-xl text-blue-900 mb-3">
+          来月・来年の売上・経費を予測し、予算を作成します。
+        </p>
+        <div class="bg-white p-4 rounded">
+          <p class="text-lg text-gray-700 mb-2"><strong>具体的な作業：</strong></p>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>過去の実績データを参考にする</li>
+            <li>季節変動や特別な要因を考慮する</li>
+            <li>売上予算と経費予算を作る</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Do -->
+      <div class="bg-green-50 p-6 rounded-lg mb-6 border-l-4 border-green-500">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">🚀 Do（実行）</h3>
+        <p class="text-lg md:text-xl text-green-900 mb-3">
+          予算に基づいて事業を運営します。
+        </p>
+        <div class="bg-white p-4 rounded">
+          <p class="text-lg text-gray-700 mb-2"><strong>具体的な作業：</strong></p>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>予算を意識して営業活動を行う</li>
+            <li>経費を予算内に収める</li>
+            <li>日々の売上・経費を記録する</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Check -->
+      <div class="bg-orange-50 p-6 rounded-lg mb-6 border-l-4 border-orange-500">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">📊 Check（評価）</h3>
+        <p class="text-lg md:text-xl text-orange-900 mb-3">
+          予算と実績を比較し、差異を分析します。
+        </p>
+        <div class="bg-white p-4 rounded">
+          <p class="text-lg text-gray-700 mb-2"><strong>具体的な作業：</strong></p>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>月末に予算vs実績の表を作る</li>
+            <li>差異の原因を分析する</li>
+            <li>問題点を明確にする</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Action -->
+      <div class="bg-purple-50 p-6 rounded-lg mb-6 border-l-4 border-purple-500">
+        <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">🔧 Action（改善）</h3>
+        <p class="text-lg md:text-xl text-purple-900 mb-3">
+          分析結果をもとに、改善策を実行します。
+        </p>
+        <div class="bg-white p-4 rounded">
+          <p class="text-lg text-gray-700 mb-2"><strong>具体的な作業：</strong></p>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>売上不足なら営業強化</li>
+            <li>経費超過なら削減策を検討</li>
+            <li>次月の予算を修正する</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="bg-gray-100 p-8 rounded-lg text-center mb-6 border-2 border-dashed border-gray-300">
+        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
+        <p class="text-lg md:text-xl text-gray-700 font-bold">pdca-cycle-diagram.png</p>
+        <p class="text-lg text-gray-600 mt-2">PDCAサイクルの循環図（Plan → Do → Check → Action → Plan...）</p>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 予算作成のポイント -->
+    <section id="budget" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">予算作成のポイント</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        予算を作る際は、以下のポイントを意識しましょう。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">1. 過去の実績を参考に</h3>
+          <p class="text-lg text-gray-700">
+            昨年の同じ月や、過去3ヶ月の平均などを参考にして、
+            現実的な数値を設定します。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">2. 高すぎる目標はNG</h3>
+          <p class="text-lg text-gray-700">
+            達成不可能な予算を立てると、すぐに諦めてしまいます。
+            少し頑張れば届く程度が理想です。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-orange-500">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">3. 売上だけでなく経費も</h3>
+          <p class="text-lg text-gray-700">
+            売上予算だけでなく、経費予算も作ることで、
+            利益を予測できます。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+          <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">4. 定期的に見直す</h3>
+          <p class="text-lg text-gray-700">
+            予算は固定ではありません。状況が変わったら、
+            柔軟に修正することが大切です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 差異分析 -->
+    <section id="variance" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">差異分析</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        <strong class="text-blue-600">差異分析</strong>とは、
+        予算と実績のズレを分析し、原因を特定することです。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8 border-2 border-gray-300">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">📊 差異分析の例</h3>
+
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-lg overflow-hidden">
+            <thead class="bg-blue-600 text-white">
+              <tr>
+                <th class="px-4 py-3 text-left text-lg font-bold">項目</th>
+                <th class="px-4 py-3 text-right text-lg font-bold">予算</th>
+                <th class="px-4 py-3 text-right text-lg font-bold">実績</th>
+                <th class="px-4 py-3 text-right text-lg font-bold">差異</th>
+                <th class="px-4 py-3 text-left text-lg font-bold">原因</th>
+              </tr>
+            </thead>
+            <tbody class="text-lg">
+              <tr class="border-b border-gray-200">
+                <td class="px-4 py-3 font-bold">売上</td>
+                <td class="px-4 py-3 text-right">100万円</td>
+                <td class="px-4 py-3 text-right">90万円</td>
+                <td class="px-4 py-3 text-right text-red-600 font-bold">-10万円</td>
+                <td class="px-4 py-3">来客数減少</td>
+              </tr>
+              <tr class="border-b border-gray-200 bg-gray-50">
+                <td class="px-4 py-3 font-bold">材料費</td>
+                <td class="px-4 py-3 text-right">40万円</td>
+                <td class="px-4 py-3 text-right">35万円</td>
+                <td class="px-4 py-3 text-right text-green-600 font-bold">-5万円</td>
+                <td class="px-4 py-3">仕入先変更</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="px-4 py-3 font-bold">広告費</td>
+                <td class="px-4 py-3 text-right">10万円</td>
+                <td class="px-4 py-3 text-right">15万円</td>
+                <td class="px-4 py-3 text-right text-red-600 font-bold">+5万円</td>
+                <td class="px-4 py-3">追加施策実施</td>
+              </tr>
+              <tr class="bg-blue-50 font-bold">
+                <td class="px-4 py-3">利益</td>
+                <td class="px-4 py-3 text-right">30万円</td>
+                <td class="px-4 py-3 text-right">25万円</td>
+                <td class="px-4 py-3 text-right text-red-600">-5万円</td>
+                <td class="px-4 py-3">売上不足</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-6 bg-orange-50 p-4 rounded border-l-4 border-orange-500">
+          <h4 class="text-lg md:text-xl font-bold text-orange-700 mb-2">分析結果</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-orange-900">
+            <li>売上が10万円不足 → 来客数が減少したことが原因</li>
+            <li>材料費は5万円削減に成功（仕入先変更の効果）</li>
+            <li>広告費が5万円超過（追加施策を実施したため）</li>
+            <li>結果：利益は5万円減少。来月は集客強化が必要</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">💡 差異分析のポイント</h3>
+        <ul class="list-disc pl-6 space-y-2 text-lg text-green-900">
+          <li><strong>原因を特定する：</strong>ただ「差がある」で終わらせず、なぜそうなったかを考える</li>
+          <li><strong>改善策を考える：</strong>次月にどうすればよいかを具体的に決める</li>
+          <li><strong>良い差異も分析：</strong>予算より良い結果も、なぜそうなったかを理解する</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        予算管理と実績管理について、理解が深まったでしょうか？
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">📝 このセクションで学んだこと</h3>
+        <ul class="list-disc pl-6 space-y-3 text-lg md:text-xl text-blue-900">
+          <li>予算管理は、計画→実行→評価→改善のPDCAサイクルで回します</li>
+          <li>予算は経営の羅針盤であり、達成すべき絶対目標ではありません</li>
+          <li>予算作成では、過去の実績を参考に現実的な数値を設定します</li>
+          <li>差異分析で原因を特定し、改善策を考えることが重要です</li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        次のセクションでは、変動費と固定費の見極め方を学びます。
+        正確な分類が、正確な分析につながります。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-06.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold shadow-lg">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+        if (dot.getAttribute('data-target') === current) {
+          dot.classList.add('active');
+        }
+      });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img:not(#modalImage)').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

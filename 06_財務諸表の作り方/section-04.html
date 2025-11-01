@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.4 キャッシュフロー計算書（C/F）の作り方 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="structure">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          基本構造
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="steps">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          作成ステップ
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="simple">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          簡易版
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="calculator">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          C/F計算ツール
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-orange-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.4 キャッシュフロー計算書（C/F）の作り方</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        キャッシュフロー計算書（C/F）は、一定期間の現金の動きを示す表です。
+        P/Lで利益が出ていても、現金が減っていることがあります。その理由を明らかにするのがC/Fです。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、営業活動、投資活動、財務活動の3つに分けて、C/Fの作り方を学んでいきましょう。
+        小規模事業者向けの簡易版も紹介します。
+      </p>
+    </section>
+
+    <!-- 基本構造 -->
+    <section id="structure" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">基本構造</h2>
+
+      <div class="bg-orange-50 p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-4">キャッシュフロー計算書の構造</h3>
+        <pre class="text-base md:text-lg text-orange-900 font-mono leading-relaxed overflow-x-auto">
+【営業活動によるキャッシュフロー】
+  税引前当期純利益            95万円
+  減価償却費                 30万円
+  受取利息・支払利息          +5万円
+  売上債権の増減             -20万円
+  棚卸資産の増減             +10万円
+  仕入債務の増減             +10万円
+  小計                      130万円
+  利息の受取額               +1万円
+  利息の支払額               -10万円
+  法人税等の支払額           -25万円
+  営業活動CF                 96万円
+
+【投資活動によるキャッシュフロー】
+  固定資産の取得             -50万円
+  投資活動CF                 -50万円
+
+【財務活動によるキャッシュフロー】
+  長期借入れによる収入       +200万円
+  長期借入金の返済           -100万円
+  財務活動CF                +100万円
+
+現金及び現金同等物の増減     146万円
+現金及び現金同等物の期首残高  54万円
+現金及び現金同等物の期末残高 200万円
+        </pre>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">3つの区分</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl text-orange-900">
+            <span class="font-bold">営業CF：</span>本業で稼いだ現金
+          </li>
+          <li class="text-lg md:text-xl text-orange-900">
+            <span class="font-bold">投資CF：</span>設備投資などに使った現金
+          </li>
+          <li class="text-lg md:text-xl text-orange-900">
+            <span class="font-bold">財務CF：</span>融資や返済による現金の増減
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 作成ステップ -->
+    <section id="steps" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">C/F作成の5つのステップ</h2>
+
+      <!-- ステップ1 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ1：営業CFの計算（簡易法）</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          営業CFは、本業でどれだけ現金を稼いだかを示します。
+          簡易法では、当期純利益に調整を加えて計算します。
+        </p>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <p class="text-lg md:text-xl text-blue-900 font-bold mb-2">
+            営業CF = 当期純利益 + 減価償却費 +/- 運転資金の増減
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">例：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>当期純利益：70万円</li>
+            <li>減価償却費：30万円（現金は出ていない）</li>
+            <li>売掛金増加：-20万円（現金が減る）</li>
+            <li>在庫減少：+10万円（現金が増える）</li>
+            <li>買掛金増加：+10万円（現金が増える）</li>
+            <li class="font-bold">→ 営業CF：100万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ2 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ2：投資CFの計算</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          投資CFは、設備投資などに使った現金を示します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">例：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>設備購入：-50万円（現金減）</li>
+            <li>設備売却：0万円</li>
+            <li class="font-bold">→ 投資CF：-50万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ3 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ3：財務CFの計算</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          財務CFは、融資の受取や返済による現金の増減を示します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">例：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>融資受取：+200万円（現金増）</li>
+            <li>融資返済：-100万円（現金減）</li>
+            <li>配当金支払：0万円</li>
+            <li class="font-bold">→ 財務CF：+100万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ4 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ4：現金増減の計算</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          3つのCFを合計して、現金の増減を計算します。
+        </p>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <p class="text-lg md:text-xl text-blue-900 font-bold mb-2">
+            現金増減 = 営業CF + 投資CF + 財務CF
+          </p>
+          <p class="text-lg md:text-xl text-blue-900">
+            = 100万円 - 50万円 + 100万円 = 150万円
+          </p>
+        </div>
+      </div>
+
+      <!-- ステップ5 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ5：期末現金残高の確認</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          期首残高に現金増減を加えて、期末残高を計算します。
+        </p>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <p class="text-lg md:text-xl text-blue-900 font-bold mb-2">
+            期末残高 = 期首残高 + 現金増減
+          </p>
+          <p class="text-lg md:text-xl text-blue-900">
+            = 50万円 + 150万円 = 200万円
+          </p>
+        </div>
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
+          <p class="text-lg md:text-xl text-green-900">
+            <span class="font-bold">確認：</span>この200万円は、B/Sの現金預金と一致するはずです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 簡易版 -->
+    <section id="simple" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">小規模事業者向け簡易版</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        詳細なC/Fが難しい場合は、以下の簡易版でも十分です。
+        現金の動きを大まかに把握できます。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">簡易版C/F</h3>
+        <div class="bg-orange-50 p-4 rounded">
+          <pre class="text-base md:text-lg text-orange-900 font-mono leading-relaxed overflow-x-auto">
+項目                    金額
+--------------------------
+期首現金残高            50万円
++ 営業による入金      1,200万円
+- 営業による支出     -1,100万円
+- 設備投資             -50万円
++ 融資受取            +200万円
+- 融資返済            -100万円
+--------------------------
+期末現金残高           200万円
+          </pre>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">簡易版のポイント</h3>
+        <p class="text-lg md:text-xl text-blue-900">
+          入金と支出を大まかに分類するだけでOKです。
+          細かい調整は不要で、実際の現金の動きを把握することが目的です。
+        </p>
+      </div>
+    </section>
+
+    <!-- C/F計算ツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">C/F計算ツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        実際に数値を入力して、C/Fを作成してみましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">営業・投資・財務CFの入力</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold text-gray-700 mb-3">営業活動CF</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-lg mb-2 text-gray-700">当期純利益（円）</label>
+              <input type="number" id="netIncome" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="700000" value="700000">
+            </div>
+            <div>
+              <label class="block text-lg mb-2 text-gray-700">減価償却費（円）</label>
+              <input type="number" id="depreciation" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="300000" value="300000">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold text-gray-700 mb-3">投資活動CF</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-lg mb-2 text-gray-700">設備投資（円・マイナスで入力）</label>
+              <input type="number" id="investment" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="-500000" value="-500000">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold text-gray-700 mb-3">財務活動CF</h4>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-lg mb-2 text-gray-700">融資受取（円）</label>
+              <input type="number" id="loanReceived" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="2000000" value="2000000">
+            </div>
+            <div>
+              <label class="block text-lg mb-2 text-gray-700">融資返済（円・マイナスで入力）</label>
+              <input type="number" id="loanRepayment" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="-1000000" value="-1000000">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-lg mb-2 text-gray-700">期首現金残高（円）</label>
+          <input type="number" id="beginningCash" class="w-full border-2 border-orange-300 rounded px-4 py-3 text-lg focus:border-orange-500 focus:outline-none" placeholder="500000" value="500000">
+        </div>
+
+        <button onclick="calculateCF()" class="w-full bg-orange-600 text-white text-lg md:text-xl px-6 py-4 rounded-lg hover:bg-orange-700 transition shadow-lg font-bold">
+          計算する
+        </button>
+      </div>
+
+      <!-- 計算結果 -->
+      <div id="result" class="bg-orange-50 border-2 border-orange-500 rounded-lg p-6 hidden">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-4">計算結果</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b border-orange-300 pb-2">
+            <span class="text-lg md:text-xl text-orange-900 font-bold">営業活動CF（簡易）</span>
+            <span class="text-lg md:text-xl text-orange-900 font-bold" id="resultOperatingCF"></span>
+          </div>
+          <div class="flex justify-between border-b border-orange-300 pb-2">
+            <span class="text-lg md:text-xl text-orange-900 font-bold">投資活動CF</span>
+            <span class="text-lg md:text-xl text-orange-900 font-bold" id="resultInvestingCF"></span>
+          </div>
+          <div class="flex justify-between border-b border-orange-300 pb-2">
+            <span class="text-lg md:text-xl text-orange-900 font-bold">財務活動CF</span>
+            <span class="text-lg md:text-xl text-orange-900 font-bold" id="resultFinancingCF"></span>
+          </div>
+          <div class="flex justify-between border-b border-orange-300 pb-2">
+            <span class="text-lg md:text-xl text-orange-900 font-bold">現金増減</span>
+            <span class="text-lg md:text-xl text-orange-900 font-bold" id="resultCashChange"></span>
+          </div>
+          <div class="flex justify-between border-b border-orange-300 pb-2">
+            <span class="text-lg md:text-xl text-orange-900">期首現金残高</span>
+            <span class="text-lg md:text-xl text-orange-900" id="resultBeginningCash"></span>
+          </div>
+          <div class="flex justify-between pt-2">
+            <span class="text-lg md:text-xl text-orange-900 font-bold">期末現金残高</span>
+            <span class="text-lg md:text-xl text-orange-900 font-bold text-2xl" id="resultEndingCash"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">ダウンロード</h3>
+        <p class="text-lg md:text-xl text-orange-900 mb-4">
+          Excelテンプレートをダウンロードして、実際にC/Fを作成してみましょう。
+        </p>
+        <a href="../../assets/templates/キャッシュフロー計算書.xlsx" class="inline-block bg-orange-600 text-white text-lg px-6 py-3 rounded hover:bg-orange-700 transition">
+          キャッシュフロー計算書テンプレート (.xlsx)
+        </a>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        C/Fの作り方について、理解が深まったでしょうか？
+        営業・投資・財務の3つに分けて現金の動きを把握します。
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-orange-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">✓ 営業CF</h3>
+          <p class="text-lg md:text-xl text-orange-900">
+            本業で稼いだ現金を示します。
+          </p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">✓ 投資CF</h3>
+          <p class="text-lg md:text-xl text-orange-900">
+            設備投資に使った現金を示します。
+          </p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-orange-800 mb-3">✓ 財務CF</h3>
+          <p class="text-lg md:text-xl text-orange-900">
+            融資・返済による現金の増減を示します。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「3つの財務諸表の関連性」を学んでいきます。
+        P/L、B/S、C/Fがどう繋がるのか、具体例で確認しましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-05.html" class="inline-block bg-orange-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-orange-700 transition shadow-lg">
+        次のセクションへ：6.5 3つの財務諸表の関連性 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // C/F計算ツール
+    function calculateCF() {
+      const netIncome = parseFloat(document.getElementById('netIncome').value) || 0;
+      const depreciation = parseFloat(document.getElementById('depreciation').value) || 0;
+      const investment = parseFloat(document.getElementById('investment').value) || 0;
+      const loanReceived = parseFloat(document.getElementById('loanReceived').value) || 0;
+      const loanRepayment = parseFloat(document.getElementById('loanRepayment').value) || 0;
+      const beginningCash = parseFloat(document.getElementById('beginningCash').value) || 0;
+
+      // 計算（簡易版）
+      const operatingCF = netIncome + depreciation;
+      const investingCF = investment;
+      const financingCF = loanReceived + loanRepayment;
+      const cashChange = operatingCF + investingCF + financingCF;
+      const endingCash = beginningCash + cashChange;
+
+      // 結果を表示
+      document.getElementById('resultOperatingCF').textContent = operatingCF.toLocaleString() + '円';
+      document.getElementById('resultInvestingCF').textContent = investingCF.toLocaleString() + '円';
+      document.getElementById('resultFinancingCF').textContent = financingCF.toLocaleString() + '円';
+      document.getElementById('resultCashChange').textContent = cashChange.toLocaleString() + '円';
+      document.getElementById('resultBeginningCash').textContent = beginningCash.toLocaleString() + '円';
+      document.getElementById('resultEndingCash').textContent = endingCash.toLocaleString() + '円';
+
+      document.getElementById('result').classList.remove('hidden');
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-orange-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-orange-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.3 貸借対照表（B/S）の作り方 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-02.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-green-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="structure">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-green-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          基本構造
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="steps">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-green-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          作成ステップ
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="calculator">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-green-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          B/Sバランスチェック
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-green-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.3 貸借対照表（B/S）の作り方</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        貸借対照表（B/S）は、ある時点における会社の財産状況を示す表です。
+        左側に「資産の部」、右側に「負債の部」と「純資産の部」を記載します。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        B/Sの特徴は、左側と右側が必ずバランス（釣り合い）することです。
+        このセクションでは、6つのステップでB/Sの作り方を学んでいきましょう。
+      </p>
+    </section>
+
+    <!-- 基本構造 -->
+    <section id="structure" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">基本構造（おさらい）</h2>
+
+      <div class="bg-green-50 p-6 rounded-lg shadow-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-4">貸借対照表の構造</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- 資産の部 -->
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-green-900 mb-3">【資産の部】</h4>
+            <div class="text-base md:text-lg text-green-900 space-y-2">
+              <p class="font-bold">流動資産</p>
+              <p class="pl-4">現金預金    200万円</p>
+              <p class="pl-4">売掛金     100万円</p>
+              <p class="pl-4">在庫        50万円</p>
+              <p class="pl-4 font-bold">小計       350万円</p>
+              <p class="font-bold mt-4">固定資産</p>
+              <p class="pl-4">建物       200万円</p>
+              <p class="pl-4">機械装置    100万円</p>
+              <p class="pl-4 font-bold">小計       300万円</p>
+              <p class="font-bold mt-4">資産合計   650万円</p>
+            </div>
+          </div>
+          <!-- 負債・純資産の部 -->
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-green-900 mb-3">【負債の部】</h4>
+            <div class="text-base md:text-lg text-green-900 space-y-2">
+              <p class="font-bold">流動負債</p>
+              <p class="pl-4">買掛金      50万円</p>
+              <p class="pl-4">未払金      30万円</p>
+              <p class="pl-4">短期借入金  100万円</p>
+              <p class="pl-4 font-bold">小計       180万円</p>
+              <p class="font-bold mt-4">固定負債</p>
+              <p class="pl-4">長期借入金  300万円</p>
+              <p class="pl-4 font-bold">小計       300万円</p>
+              <p class="font-bold mt-4">負債合計   480万円</p>
+              <h4 class="text-lg md:text-xl font-bold text-green-900 mb-2 mt-4">【純資産の部】</h4>
+              <p class="pl-4">資本金      100万円</p>
+              <p class="pl-4">利益剰余金   70万円</p>
+              <p class="pl-4 font-bold">小計       170万円</p>
+              <p class="font-bold mt-4">負債・純資産合計 650万円</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">重要なポイント</h3>
+        <p class="text-lg md:text-xl text-green-900">
+          資産合計 = 負債合計 + 純資産合計
+        </p>
+        <p class="text-lg md:text-xl text-green-900 mt-2">
+          この式が必ず成り立ちます。バランスが取れていない場合は、どこかに計算ミスがあります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 作成ステップ -->
+    <section id="steps" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">B/S作成の6つのステップ</h2>
+
+      <!-- ステップ1 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ1：流動資産の集計</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          1年以内に現金化できる資産を集計します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">主な項目：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>現金預金：現金（レジ・手元）+ 普通預金（各銀行） = 200万円</li>
+            <li>売掛金：請求済で未入金の代金 = 100万円</li>
+            <li>在庫（商品）：棚卸により確認 = 50万円</li>
+            <li class="font-bold">→ 流動資産合計：350万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ2 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ2：固定資産の集計</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          1年以上使用する資産を集計します。減価償却後の簿価を記載します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">例：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>建物：取得価額300万円 - 減価償却累計額100万円 = 簿価200万円</li>
+            <li>機械装置：取得価額150万円 - 減価償却累計額50万円 = 簿価100万円</li>
+            <li class="font-bold">→ 固定資産合計：300万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ3 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ3：流動負債の集計</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          1年以内に返済すべき負債を集計します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">主な項目：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>買掛金：仕入代金の未払い = 50万円</li>
+            <li>未払金：広告費などの未払い = 30万円</li>
+            <li>短期借入金：1年以内返済予定の融資 = 100万円</li>
+            <li class="font-bold">→ 流動負債合計：180万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ4 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ4：固定負債の集計</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          1年超の返済期限がある負債を集計します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">例：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>長期借入金：1年超の融資残高 = 300万円</li>
+            <li class="font-bold">→ 固定負債合計：300万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ5 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ5：純資産の計算</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          純資産は、会社の正味の財産です。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-gray-800 font-bold mb-2">主な項目：</p>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+            <li>資本金：創業時の出資額 = 100万円</li>
+            <li>利益剰余金：過去の利益の累積 + 今期の当期純利益 = 70万円</li>
+            <li class="font-bold">→ 純資産合計：170万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ステップ6 -->
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">ステップ6：バランスチェック</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          最後に、必ず左右のバランスを確認します。
+        </p>
+        <div class="bg-green-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-green-900 font-bold mb-2">確認：</p>
+          <p class="text-lg md:text-xl text-green-900">
+            資産合計 = 負債合計 + 純資産合計
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            650万円 = 480万円 + 170万円 ✓
+          </p>
+        </div>
+        <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r mt-4">
+          <p class="text-lg md:text-xl text-orange-900">
+            <span class="font-bold">注意：</span>一致しない場合は、どこかに計算ミスがあります。各項目を再確認してください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- B/Sバランスチェックツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">B/Sバランスチェックツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        実際に数値を入力して、B/Sのバランスをチェックしてみましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">資産の部</h3>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">流動資産（円）</label>
+            <input type="number" id="currentAssets" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="3500000" value="3500000">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">固定資産（円）</label>
+            <input type="number" id="fixedAssets" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="3000000" value="3000000">
+          </div>
+        </div>
+
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">負債の部</h3>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">流動負債（円）</label>
+            <input type="number" id="currentLiabilities" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="1800000" value="1800000">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">固定負債（円）</label>
+            <input type="number" id="fixedLiabilities" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="3000000" value="3000000">
+          </div>
+        </div>
+
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">純資産の部</h3>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">資本金（円）</label>
+            <input type="number" id="capital" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="1000000" value="1000000">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">利益剰余金（円）</label>
+            <input type="number" id="retainedEarnings" class="w-full border-2 border-green-300 rounded px-4 py-3 text-lg focus:border-green-500 focus:outline-none" placeholder="700000" value="700000">
+          </div>
+        </div>
+
+        <button onclick="checkBalance()" class="w-full bg-green-600 text-white text-lg md:text-xl px-6 py-4 rounded-lg hover:bg-green-700 transition shadow-lg font-bold">
+          バランスをチェック
+        </button>
+      </div>
+
+      <!-- 計算結果 -->
+      <div id="result" class="rounded-lg p-6 hidden">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">チェック結果</h3>
+        <div class="space-y-3">
+          <div class="flex justify-between border-b pb-2">
+            <span class="text-lg md:text-xl font-bold">資産合計</span>
+            <span class="text-lg md:text-xl font-bold" id="resultAssets"></span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="text-lg md:text-xl font-bold">負債合計</span>
+            <span class="text-lg md:text-xl" id="resultLiabilities"></span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="text-lg md:text-xl font-bold">純資産合計</span>
+            <span class="text-lg md:text-xl" id="resultEquity"></span>
+          </div>
+          <div class="flex justify-between border-b pb-2">
+            <span class="text-lg md:text-xl font-bold">負債+純資産</span>
+            <span class="text-lg md:text-xl font-bold" id="resultTotal"></span>
+          </div>
+          <div id="balanceMessage" class="mt-4 p-4 rounded text-lg md:text-xl font-bold text-center"></div>
+        </div>
+      </div>
+
+      <div class="mt-6 bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">ダウンロード</h3>
+        <p class="text-lg md:text-xl text-green-900 mb-4">
+          Excelテンプレートをダウンロードして、実際にB/Sを作成してみましょう。
+        </p>
+        <a href="../../assets/templates/貸借対照表.xlsx" class="inline-block bg-green-600 text-white text-lg px-6 py-3 rounded hover:bg-green-700 transition">
+          貸借対照表テンプレート (.xlsx)
+        </a>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        B/Sの作り方について、理解が深まったでしょうか？
+        6つのステップを順に進めれば、誰でもB/Sを作成できます。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ 資産の部</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            流動資産と固定資産を集計します。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ 負債・純資産の部</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            流動負債、固定負債、純資産を集計します。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ バランスチェック</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            資産合計 = 負債+純資産を必ず確認します。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ 減価償却</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            固定資産は減価償却後の簿価を記載します。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「キャッシュフロー計算書（C/F）の作り方」を学んでいきます。
+        現金の動きを把握する重要な表です。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-04.html" class="inline-block bg-green-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-green-700 transition shadow-lg">
+        次のセクションへ：6.4 キャッシュフロー計算書（C/F）の作り方 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // B/Sバランスチェック
+    function checkBalance() {
+      const currentAssets = parseFloat(document.getElementById('currentAssets').value) || 0;
+      const fixedAssets = parseFloat(document.getElementById('fixedAssets').value) || 0;
+      const currentLiabilities = parseFloat(document.getElementById('currentLiabilities').value) || 0;
+      const fixedLiabilities = parseFloat(document.getElementById('fixedLiabilities').value) || 0;
+      const capital = parseFloat(document.getElementById('capital').value) || 0;
+      const retainedEarnings = parseFloat(document.getElementById('retainedEarnings').value) || 0;
+
+      const totalAssets = currentAssets + fixedAssets;
+      const totalLiabilities = currentLiabilities + fixedLiabilities;
+      const totalEquity = capital + retainedEarnings;
+      const totalLiabilitiesEquity = totalLiabilities + totalEquity;
+
+      document.getElementById('resultAssets').textContent = totalAssets.toLocaleString() + '円';
+      document.getElementById('resultLiabilities').textContent = totalLiabilities.toLocaleString() + '円';
+      document.getElementById('resultEquity').textContent = totalEquity.toLocaleString() + '円';
+      document.getElementById('resultTotal').textContent = totalLiabilitiesEquity.toLocaleString() + '円';
+
+      const resultDiv = document.getElementById('result');
+      const balanceMessage = document.getElementById('balanceMessage');
+
+      if (Math.abs(totalAssets - totalLiabilitiesEquity) < 1) {
+        resultDiv.className = 'rounded-lg p-6 bg-green-50 border-2 border-green-500';
+        balanceMessage.className = 'mt-4 p-4 rounded text-lg md:text-xl font-bold text-center bg-green-100 text-green-800';
+        balanceMessage.textContent = '✓ バランスが取れています！';
+      } else {
+        resultDiv.className = 'rounded-lg p-6 bg-red-50 border-2 border-red-500';
+        balanceMessage.className = 'mt-4 p-4 rounded text-lg md:text-xl font-bold text-center bg-red-100 text-red-800';
+        const diff = Math.abs(totalAssets - totalLiabilitiesEquity);
+        balanceMessage.textContent = '✗ バランスが取れていません（差額: ' + diff.toLocaleString() + '円）';
+      }
+
+      resultDiv.classList.remove('hidden');
+      resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-green-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-green-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

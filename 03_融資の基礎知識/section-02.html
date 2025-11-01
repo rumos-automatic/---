@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.2 融資と資本の違い | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-01.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="financing">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          融資（借入）
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="equity">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          資本（出資）
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="comparison">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          比較表
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="small-business">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          小規模事業の場合
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">3.2 融資と資本の違い</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        資金調達の方法には、大きく分けて「融資（借入）」と「資本（出資）」の2つがあります。
+        この2つは、一見同じように見えるかもしれませんが、実は全く異なる性質を持っています。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        融資と資本の違いを正しく理解することで、自分の事業に適した資金調達方法を選択できるようになります。
+        それぞれの特徴を詳しく見ていきましょう。
+      </p>
+    </section>
+
+    <!-- 融資（借入） -->
+    <section id="financing" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">融資（借入）とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        融資は、金融機関からお金を「借りる」ことです。
+        前のセクションで学んだ通り、必ず返済義務があります。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-red-800 mb-4">融資（借入）の特徴</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl text-red-900 flex items-start">
+            <span class="font-bold mr-3 text-red-600">●</span>
+            <span><strong>金融機関から借りる</strong>：銀行、信用金庫、日本政策金融公庫などから借ります</span>
+          </li>
+          <li class="text-lg md:text-xl text-red-900 flex items-start">
+            <span class="font-bold mr-3 text-red-600">●</span>
+            <span><strong>返済義務がある</strong>：必ず返さなければなりません</span>
+          </li>
+          <li class="text-lg md:text-xl text-red-900 flex items-start">
+            <span class="font-bold mr-3 text-red-600">●</span>
+            <span><strong>利息を払う</strong>：借りた金額に利息を加えて返済します</span>
+          </li>
+          <li class="text-lg md:text-xl text-red-900 flex items-start">
+            <span class="font-bold mr-3 text-red-600">●</span>
+            <span><strong>経営権は渡さない</strong>：あなたが経営の全権を持ったままです</span>
+          </li>
+          <li class="text-lg md:text-xl text-red-900 flex items-start">
+            <span class="font-bold mr-3 text-red-600">●</span>
+            <span><strong>貸借対照表では「負債」</strong>：会社の借金として記載されます</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        融資の最大の特徴は、「返済義務がある」という点です。
+        毎月決まった金額を返済し続ける必要があり、返済できないと倒産のリスクがあります。
+        しかし、経営権を誰にも渡さないので、自分の判断で事業を運営できます。
+      </p>
+    </section>
+
+    <!-- 資本（出資） -->
+    <section id="equity" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">資本（出資）とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        資本は、投資家や共同経営者などから「出資」を受けることです。
+        融資とは異なり、返済義務がないのが大きな特徴です。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">資本（出資）の特徴</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl text-blue-900 flex items-start">
+            <span class="font-bold mr-3 text-blue-600">●</span>
+            <span><strong>投資家から出資を受ける</strong>：個人投資家、ベンチャーキャピタルなどから資金を得ます</span>
+          </li>
+          <li class="text-lg md:text-xl text-blue-900 flex items-start">
+            <span class="font-bold mr-3 text-blue-600">●</span>
+            <span><strong>返済義務がない</strong>：借金ではないので返す必要はありません</span>
+          </li>
+          <li class="text-lg md:text-xl text-blue-900 flex items-start">
+            <span class="font-bold mr-3 text-blue-600">●</span>
+            <span><strong>配当を払う</strong>：利益が出たら、出資者に配当として還元します</span>
+          </li>
+          <li class="text-lg md:text-xl text-blue-900 flex items-start">
+            <span class="font-bold mr-3 text-blue-600">●</span>
+            <span><strong>経営権の一部を渡す</strong>：出資者が株主となり、経営に関与する場合があります</span>
+          </li>
+          <li class="text-lg md:text-xl text-blue-900 flex items-start">
+            <span class="font-bold mr-3 text-blue-600">●</span>
+            <span><strong>貸借対照表では「純資産」</strong>：会社の自己資本として記載されます</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        資本の最大の特徴は、「返済義務がない」という点です。
+        利益が出なくても配当を払う必要はありませんし、倒産リスクも融資に比べて低くなります。
+        ただし、出資者に経営権の一部を渡すことになるため、経営判断に制約が生じる場合があります。
+      </p>
+    </section>
+
+    <!-- 比較表 -->
+    <section id="comparison" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">融資と資本の比較</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        融資（借入）と資本（出資）の違いを表にまとめました。
+        どちらが自分の事業に適しているか、この表を参考に判断してください。
+      </p>
+
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+          <thead class="bg-gray-800 text-white">
+            <tr>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold">項目</th>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold bg-red-700">融資（借入）</th>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold bg-blue-700">資本（出資）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">返済義務</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">ある</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">ない</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">利息/配当</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">必ず払う（利息）</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">利益が出たら払う（配当）</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">経営権</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">渡さない</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">一部渡す</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">リスク</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">返せないと倒産</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">リスク低い</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">調達難易度</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">比較的容易</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">難しい（小規模事業）</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 text-lg md:text-xl font-bold text-gray-800">貸借対照表</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-red-900 bg-red-50">負債の部</td>
+              <td class="px-6 py-4 text-lg md:text-xl text-blue-900 bg-blue-50">純資産の部</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
+        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
+        <p class="text-lg md:text-xl text-gray-500">融資と資本の対比図（天秤のイメージ）</p>
+        <p class="text-base text-gray-400 mt-2">画像ファイル名: financing-vs-equity-balance.png</p>
+      </div>
+    </section>
+
+    <!-- 小規模事業の場合 -->
+    <section id="small-business" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">小規模事業の場合</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        ここまで融資と資本の違いを見てきましたが、小規模事業の場合、
+        どちらを選ぶべきなのでしょうか？
+      </p>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-4">小規模事業向けアドバイス</h3>
+        <p class="text-lg md:text-xl text-green-900 mb-4">
+          小規模事業の場合、<strong>出資を受けるのは現実的に難しい</strong>ことが多いです。
+          投資家は、大きなリターンが見込める成長事業に投資する傾向があり、
+          小規模な飲食店や小売店などには出資してくれないことがほとんどです。
+        </p>
+        <p class="text-lg md:text-xl text-green-900 mb-4">
+          そのため、小規模事業の場合は<strong>融資が主な資金調達手段</strong>になります。
+          特に、日本政策金融公庫や信用保証協会付き融資は、創業時でも比較的借りやすく、
+          小規模事業に適した制度です。
+        </p>
+        <p class="text-lg md:text-xl text-green-900">
+          一般的には、<strong>自己資金 + 融資の組み合わせ</strong>で事業をスタートすることが多いです。
+          自己資金を一定額用意し、不足分を融資で補うという形が基本になります。
+        </p>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">おすすめの資金調達パターン</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <span class="text-2xl mr-4">1️⃣</span>
+            <div>
+              <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">創業時</h4>
+              <p class="text-lg md:text-xl text-gray-700">
+                自己資金（総投資額の1/3以上） + 日本政策金融公庫の創業融資
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="text-2xl mr-4">2️⃣</span>
+            <div>
+              <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">事業拡大時</h4>
+              <p class="text-lg md:text-xl text-gray-700">
+                利益の内部留保 + 信用保証協会付き融資 or プロパー融資
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <span class="text-2xl mr-4">3️⃣</span>
+            <div>
+              <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">安定期</h4>
+              <p class="text-lg md:text-xl text-gray-700">
+                利益の内部留保で自己資本比率を高め、融資に頼らない経営を目指す
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        融資と資本の違いについて、理解が深まったでしょうか？
+        ここで学んだ内容を振り返ってみましょう。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-red-800 mb-3">融資（借入）</h3>
+          <ul class="space-y-2 text-lg md:text-xl text-red-900">
+            <li>✓ 返済義務がある</li>
+            <li>✓ 利息を必ず払う</li>
+            <li>✓ 経営権は渡さない</li>
+            <li>✓ 小規模事業でも調達しやすい</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">資本（出資）</h3>
+          <ul class="space-y-2 text-lg md:text-xl text-blue-900">
+            <li>✓ 返済義務がない</li>
+            <li>✓ 配当は利益が出たら払う</li>
+            <li>✓ 経営権の一部を渡す</li>
+            <li>✓ 小規模事業では調達が難しい</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「融資の種類」について学んでいきます。
+        日本政策金融公庫、信用保証協会付き融資、プロパー融資など、
+        具体的な融資制度を見ていきましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-03.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        次のセクションへ：3.3 融資の種類 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    // ドットクリックでスクロール
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // スクロール時にドットをアクティブ化
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-blue-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-blue-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

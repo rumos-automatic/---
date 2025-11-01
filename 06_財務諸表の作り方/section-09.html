@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.9 税務申告との関係 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-08.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-10.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-red-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="individual">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-red-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          個人事業主
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="corporation">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-red-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          法人
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="accountant">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-red-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          税理士に頼むべきか
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-red-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.9 税務申告との関係</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        財務諸表は、経営判断だけでなく、税務申告にも必須の資料です。
+        確定申告や法人税申告では、P/LとB/Sを提出する必要があります。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、財務諸表と税務申告の関係、青色申告の特典、税理士に頼むべきケースについて学びます。
+      </p>
+    </section>
+
+    <!-- 個人事業主の場合 -->
+    <section id="individual" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">個人事業主の場合</h2>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">確定申告に必要な書類</h3>
+        <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+          <li>損益計算書（青色申告決算書）</li>
+          <li>貸借対照表（青色申告決算書）</li>
+          <li>確定申告書B</li>
+        </ul>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">青色申告の特典</h3>
+        <div class="space-y-3">
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-blue-900 mb-2">1. 65万円控除（電子申告なら）</h4>
+            <p class="text-lg md:text-xl text-blue-900">
+              正規の簿記（複式簿記）で記帳し、電子申告すると、65万円の控除が受けられます。
+              紙申告の場合は55万円控除です。
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-blue-900 mb-2">2. 赤字の繰越（3年間）</h4>
+            <p class="text-lg md:text-xl text-blue-900">
+              今年赤字でも、来年以降の黒字と相殺できます。
+              最大3年間繰り越せます。
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-blue-900 mb-2">3. 家族への給料を経費にできる</h4>
+            <p class="text-lg md:text-xl text-blue-900">
+              青色事業専従者給与として、家族への給料を経費に計上できます。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">申告スケジュール</h3>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-lg px-4 py-2 text-lg font-bold mr-4 flex-shrink-0">
+              12月末
+            </div>
+            <div>
+              <p class="text-lg md:text-xl text-gray-700">
+                年度の決算を確定（12月31日が決算日）
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-lg px-4 py-2 text-lg font-bold mr-4 flex-shrink-0">
+              1-2月
+            </div>
+            <div>
+              <p class="text-lg md:text-xl text-gray-700">
+                財務諸表作成、青色申告決算書の準備
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-lg px-4 py-2 text-lg font-bold mr-4 flex-shrink-0">
+              3月15日まで
+            </div>
+            <div>
+              <p class="text-lg md:text-xl text-gray-700 font-bold">
+                確定申告を提出（期限厳守！）
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 法人の場合 -->
+    <section id="corporation" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">法人の場合</h2>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">法人税申告に必要な書類</h3>
+        <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+          <li>損益計算書</li>
+          <li>貸借対照表</li>
+          <li>株主資本等変動計算書</li>
+          <li>勘定科目内訳書</li>
+          <li>法人税申告書</li>
+        </ul>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">申告スケジュール</h3>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          決算月の翌々月末までに申告が必要です。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-lg text-gray-700 mb-2">
+            <span class="font-bold">例：</span>3月決算の会社の場合
+          </p>
+          <ul class="list-disc pl-6 text-lg text-gray-700 space-y-1">
+            <li>3月31日：決算日</li>
+            <li>4-5月：財務諸表作成、申告書準備</li>
+            <li>5月31日まで：法人税申告を提出</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">重要な注意点</h3>
+        <p class="text-lg md:text-xl text-orange-900">
+          法人の場合、申告書類が複雑です。
+          税理士に依頼することを強くおすすめします。
+        </p>
+      </div>
+    </section>
+
+    <!-- 税理士に頼むべきか -->
+    <section id="accountant" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">税理士に頼むべきか</h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <!-- 自分でできる場合 -->
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-4">自分でできる場合</h3>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-green-900 space-y-2">
+            <li>個人事業主</li>
+            <li>取引が少ない（月10件以下）</li>
+            <li>会計ソフトを使いこなせる</li>
+            <li>時間に余裕がある</li>
+          </ul>
+        </div>
+
+        <!-- 税理士に頼むべき場合 -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-4">税理士に頼むべき場合</h3>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-red-900 space-y-2">
+            <li>法人</li>
+            <li>取引が多い（月20件以上）</li>
+            <li>節税したい</li>
+            <li>時間がない</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">税理士費用の目安</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-base md:text-lg">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="p-3 text-left">事業形態</th>
+                <th class="p-3 text-left">年商</th>
+                <th class="p-3 text-left">月額</th>
+                <th class="p-3 text-left">決算料</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="p-3">個人事業主</td>
+                <td class="p-3">1,000万円以下</td>
+                <td class="p-3">1-2万円</td>
+                <td class="p-3">5-10万円</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3">個人事業主</td>
+                <td class="p-3">3,000万円以下</td>
+                <td class="p-3">2-3万円</td>
+                <td class="p-3">10-15万円</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3">法人</td>
+                <td class="p-3">1,000万円以下</td>
+                <td class="p-3">2-3万円</td>
+                <td class="p-3">10-15万円</td>
+              </tr>
+              <tr>
+                <td class="p-3">法人</td>
+                <td class="p-3">5,000万円以下</td>
+                <td class="p-3">3-5万円</td>
+                <td class="p-3">15-25万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">税理士を選ぶポイント</h3>
+        <ul class="list-disc pl-6 text-lg md:text-xl text-blue-900 space-y-2">
+          <li>料金が明確で、事前に見積もりを出してくれる</li>
+          <li>会計ソフトに対応している（freee、マネーフォワードなど）</li>
+          <li>定期的に面談してくれる</li>
+          <li>節税アドバイスをしてくれる</li>
+          <li>レスポンスが早い</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        税務申告との関係について、理解が深まったでしょうか？
+        財務諸表は経営判断だけでなく、税務申告にも必須です。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ 個人事業主</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            青色申告で65万円控除を受けましょう。
+          </p>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-red-800 mb-3">✓ 法人</h3>
+          <p class="text-lg md:text-xl text-red-900">
+            決算月の翌々月末までに申告が必要です。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ 税理士活用</h3>
+          <p class="text-lg md:text-xl text-green-900">
+            法人や取引が多い場合は税理士に依頼しましょう。
+          </p>
+        </div>
+
+        <div class="bg-purple-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-purple-800 mb-3">✓ 期限厳守</h3>
+          <p class="text-lg md:text-xl text-purple-900">
+            申告期限を必ず守りましょう。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、この章のまとめを行います。
+        財務諸表の作り方を復習し、実践に活かしましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-10.html" class="inline-block bg-red-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-red-700 transition shadow-lg">
+        次のセクションへ：6.10 まとめ →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-red-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-red-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

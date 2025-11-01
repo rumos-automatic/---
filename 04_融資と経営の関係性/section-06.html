@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.6 資金繰り表の作り方 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-07.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col gap-4">
+      <div class="group relative">
+        <a href="#definition" class="block w-4 h-4 rounded-full bg-blue-600 hover:scale-125 transition dot-indicator" data-section="definition"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          資金繰り表とは
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#structure" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="structure"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          基本構造
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#points" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="points"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          作成のポイント
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#tool" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="tool"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          簡易シミュレーター
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#summary" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="summary"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">4.6 資金繰り表の作り方</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      このセクションでは、お金の出入りを予測し、資金ショートを防ぐ「資金繰り表」の作り方を学んでいきます。
+      経営者が最も重視すべき資料の1つです。
+    </p>
+
+    <!-- 資金繰り表とは -->
+    <section id="definition" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">資金繰り表とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        資金繰り表とは、毎月の現金の入出金を記録・予測する表です。
+        損益計算書（P/L）とは別物で、<strong>「いつ現金が入り、いつ現金が出るか」</strong>を管理します。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-red-700">資金繰り表の重要性</h3>
+        <p class="text-lg md:text-xl text-red-900 leading-relaxed mb-4">
+          損益計算書（P/L）で黒字でも、現金が不足すれば倒産します。
+          資金繰り表を作成することで、現金不足を事前に予測し、対策を打つことができます。
+        </p>
+        <p class="text-lg md:text-xl text-red-900 font-bold">
+          → 経営者が最も重視すべき資料です
+        </p>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">損益計算書（P/L）との違い</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-gray-800">損益計算書（P/L）</h4>
+            <ul class="space-y-1 text-lg text-gray-700">
+              <li>• 売上と経費を記録</li>
+              <li>• 利益を計算</li>
+              <li>• 発生主義（売上日で記録）</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-gray-800">資金繰り表</h4>
+            <ul class="space-y-1 text-lg text-gray-700">
+              <li>• 現金の入出金を記録</li>
+              <li>• 現金残高を計算</li>
+              <li>• 現金主義（入出金日で記録）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 資金繰り表の基本構造 -->
+    <section id="structure" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">資金繰り表の基本構造</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        資金繰り表の基本的な構造を理解しましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8 overflow-x-auto">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">資金繰り表の例</h3>
+
+        <table class="w-full border-collapse text-sm md:text-base">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="border border-gray-300 px-2 py-2 text-left">項目</th>
+              <th class="border border-gray-300 px-2 py-2 text-right">4月</th>
+              <th class="border border-gray-300 px-2 py-2 text-right">5月</th>
+              <th class="border border-gray-300 px-2 py-2 text-right">6月</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-blue-50">
+              <td class="border border-gray-300 px-2 py-2 font-bold">前月繰越</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">100万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">50万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">30万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">売上入金</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">200万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">250万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">300万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">その他入金</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">0万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">0万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">0万円</td>
+            </tr>
+            <tr class="bg-green-50 font-bold">
+              <td class="border border-gray-300 px-2 py-2">入金合計</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">300万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">300万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">330万円</td>
+            </tr>
+            <tr class="border-t-2 border-gray-400">
+              <td class="border border-gray-300 px-2 py-2">仕入支払</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">100万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">120万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">140万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">人件費</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">80万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">80万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">80万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">家賃</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">その他経費</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">30万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">30万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">30万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-2 py-2">融資返済</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">20万円</td>
+            </tr>
+            <tr class="bg-red-50 font-bold">
+              <td class="border border-gray-300 px-2 py-2">支出合計</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">250万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">270万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">290万円</td>
+            </tr>
+            <tr class="bg-yellow-50 font-bold text-lg">
+              <td class="border border-gray-300 px-2 py-2">次月繰越</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">50万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">30万円</td>
+              <td class="border border-gray-300 px-2 py-2 text-right">40万円</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-yellow-800">💡 重要なポイント</h3>
+        <p class="text-lg md:text-xl text-yellow-900 leading-relaxed">
+          「次月繰越」（現金残高）がマイナスになる月があれば、その月に資金ショートする危険があります。
+          事前に対策を打つ必要があります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 作成のポイント -->
+    <section id="points" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">資金繰り表作成のポイント</h2>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">ポイント1：実際の入出金日で記録する</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            売上日ではなく、<strong>実際に現金が入る日</strong>で記録します。
+            売掛金の場合、入金が1～2ヶ月後になることを考慮しましょう。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-700">ポイント2：3～6ヶ月先まで予測する</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            現状だけでなく、3～6ヶ月先の入出金を予測します。
+            将来の資金不足を早期に発見できます。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-purple-700">ポイント3：現金残高がマイナスにならないか確認</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            毎月の「次月繰越」（現金残高）を確認し、マイナスになる月がないかチェックします。
+            マイナスになりそうな場合は、対策を検討しましょう。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-orange-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-orange-700">ポイント4：早めに対策を打つ</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            現金不足が予測される場合、早めに対策を打ちます。
+            売掛金の早期回収、経費削減、融資の検討などが考えられます。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-red-700">⚠️ 資金ショートの予兆</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start">
+            <span class="text-red-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-red-900">現金残高が毎月減少している</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-red-900">支払日が近づくと資金不足になる</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-red-900">売掛金の回収が遅れがち</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-red-900">3ヶ月後の現金残高がマイナスになる見込み</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 簡易シミュレーター -->
+    <section id="tool" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">簡易資金繰りシミュレーター</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        3ヶ月間の資金繰りをシミュレーションしてみましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">初期値を入力</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">現在の現金残高（万円）</label>
+            <input type="number" id="initialCash" class="w-full border border-gray-300 rounded px-4 py-2" placeholder="100" value="100">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">月の入金額（万円）</label>
+            <input type="number" id="monthlyIncome" class="w-full border border-gray-300 rounded px-4 py-2" placeholder="200" value="200">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">月の支出額（万円）</label>
+            <input type="number" id="monthlyExpense" class="w-full border border-gray-300 rounded px-4 py-2" placeholder="180" value="180">
+          </div>
+          <div>
+            <label class="block text-lg mb-2 text-gray-700">入金増加率（%/月）</label>
+            <input type="number" id="incomeGrowth" class="w-full border border-gray-300 rounded px-4 py-2" placeholder="5" value="5" step="1">
+          </div>
+        </div>
+
+        <button onclick="simulateCashFlow()" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full text-lg font-semibold">
+          シミュレーション実行
+        </button>
+
+        <div id="cfResult" class="mt-6 hidden">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">3ヶ月間のシミュレーション結果</h3>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-sm md:text-base">
+              <thead>
+                <tr class="bg-gray-200">
+                  <th class="border border-gray-300 px-2 py-2 text-left">項目</th>
+                  <th class="border border-gray-300 px-2 py-2 text-right">1ヶ月目</th>
+                  <th class="border border-gray-300 px-2 py-2 text-right">2ヶ月目</th>
+                  <th class="border border-gray-300 px-2 py-2 text-right">3ヶ月目</th>
+                </tr>
+              </thead>
+              <tbody id="cfTableBody">
+              </tbody>
+            </table>
+          </div>
+
+          <div id="cfWarning" class="mt-4 hidden p-4 rounded bg-red-50 border-l-4 border-red-500">
+            <h4 class="text-lg font-bold mb-2 text-red-700">⚠️ 警告</h4>
+            <p class="text-lg text-red-900" id="cfWarningMessage"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              資金繰り表は経営者が最も重視すべき資料
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              実際の入出金日で記録し、3～6ヶ月先まで予測する
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              現金残高がマイナスになる月を早期に発見し、対策を打つ
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次は、融資を活用した事業拡大のシナリオを見ていきましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-07.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-semibold">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <script>
+    // ドットインジケーター
+    document.querySelectorAll('.dot-indicator').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = dot.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 200;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('.dot-indicator').forEach(dot => {
+            dot.classList.remove('bg-blue-600');
+            dot.classList.add('bg-gray-300');
+          });
+          const activeDot = document.querySelector(`.dot-indicator[data-section="${sectionId}"]`);
+          if (activeDot) {
+            activeDot.classList.remove('bg-gray-300');
+            activeDot.classList.add('bg-blue-600');
+          }
+        }
+      });
+    });
+
+    function simulateCashFlow() {
+      const initial = parseFloat(document.getElementById('initialCash').value);
+      const income = parseFloat(document.getElementById('monthlyIncome').value);
+      const expense = parseFloat(document.getElementById('monthlyExpense').value);
+      const growth = parseFloat(document.getElementById('incomeGrowth').value) / 100;
+
+      if (isNaN(initial) || isNaN(income) || isNaN(expense) || isNaN(growth)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      let cash = initial;
+      const months = [];
+      let hasWarning = false;
+
+      for (let i = 1; i <= 3; i++) {
+        const monthIncome = income * Math.pow(1 + growth, i - 1);
+        const total = cash + monthIncome;
+        const newCash = total - expense;
+
+        months.push({
+          month: i,
+          prevCash: cash,
+          income: monthIncome,
+          total: total,
+          expense: expense,
+          newCash: newCash
+        });
+
+        if (newCash < 0) hasWarning = true;
+        cash = newCash;
+      }
+
+      // テーブル作成
+      const tbody = document.getElementById('cfTableBody');
+      tbody.innerHTML = '';
+
+      const rows = [
+        { label: '前月繰越', key: 'prevCash', class: 'bg-blue-50' },
+        { label: '入金', key: 'income', class: '' },
+        { label: '合計', key: 'total', class: 'bg-green-50 font-bold' },
+        { label: '支出', key: 'expense', class: '' },
+        { label: '次月繰越', key: 'newCash', class: 'bg-yellow-50 font-bold' }
+      ];
+
+      rows.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.className = row.class;
+        tr.innerHTML = `
+          <td class="border border-gray-300 px-2 py-2">${row.label}</td>
+          ${months.map(m => {
+            const value = m[row.key].toFixed(1);
+            const color = row.key === 'newCash' && m[row.key] < 0 ? 'text-red-600' : '';
+            return `<td class="border border-gray-300 px-2 py-2 text-right ${color}">${value}万円</td>`;
+          }).join('')}
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // 警告表示
+      if (hasWarning) {
+        const warningMonth = months.find(m => m.newCash < 0).month;
+        document.getElementById('cfWarningMessage').textContent =
+          `${warningMonth}ヶ月目に現金残高がマイナスになります。資金ショートの危険があります。早急に対策が必要です。`;
+        document.getElementById('cfWarning').classList.remove('hidden');
+      } else {
+        document.getElementById('cfWarning').classList.add('hidden');
+      }
+
+      document.getElementById('cfResult').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.7 融資の立ち位置 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページ</a>
+      <div class="flex gap-4">
+        <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+        <a href="section-08.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">次のセクション →</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">導入</span>
+      </div>
+      <div class="dot-item group relative" data-target="balance-sheet">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">貸借対照表での表示</span>
+      </div>
+      <div class="dot-item group relative" data-target="misconception">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">重要な誤解</span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">まとめ</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">3.7 融資の立ち位置</h1>
+
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        融資は、会社の財務諸表でどのように表示されるのでしょうか？
+        貸借対照表（B/S）での位置を理解することで、融資の本質がより明確になります。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、融資が会社のどこに位置するのか、そして融資≠売上・利益であることを再確認します。
+      </p>
+    </section>
+
+    <section id="balance-sheet" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">貸借対照表（B/S）での表示</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        貸借対照表（B/S）は、会社の財産状況を示す表です。
+        左側に「資産の部」、右側に「負債の部」と「純資産の部」が記載されます。
+      </p>
+
+      <div class="bg-white shadow-xl rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 text-center">貸借対照表（B/S）の例</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- 資産の部 -->
+          <div class="bg-green-50 p-6 rounded-lg border-2 border-green-500">
+            <h4 class="text-xl md:text-2xl font-bold text-green-800 mb-4 text-center">資産の部</h4>
+            <div class="space-y-3 text-lg md:text-xl text-green-900">
+              <div class="flex justify-between">
+                <span>現金</span>
+                <span class="font-bold">500万円</span>
+              </div>
+              <div class="flex justify-between">
+                <span>商品</span>
+                <span class="font-bold">100万円</span>
+              </div>
+              <div class="flex justify-between">
+                <span>設備</span>
+                <span class="font-bold">200万円</span>
+              </div>
+              <div class="border-t-2 border-green-600 pt-2 mt-2">
+                <div class="flex justify-between font-bold">
+                  <span>合計</span>
+                  <span>800万円</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 負債・純資産の部 -->
+          <div>
+            <div class="bg-red-50 p-6 rounded-lg border-2 border-red-500 mb-4">
+              <h4 class="text-xl md:text-2xl font-bold text-red-800 mb-4 text-center">負債の部</h4>
+              <div class="space-y-3 text-lg md:text-xl text-red-900">
+                <div class="flex justify-between bg-red-100 p-2 rounded">
+                  <span class="font-bold">借入金（融資）</span>
+                  <span class="font-bold">500万円</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>未払金</span>
+                  <span class="font-bold">50万円</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg border-2 border-blue-500">
+              <h4 class="text-xl md:text-2xl font-bold text-blue-800 mb-4 text-center">純資産の部</h4>
+              <div class="space-y-3 text-lg md:text-xl text-blue-900">
+                <div class="flex justify-between">
+                  <span>資本金</span>
+                  <span class="font-bold">250万円</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-t-2 border-gray-600 pt-2 mt-4">
+              <div class="flex justify-between font-bold text-lg md:text-xl">
+                <span>合計</span>
+                <span>800万円</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">融資を受けた瞬間の変化</h3>
+        <ul class="space-y-2 text-lg md:text-xl text-blue-900">
+          <li>• <strong>資産（現金）が増える</strong>：融資金が口座に入金される</li>
+          <li>• <strong>負債（借入金）が増える</strong>：返済義務が発生する</li>
+          <li>• <strong>純資産は変わらない</strong>：自己資本には影響しない</li>
+        </ul>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">融資を返済すると...</h3>
+        <ul class="space-y-2 text-lg md:text-xl text-green-900">
+          <li>• <strong>資産（現金）が減る</strong>：現金で返済する</li>
+          <li>• <strong>負債（借入金）が減る</strong>：返済義務が減る</li>
+          <li>• <strong>純資産は変わらない</strong>：自己資本には影響しない</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="misconception" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">重要な誤解を訂正しよう</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        ここで、もう一度、融資に関する重要な誤解を訂正しておきましょう。
+        この誤解を持ったまま事業を進めると、資金繰りが悪化する危険性があります。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-4">❌ よくある誤解</h3>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-red-900 font-bold mb-2">誤解1：融資 = 売上・利益</p>
+            <p class="text-lg md:text-xl text-red-800">
+              融資は売上でも利益でもありません。借金です。
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-red-900 font-bold mb-2">誤解2：融資 = 自己資金</p>
+            <p class="text-lg md:text-xl text-red-800">
+              融資は自己資金ではありません。必ず返済する必要があります。
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-red-900 font-bold mb-2">誤解3：融資を受けたら自由に使える</p>
+            <p class="text-lg md:text-xl text-red-800">
+              融資は投資目的で使い、売上・利益を増やして返済する必要があります。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-4">✅ 正しい理解</h3>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-green-900 font-bold mb-2">正解1：融資 = 返すべき借金</p>
+            <p class="text-lg md:text-xl text-green-800">
+              融資は負債であり、必ず利息を付けて返済する必要があります。
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-green-900 font-bold mb-2">正解2：融資 = 投資に使う資金</p>
+            <p class="text-lg md:text-xl text-green-800">
+              融資は、売上・利益を増やすための投資に使うべきです。
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded">
+            <p class="text-lg md:text-xl text-green-900 font-bold mb-2">正解3：月の利益 > 月の返済額が絶対条件</p>
+            <p class="text-lg md:text-xl text-green-800">
+              毎月の利益から返済できるように、事業計画を立てることが重要です。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">⚠️ 絶対に避けるべき使い方</h3>
+        <ul class="space-y-2 text-lg md:text-xl text-orange-900">
+          <li>❌ 生活費に使う</li>
+          <li>❌ 赤字補填に使う（根本的な問題が解決していない）</li>
+          <li>❌ 返済計画のない使い方</li>
+          <li>❌ ギャンブル的な投資</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        融資の立ち位置について、理解が深まったでしょうか？
+        貸借対照表での位置を理解することで、融資が負債であることが明確になります。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-50 p-6 rounded-lg shadow border-2 border-red-500">
+          <h3 class="text-xl md:text-2xl font-bold text-red-800 mb-3">融資の位置</h3>
+          <p class="text-lg md:text-xl text-red-900">
+            貸借対照表の<strong>「負債の部」</strong>に記載される
+          </p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg shadow border-2 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">融資の本質</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            <strong>返すべき借金</strong>であり、自己資金ではない
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「融資を受けるべきか判断する基準」について学んでいきます。
+        どのような場合に融資を受けるべきか、判断基準を詳しく見ていきましょう。
+      </p>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="section-08.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        次のセクションへ：3.8 融資を受けるべきか判断する基準 →
+      </a>
+    </div>
+
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-blue-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-blue-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.4 商品別・サービス別損益の把握 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← トップページへ</a>
+      <div class="flex space-x-4">
+        <a href="section-03.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← 前のセクション</a>
+        <a href="section-05.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">次のセクション →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col space-y-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-4 h-4 bg-blue-600 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          なぜ商品別損益が重要なのか
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="products">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          商品別損益の分析（小売店の例）
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="services">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          サービス別損益の分析（コンサルの例）
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="decision">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          不採算商品の判断と対策
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">7.4 商品別・サービス別損益の把握</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      全体の利益を見るだけでは不十分です。
+      「どの商品が儲かっているのか」「どのサービスが赤字なのか」を知ることで、経営戦略を明確にできます。
+      このセクションでは、商品別・サービス別損益の把握方法を学んでいきましょう。
+    </p>
+
+    <!-- 小セクション1: なぜ商品別損益が重要なのか -->
+    <section id="intro" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">なぜ商品別損益が重要なのか</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        全体で見ると利益が出ているように見えても、実は一部の商品が大きく稼いでいて、他の商品は赤字かもしれません。
+        商品別損益を把握することで、<strong class="text-blue-700">どこにリソースを集中すべきか</strong>が明確になります。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-red-900">❌ よくある誤解</h3>
+        <p class="text-lg md:text-xl mb-3 text-red-900">
+          「全体で利益が出ていれば問題ない」
+        </p>
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-900">✅ 正しい理解</h3>
+        <p class="text-lg md:text-xl text-green-900">
+          「儲かっている商品に集中し、不採算商品は整理する」
+        </p>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-900">商品別損益を把握するメリット</h3>
+        <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-blue-900">
+          <li>利益率の高い商品に集中できる</li>
+          <li>不採算商品を見極めて整理できる</li>
+          <li>売上目標を商品別に立てられる</li>
+          <li>仕入・在庫の判断がしやすくなる</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 小セクション2: 商品別損益の分析（小売店の例） -->
+    <section id="products" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">商品別損益の分析（小売店の例）</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        小売店を例に、商品別損益表の作り方と分析方法を見ていきましょう。
+      </p>
+
+      <!-- 商品別損益表 -->
+      <div class="overflow-x-auto mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">商品別損益表の例</h3>
+        <table class="w-full border-collapse text-lg md:text-xl">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 text-left">商品</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">売上</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">原価</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">粗利</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">粗利率</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">販売数</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-green-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">商品A</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">50万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">30万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">20万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">40%</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">100個</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">商品B</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">30万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">18万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">12万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">40%</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">60個</td>
+            </tr>
+            <tr class="bg-red-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">商品C</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">20万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">16万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-red-700">4万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-red-700">20%</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">40個</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">合計</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">100万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">64万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">36万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">36%</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">200個</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 分析のポイント -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">分析のポイント</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">1. 粗利率の高い商品を優先</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            商品A・Bは粗利率40%で優秀です。
+            商品Cは20%と低く、利益が薄い商品です。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-blue-900">
+              <strong>戦略：</strong> 商品A・Bの販売を強化し、商品Cは見直しを検討します。
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">2. 売上金額の大きい商品を重視</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            商品Aが売上の50%を占める主力商品です。
+            この商品が売れなくなると大きな影響が出ます。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-blue-900">
+              <strong>戦略：</strong> 商品Aの在庫切れを防ぎ、常に十分な在庫を確保します。
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">3. 不採算商品の判断</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            商品Cは粗利率20%と低く、利益が薄い商品です。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-blue-900">
+              <strong>対策：</strong> 値上げするか、販売中止を検討します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション3: サービス別損益の分析（コンサルの例） -->
+    <section id="services" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">サービス別損益の分析（コンサルの例）</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        サービス業の場合、「時間単価」を見ることが重要です。
+        コンサルティング業を例に見ていきましょう。
+      </p>
+
+      <!-- サービス別損益表 -->
+      <div class="overflow-x-auto mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">サービス別損益表の例</h3>
+        <table class="w-full border-collapse text-lg md:text-xl">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 text-left">サービス</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">売上</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">原価</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">粗利</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">時間</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">時給換算</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-green-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">コンサル</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">30万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">5万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">25万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">20h</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">1.25万円/h</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">研修</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">20万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">3万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">17万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">10h</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">1.7万円/h</td>
+            </tr>
+            <tr class="bg-red-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">制作物</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">10万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">8万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-red-700">2万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">15h</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-red-700">0.13万円/h</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">合計</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">60万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">16万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">44万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">45h</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">0.98万円/h</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 分析のポイント -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">分析のポイント</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">研修が時給換算で最も効率的</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            研修は10時間で17万円の粗利を稼ぎ、時給換算で1.7万円/hです。
+            これは最も効率の良いサービスです。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-blue-900">
+              <strong>戦略：</strong> 研修の案件を増やすことで、効率的に利益を上げられます。
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">制作物は時間がかかる割に粗利が少ない</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            制作物は15時間かけて2万円しか稼げず、時給換算で0.13万円/hと非常に低いです。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-blue-900">
+              <strong>対策：</strong> 制作物の価格を見直すか、外注化を検討します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 不採算商品の判断と対策 -->
+    <section id="decision" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">不採算商品の判断と対策</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        商品別損益を見たら、次は不採算商品をどうするか判断しましょう。
+      </p>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-orange-900">不採算商品の対策</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-orange-800">1. 値上げする</h4>
+          <p class="text-lg md:text-xl text-orange-900">
+            利益率が低い場合、値上げを検討します。
+            値上げしても売れるなら、そのまま販売を続けます。
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-orange-800">2. 仕入先を見直す</h4>
+          <p class="text-lg md:text-xl text-orange-900">
+            原価が高い場合、仕入先を変更して原価を下げます。
+            これで粗利率が改善されれば、販売を続けられます。
+          </p>
+        </div>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-orange-800">3. 販売中止する</h4>
+          <p class="text-lg md:text-xl text-orange-900">
+            値上げも原価削減もできない場合、販売中止を検討します。
+            不採算商品に時間とリソースを割くより、儲かる商品に集中すべきです。
+          </p>
+        </div>
+      </div>
+
+      <!-- Excelテンプレートダウンロード -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-900">📥 Excelテンプレートをダウンロード</h3>
+        <p class="text-lg md:text-xl mb-4 text-green-900">
+          商品別損益表のテンプレートをご用意しています。
+        </p>
+        <a href="../assets/templates/商品別損益表.xlsx" class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition text-lg md:text-xl font-bold">
+          商品別損益表テンプレート.xlsx をダウンロード
+        </a>
+        <p class="text-sm mt-2 text-green-700">※ ファイルは準備中です。後日公開予定。</p>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        商品別・サービス別損益の把握方法について、理解が深まったでしょうか？
+      </p>
+
+      <ul class="list-disc pl-6 space-y-3 mb-6 text-lg md:text-xl text-gray-700">
+        <li>商品別損益を把握することで、どこにリソースを集中すべきかが明確になる</li>
+        <li>粗利率の高い商品を優先し、不採算商品は整理する</li>
+        <li>サービス業では時給換算で効率を見る</li>
+        <li>不採算商品は値上げ・仕入先見直し・販売中止を検討する</li>
+      </ul>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次のセクションでは、損益分岐点分析の実践方法を学びます。
+        「何個売れば黒字になるのか」を計算し、目標売上を明確にしましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-05.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ：損益分岐点分析の実践 →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        const dotTarget = dot.getAttribute('data-target');
+        const dotCircle = dot.querySelector('div');
+        if (dotTarget === current) {
+          dotCircle.classList.remove('bg-gray-300');
+          dotCircle.classList.add('bg-blue-600');
+        } else {
+          dotCircle.classList.remove('bg-blue-600');
+          dotCircle.classList.add('bg-gray-300');
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img[data-expandable]').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

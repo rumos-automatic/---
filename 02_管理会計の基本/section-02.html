@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.2 管理会計で学べること | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dot-indicator {
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 40;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #cbd5e1;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .dot.active {
+      background-color: #3b82f6;
+      transform: scale(1.3);
+    }
+    .dot:hover {
+      background-color: #3b82f6;
+      transform: scale(1.2);
+    }
+    .dot-label {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e293b;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      font-size: 0.875rem;
+    }
+    .dot:hover .dot-label {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .dot-indicator {
+        display: none;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .priority-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+    .priority-high {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+    .priority-medium {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+    .priority-low {
+      background-color: #f3f4f6;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-700">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-01.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          ← 前のセクション
+        </a>
+        <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="dot-indicator">
+    <div class="dot active" data-target="intro">
+      <div class="dot-label">本で学べること</div>
+    </div>
+    <div class="dot" data-target="topics">
+      <div class="dot-label">6つのトピック</div>
+    </div>
+    <div class="dot" data-target="tips">
+      <div class="dot-label">読むときのポイント</div>
+    </div>
+    <div class="dot" data-target="summary">
+      <div class="dot-label">まとめ</div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-800">2.2 管理会計で学べること</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      「管理会計の基本」という書籍で学べる主な内容を、ダイジェストで紹介します。
+      どこに注目して読むべきかを把握しておくことで、理解がスムーズになりますよ。
+    </p>
+
+    <!-- 小セクション1: 本で学べること -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">本で学べること</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        「管理会計の基本」では、経営判断に必要な6つの重要なトピックを学ぶことができます。
+        すべてを完璧にマスターする必要はありません。
+        <strong class="text-blue-600">自社のビジネスに必要な部分を選んで活用する</strong>ことが大切です。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">📖 本書の構成</h3>
+        <p class="text-lg md:text-xl text-blue-900">
+          管理会計の理論だけでなく、実務で使える計算手法や、判断のための考え方を学べます。
+          小規模事業者にとって特に重要なのは、<strong>原価計算</strong>、<strong>CVP分析</strong>、<strong>予算管理</strong>の3つです。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション2: 6つのトピック -->
+    <section id="topics" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">6つのトピック</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        以下が、本書で学べる主な内容です。
+        各トピックには「優先度」を示していますので、参考にしてください。
+      </p>
+
+      <!-- トピック1: 原価計算 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-yellow-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">1. 原価計算</h3>
+          <span class="priority-badge priority-high">★★★ 最重要</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          製品やサービス1個あたりのコストを正確に把握する方法です。
+        </p>
+        <div class="bg-yellow-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-yellow-800 mb-2">なぜ重要？</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-yellow-900">
+            <li>売値を決める根拠になる</li>
+            <li>利益が出る商品・出ない商品がわかる</li>
+            <li>ムダなコストを発見できる</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a href="section-03.html" class="text-blue-600 hover:text-blue-700 text-lg font-bold">
+            → セクション2.3で詳しく学ぶ
+          </a>
+        </div>
+      </div>
+
+      <!-- トピック2: CVP分析 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-yellow-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">2. CVP分析（損益分岐点分析）</h3>
+          <span class="priority-badge priority-high">★★★ 最重要</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          「いくつ売れば黒字になるか」を計算する手法です。
+        </p>
+        <div class="bg-yellow-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-yellow-800 mb-2">なぜ重要？</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-yellow-900">
+            <li>目標売上を設定できる</li>
+            <li>値引き判断の基準がわかる</li>
+            <li>固定費削減の効果を測定できる</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a href="section-04.html" class="text-blue-600 hover:text-blue-700 text-lg font-bold">
+            → セクション2.4で詳しく学ぶ
+          </a>
+        </div>
+      </div>
+
+      <!-- トピック3: 予算管理 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-yellow-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">3. 予算管理</h3>
+          <span class="priority-badge priority-high">★★★ 最重要</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          計画（予算）を立て、実績と比較して改善する手法です。
+        </p>
+        <div class="bg-yellow-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-yellow-800 mb-2">なぜ重要？</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-yellow-900">
+            <li>計画的な経営ができる</li>
+            <li>問題を早期発見できる</li>
+            <li>継続的な改善が可能になる</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a href="section-05.html" class="text-blue-600 hover:text-blue-700 text-lg font-bold">
+            → セクション2.5で詳しく学ぶ
+          </a>
+        </div>
+      </div>
+
+      <!-- トピック4: 差異分析 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-blue-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">4. 差異分析</h3>
+          <span class="priority-badge priority-medium">★★ 重要</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          予算と実績のズレを分析し、原因を特定する手法です。
+        </p>
+        <div class="bg-blue-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-blue-800 mb-2">役立つ場面</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-blue-900">
+            <li>売上が目標に届かなかった原因を特定</li>
+            <li>経費が予算を超えた理由を分析</li>
+            <li>次の改善策を考える材料にする</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a href="section-05.html" class="text-blue-600 hover:text-blue-700 text-lg font-bold">
+            → セクション2.5で詳しく学ぶ
+          </a>
+        </div>
+      </div>
+
+      <!-- トピック5: 事業部別損益 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-blue-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">5. 事業部別損益</h3>
+          <span class="priority-badge priority-medium">★★ 重要</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          どの事業・商品が儲かっているかを分析する手法です。
+        </p>
+        <div class="bg-blue-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-blue-800 mb-2">役立つ場面</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-blue-900">
+            <li>複数の商品・サービスを扱っている場合</li>
+            <li>注力すべき商品を判断したい場合</li>
+            <li>撤退を検討する商品がある場合</li>
+          </ul>
+        </div>
+        <div class="mt-4">
+          <a href="section-09.html" class="text-blue-600 hover:text-blue-700 text-lg font-bold">
+            → セクション2.9で詳しく学ぶ
+          </a>
+        </div>
+      </div>
+
+      <!-- トピック6: 投資判断 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6 border-l-4 border-gray-500">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800">6. 投資判断</h3>
+          <span class="priority-badge priority-low">★ やや高度</span>
+        </div>
+        <p class="text-lg md:text-xl text-gray-700 mb-4">
+          設備投資をするべきか、回収できるかを計算する手法です。
+        </p>
+        <div class="bg-gray-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">役立つ場面</h4>
+          <ul class="list-disc pl-6 space-y-1 text-lg text-gray-700">
+            <li>大きな設備投資を検討している場合</li>
+            <li>投資回収期間を知りたい場合</li>
+            <li>複数の投資案を比較したい場合</li>
+          </ul>
+        </div>
+        <p class="mt-4 text-lg text-gray-600">
+          小規模事業では、まず上記5つを優先的に学ぶことをおすすめします。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 本を読むときのポイント -->
+    <section id="tips" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">本を読むときのポイント</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        「管理会計の基本」を読む際は、以下のポイントを意識してください。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">✅ ポイント1</h3>
+          <p class="text-lg md:text-xl text-green-900 font-bold mb-2">全てを使う必要はない</p>
+          <p class="text-lg text-green-800">
+            小規模事業では、すべてのトピックを使う必要はありません。
+            自社に必要な部分だけピックアップしましょう。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">✅ ポイント2</h3>
+          <p class="text-lg md:text-xl text-green-900 font-bold mb-2">考え方を理解する</p>
+          <p class="text-lg text-green-800">
+            細かい計算式より、「なぜこの分析が必要なのか」という考え方を理解することが重要です。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">✅ ポイント3</h3>
+          <p class="text-lg md:text-xl text-green-900 font-bold mb-2">実践しながら学ぶ</p>
+          <p class="text-lg text-green-800">
+            読んだら終わりではなく、自社の数値で実際に計算してみることで、理解が深まります。
+          </p>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">✅ ポイント4</h3>
+          <p class="text-lg md:text-xl text-green-900 font-bold mb-2">簡易版からスタート</p>
+          <p class="text-lg text-green-800">
+            最初から完璧を目指さず、シンプルな形からスタートして、徐々に精度を上げていきましょう。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">💡 おすすめの読み方</h3>
+        <ol class="list-decimal pl-6 space-y-3 text-lg md:text-xl text-blue-900">
+          <li>まず全体を流し読みして、どんな内容かを把握する</li>
+          <li>自社に必要なトピックを優先的に精読する</li>
+          <li>読んだ内容を実際に試してみる</li>
+          <li>わからないところは何度も読み返す</li>
+          <li>習慣化して、月次で振り返る</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        管理会計で学べる内容について、イメージが掴めたでしょうか？
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">📝 このセクションで学んだこと</h3>
+        <ul class="list-disc pl-6 space-y-3 text-lg md:text-xl text-blue-900">
+          <li>管理会計では、原価計算、CVP分析、予算管理など6つのトピックを学べます</li>
+          <li>小規模事業では、原価計算・CVP分析・予算管理が特に重要です</li>
+          <li>全てを完璧にマスターする必要はなく、必要な部分を選んで活用します</li>
+          <li>考え方を理解し、実践しながら学ぶことが大切です</li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        次のセクションから、各トピックを具体的に見ていきましょう。
+        まずは原価計算の基礎から学んでいきます。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-03.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold shadow-lg">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('section[id]');
+
+    // スクロール時にアクティブなドットを更新
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+        if (dot.getAttribute('data-target') === current) {
+          dot.classList.add('active');
+        }
+      });
+    });
+
+    // ドットクリックでスムーススクロール
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img:not(#modalImage)').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

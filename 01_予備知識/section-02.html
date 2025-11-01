@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.2 財務会計と管理会計の違い | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .dot {
+      transition: all 0.3s ease;
+    }
+    .dot:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    .tooltip {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+          ← トップページへ
+        </a>
+        <div class="flex gap-4">
+          <a href="section-01.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+            ← 前のセクション
+          </a>
+          <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+            次のセクション →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#two-types" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          会計には2種類ある
+        </div>
+      </a>
+      <a href="#financial-accounting" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          財務会計とは
+        </div>
+      </a>
+      <a href="#management-accounting" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          管理会計とは
+        </div>
+      </a>
+      <a href="#comparison" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          両者の違い
+        </div>
+      </a>
+      <a href="#importance" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          小規模事業者への重要性
+        </div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          まとめ
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.2 財務会計と管理会計の違い</h1>
+      <p class="text-lg md:text-xl text-gray-600">
+        会計には大きく分けて「財務会計」と「管理会計」の2種類があります。それぞれの目的や使い方が異なるので、この違いを理解しておくことが大切です。
+      </p>
+    </div>
+
+    <!-- 小セクション1: 会計には2種類ある -->
+    <section id="two-types" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">会計には2種類ある</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        前のセクションで「会計は事業の成績表」だと学びましたが、実は会計には大きく分けて2つの種類があります。それが<strong>「財務会計」</strong>と<strong>「管理会計」</strong>です。
+      </p>
+
+      <p class="text-lg md:text-xl mb-6">
+        簡単に言うと、財務会計は<strong>「外部の人に見せるための会計」</strong>で、管理会計は<strong>「自分が経営判断をするための会計」</strong>です。どちらも重要ですが、目的が全く違います。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-purple-50 p-6 rounded-lg shadow-md border-2 border-purple-300">
+          <div class="text-4xl mb-3 text-center">📊</div>
+          <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3 text-center">財務会計</h3>
+          <p class="text-lg md:text-xl text-purple-900 text-center">
+            外部の人（税務署、銀行、投資家）に見せるための会計
+          </p>
+        </div>
+        <div class="bg-teal-50 p-6 rounded-lg shadow-md border-2 border-teal-300">
+          <div class="text-4xl mb-3 text-center">📈</div>
+          <h3 class="text-xl md:text-2xl font-bold text-teal-700 mb-3 text-center">管理会計</h3>
+          <p class="text-lg md:text-xl text-teal-900 text-center">
+            経営者自身が経営判断をするための会計
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6">
+        この2つの会計は、同じ「お金の動きを記録する」という点では共通していますが、誰のために作るのか、どんな目的で使うのかが大きく異なります。それぞれを詳しく見ていきましょう。
+      </p>
+    </section>
+
+    <!-- 小セクション2: 財務会計とは -->
+    <section id="financial-accounting" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">財務会計とは</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        財務会計は、<strong>外部の人に事業の状況を報告するための会計</strong>です。「外部の人」とは、具体的には以下のような人たちのことを指します。
+      </p>
+
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">財務会計を見る人たち</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🏛️</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">税務署</p>
+              <p class="text-lg md:text-xl text-purple-900">税金を正しく計算するために、正確な会計資料を求めます</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🏦</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">銀行</p>
+              <p class="text-lg md:text-xl text-purple-900">融資の審査をする際に、事業の健全性を確認します</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">💼</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">投資家</p>
+              <p class="text-lg md:text-xl text-purple-900">投資判断をするために、財務状況を知りたいと考えます</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🤝</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">取引先</p>
+              <p class="text-lg md:text-xl text-purple-900">大きな取引をする前に、相手の信用度を確認したい場合があります</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">財務会計の特徴</h3>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-purple-600">1. 決められたルールに従う</h4>
+          <p class="text-lg md:text-xl mb-3">
+            財務会計には「会計基準」という厳格なルールがあります。このルールに従って作成しないと、税務署に認めてもらえなかったり、銀行の審査で不利になったりします。
+          </p>
+          <p class="text-lg md:text-xl text-gray-600">
+            例えば、「経費として認められるもの・認められないもの」「資産の減価償却の方法」などが細かく決められています。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-purple-600">2. 過去の実績を記録する</h4>
+          <p class="text-lg md:text-xl mb-3">
+            財務会計は、基本的に「過去の事実」を記録するものです。「今月はこれだけ売上があった」「これだけ経費を使った」といった、すでに起こったことを正確に記録します。
+          </p>
+          <p class="text-lg md:text-xl text-gray-600">
+            将来の予測や計画は、財務会計の範囲ではありません。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-purple-600">3. 定期的に報告する</h4>
+          <p class="text-lg md:text-xl mb-3">
+            財務会計は、年に一度（確定申告）や四半期ごとなど、定期的に報告する義務があります。小規模事業者の場合、最低でも年に一度は税務署に提出する必要があります。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">財務会計の目的</h4>
+        <p class="text-lg md:text-xl text-yellow-900">
+          財務会計の最大の目的は、<strong>「外部の人に対して、事業の状況を正確に報告すること」</strong>です。そのため、信頼性や正確性が何よりも重視されます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 管理会計とは -->
+    <section id="management-accounting" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">管理会計とは</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        管理会計は、<strong>経営者自身が経営判断をするための会計</strong>です。財務会計と違い、外部に報告する義務はなく、自分が使いやすい形で作ることができます。
+      </p>
+
+      <div class="bg-teal-50 border-l-4 border-teal-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-teal-700 mb-3">管理会計の具体例</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">📊</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">商品別の利益を計算する</p>
+              <p class="text-lg md:text-xl text-teal-900">「どの商品が一番儲かっているか」を知るための分析</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">📅</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">月次の損益を把握する</p>
+              <p class="text-lg md:text-xl text-teal-900">年に一度ではなく、毎月の利益を確認して早期に問題を発見する</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">🎯</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">予算と実績を比較する</p>
+              <p class="text-lg md:text-xl text-teal-900">「今月の目標売上は100万円だったが、実際は80万円だった」といった分析</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">💰</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">将来のキャッシュフローを予測する</p>
+              <p class="text-lg md:text-xl text-teal-900">「3ヶ月後に現金が不足しそうだから、今から対策を打とう」といった計画</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">管理会計の特徴</h3>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-teal-600">1. 自由な形式でOK</h4>
+          <p class="text-lg md:text-xl mb-3">
+            管理会計には決まったルールがありません。自分が使いやすい形で作れば良いのです。Excelで自作の表を作っても良いですし、会計ソフトのレポート機能を使っても良いです。
+          </p>
+          <p class="text-lg md:text-xl text-gray-600">
+            重要なのは「自分が経営判断をしやすいかどうか」です。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-teal-600">2. 過去だけでなく未来も対象</h4>
+          <p class="text-lg md:text-xl mb-3">
+            管理会計では、過去の実績だけでなく、将来の予測や計画も扱います。「来月の売上予測」「来期の予算」「新商品の損益分岐点」など、まだ起こっていないことも計算します。
+          </p>
+          <p class="text-lg md:text-xl text-gray-600">
+            これにより、先を見据えた経営ができるようになります。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-teal-600">3. 頻繁に確認する</h4>
+          <p class="text-lg md:text-xl mb-3">
+            管理会計は、年に一度ではなく、月次や週次、場合によっては毎日確認します。頻繁にチェックすることで、問題の早期発見や迅速な対策が可能になります。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">管理会計の目的</h4>
+        <p class="text-lg md:text-xl text-yellow-900">
+          管理会計の最大の目的は、<strong>「経営者が正しい判断をするための情報を提供すること」</strong>です。そのため、柔軟性やタイムリーさが重視されます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 両者の違い（比較表） -->
+    <section id="comparison" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">両者の違い</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        財務会計と管理会計の違いを表でまとめてみましょう。この表を見れば、両者の違いが一目でわかります。
+      </p>
+
+      <!-- 比較表 -->
+      <div class="overflow-x-auto mb-8">
+        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+          <thead class="bg-gray-800 text-white">
+            <tr>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold">項目</th>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold bg-purple-700">📊 財務会計</th>
+              <th class="px-6 py-4 text-left text-lg md:text-xl font-bold bg-teal-700">📈 管理会計</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">目的</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">外部報告<br><span class="text-sm text-gray-600">（税務署、銀行、投資家向け）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">内部管理<br><span class="text-sm text-gray-600">（経営者自身が使う）</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">ルール</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">厳格<br><span class="text-sm text-gray-600">（会計基準に従う）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">柔軟<br><span class="text-sm text-gray-600">（自由な形式でOK）</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">対象期間</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">過去<br><span class="text-sm text-gray-600">（実績を記録）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">過去・未来<br><span class="text-sm text-gray-600">（実績 + 予測・計画）</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">使用者</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">外部関係者<br><span class="text-sm text-gray-600">（税務署、銀行など）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">経営者<br><span class="text-sm text-gray-600">（自分自身）</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">頻度</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">年次・四半期<br><span class="text-sm text-gray-600">（定期的な報告義務）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">月次・週次・日次<br><span class="text-sm text-gray-600">（必要に応じて頻繁に）</span></td>
+            </tr>
+            <tr class="hover:bg-gray-50 transition">
+              <td class="px-6 py-4 text-lg md:text-xl font-bold">重視するもの</td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-purple-50">信頼性・正確性<br><span class="text-sm text-gray-600">（外部の信用を得る）</span></td>
+              <td class="px-6 py-4 text-lg md:text-xl bg-teal-50">タイムリーさ・有用性<br><span class="text-sm text-gray-600">（迅速な意思決定）</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-blue-700">どちらも大切</h4>
+        <p class="text-lg md:text-xl text-blue-900">
+          財務会計と管理会計は、どちらか一方だけやれば良いというものではありません。財務会計は外部への信用を得るために必要で、管理会計は自分の経営判断を正しくするために必要です。両方をバランスよく活用することが、成功する経営の秘訣です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション5: 小規模事業者への重要性 -->
+    <section id="importance" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">小規模事業者にとっての重要性</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        「大企業じゃないから、そんなに細かく会計をしなくても大丈夫でしょ？」と思う方もいるかもしれません。しかし、小規模事業者だからこそ、財務会計と管理会計の両方が重要なのです。
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">財務会計が重要な理由</h3>
+      <div class="bg-purple-50 p-6 rounded-lg mb-6">
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">融資を受けるために必須</p>
+              <p class="text-lg md:text-xl text-purple-900">銀行は正確な財務会計資料がないと融資をしてくれません。小規模事業者ほど融資が必要な場面が多いので、財務会計は欠かせません。</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">税務調査で困らない</p>
+              <p class="text-lg md:text-xl text-purple-900">正確な財務会計をしていれば、税務調査が来ても慌てる必要がありません。逆に、適当にやっていると、ペナルティを受ける可能性があります。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">管理会計が重要な理由</h3>
+      <div class="bg-teal-50 p-6 rounded-lg mb-6">
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">早期に問題を発見できる</p>
+              <p class="text-lg md:text-xl text-teal-900">小規模事業は資金的な余裕が少ないため、問題が起きたら迅速に対応する必要があります。管理会計で毎月チェックしていれば、早期発見・早期対策が可能です。</p>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <div>
+              <p class="text-lg md:text-xl font-bold">限られたリソースを有効活用できる</p>
+              <p class="text-lg md:text-xl text-teal-900">「どの商品に力を入れるべきか」「どの経費を削減すべきか」といった判断を、データに基づいて行えます。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">実践的なアドバイス</h4>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">
+          小規模事業者の場合、最初から完璧な管理会計をする必要はありません。まずは以下の3つから始めてみましょう。
+        </p>
+        <ul class="space-y-2">
+          <li class="text-lg md:text-xl text-yellow-900">1. 月次で売上と経費を把握する</li>
+          <li class="text-lg md:text-xl text-yellow-900">2. 現金残高を毎週確認する</li>
+          <li class="text-lg md:text-xl text-yellow-900">3. 財務会計は税理士に任せて、管理会計は自分でやる</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        財務会計と管理会計の違いについて、理解が深まったでしょうか。
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">会計には「財務会計」と「管理会計」の2種類があります</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">財務会計は外部報告用で、ルールが厳格です</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">管理会計は内部管理用で、自由な形式で作れます</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">小規模事業者こそ、両方の会計が重要です</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl">
+        次は、「会計の基本用語集」で、最低限知っておくべき会計用語を学んでいきましょう。用語を理解すれば、会計がもっとわかりやすくなりますよ。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-03.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーターのアクティブ状態を更新
+    function updateDotIndicator() {
+      const sections = ['two-types', 'financial-accounting', 'management-accounting', 'comparison', 'importance', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+
+      let currentSection = sections[0];
+
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    // スクロール時にドットインジケーターを更新
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', updateDotIndicator);
+
+    // 画像拡大モーダル
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Escキーでモーダルを閉じる
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

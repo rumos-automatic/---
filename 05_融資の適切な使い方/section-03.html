@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5.3 月の利益以上の経費を使うとどうなるか | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+        ← トップページへ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-02.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="dot-indicator fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#bad-pattern" class="dot-item group relative" data-section="bad-pattern">
+        <div class="w-4 h-4 rounded-full bg-blue-600 cursor-pointer hover:scale-125 transition"></div>
+        <span class="dot-label absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          危険なパターン
+        </span>
+      </a>
+      <a href="#why-dangerous" class="dot-item group relative" data-section="why-dangerous">
+        <div class="w-4 h-4 rounded-full bg-gray-300 cursor-pointer hover:scale-125 transition"></div>
+        <span class="dot-label absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          なぜ危険か
+        </span>
+      </a>
+      <a href="#good-pattern" class="dot-item group relative" data-section="good-pattern">
+        <div class="w-4 h-4 rounded-full bg-gray-300 cursor-pointer hover:scale-125 transition"></div>
+        <span class="dot-label absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          正しいパターン
+        </span>
+      </a>
+      <a href="#simulator" class="dot-item group relative" data-section="simulator">
+        <div class="w-4 h-4 rounded-full bg-gray-300 cursor-pointer hover:scale-125 transition"></div>
+        <span class="dot-label absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          シミュレーター
+        </span>
+      </a>
+      <a href="#summary" class="dot-item group relative" data-section="summary">
+        <div class="w-4 h-4 rounded-full bg-gray-300 cursor-pointer hover:scale-125 transition"></div>
+        <span class="dot-label absolute left-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">5.3 月の利益以上の経費を使うとどうなるか</h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-16">
+      このセクションでは、多くの経営者が抱く核心的な疑問に答えます。<br>
+      「月の利益以上の経費を使い続けるとどうなるのか？」を具体的なシミュレーションで見ていきましょう。
+    </p>
+
+    <!-- 小セクション1: 危険なパターンのシミュレーション -->
+    <section id="bad-pattern" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">危険なパターンのシミュレーション</h2>
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        具体的な数字を使って、赤字が続いた場合に何が起こるかを見ていきましょう。<br>
+        このパターンは、実際に多くの企業が陥る典型的な失敗例です。
+      </p>
+
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">初期状態</h3>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <ul class="space-y-2">
+            <li class="text-lg md:text-xl font-mono">手元現金： 100万円</li>
+            <li class="text-lg md:text-xl font-mono">融資受取： 500万円</li>
+            <li class="text-lg md:text-xl font-mono text-blue-700 font-bold">現金合計： 600万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">毎月の損益</h3>
+        <div class="bg-red-50 p-4 rounded mb-4">
+          <ul class="space-y-2">
+            <li class="text-lg md:text-xl font-mono">月の売上： 200万円</li>
+            <li class="text-lg md:text-xl font-mono text-red-700">月の経費： 250万円（利益を超える！）</li>
+            <li class="text-lg md:text-xl font-mono">月の融資返済： 10万円</li>
+            <li class="text-lg md:text-xl font-mono text-red-700 font-bold">月の利益： -50万円（赤字）</li>
+            <li class="text-lg md:text-xl font-mono text-red-700 font-bold">月の現金減少： 60万円（赤字50万円 + 返済10万円）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-red-700">現金残高の推移</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+            <thead class="bg-red-600 text-white">
+              <tr>
+                <th class="p-3 text-left text-lg md:text-xl">月</th>
+                <th class="p-3 text-right text-lg md:text-xl">現金残高</th>
+                <th class="p-3 text-left text-lg md:text-xl">状態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">開始時</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">600万円</td>
+                <td class="p-3 text-lg md:text-xl text-blue-600">融資受取直後</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="p-3 text-lg md:text-xl">1ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">540万円</td>
+                <td class="p-3 text-lg md:text-xl text-orange-600">-60万円</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">3ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">420万円</td>
+                <td class="p-3 text-lg md:text-xl text-orange-600">-180万円</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="p-3 text-lg md:text-xl">6ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">240万円</td>
+                <td class="p-3 text-lg md:text-xl text-red-600">-360万円（危険）</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">10ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold text-red-700">0円</td>
+                <td class="p-3 text-lg md:text-xl text-red-700 font-bold">→ 倒産</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">⚠️ 非常に危険</h3>
+        <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+          たった10ヶ月で現金が底をつき、倒産します。<br>
+          融資を受けても、赤字が続けば必ず倒産するのです。
+        </p>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="my-8 text-center">
+        <div class="inline-block bg-gray-200 p-8 rounded-lg cursor-pointer hover:shadow-lg transition" onclick="openModal(this)">
+          <p class="text-lg md:text-xl text-gray-600 mb-2">📊 図解</p>
+          <p class="text-lg md:text-xl font-bold text-gray-800">現金残高の推移グラフ（赤字パターン）</p>
+          <p class="text-sm text-gray-500 mt-2">ファイル名: cash-decline-graph.png</p>
+          <p class="text-sm text-gray-500">(クリックで拡大)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション2: なぜ危険か -->
+    <section id="why-dangerous" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">なぜ危険か</h2>
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        上記のパターンがなぜ危険なのか、4つのポイントで解説します。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">1. 融資は使えば減る</h3>
+          <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+            当たり前のことですが、現金は使えば減ります。<br>
+            「融資があるから大丈夫」と油断してしまう経営者が多いのです。
+          </p>
+        </div>
+
+        <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">2. 赤字が続くと尽きる</h3>
+          <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+            赤字が続けば、融資も自己資金もいずれ底をつきます。<br>
+            600万円あっても、10ヶ月で0円になるのです。
+          </p>
+        </div>
+
+        <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">3. 返済は止まらない</h3>
+          <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+            赤字だろうと、融資の返済は毎月続きます。<br>
+            返済を待ってはくれません。
+          </p>
+        </div>
+
+        <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">4. 追加融資は受けられない</h3>
+          <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+            赤字企業には、銀行は追加融資をしません。<br>
+            「返済できない」と判断されるからです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 正しいパターンのシミュレーション -->
+    <section id="good-pattern" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">正しいパターンのシミュレーション</h2>
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        次に、正しいパターンを見てみましょう。<br>
+        月の利益が月の経費を上回る場合、どうなるでしょうか？
+      </p>
+
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">初期状態</h3>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <ul class="space-y-2">
+            <li class="text-lg md:text-xl font-mono">手元現金： 100万円</li>
+            <li class="text-lg md:text-xl font-mono">融資受取： 500万円</li>
+            <li class="text-lg md:text-xl font-mono text-blue-700 font-bold">現金合計： 600万円</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white border-2 border-gray-200 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">毎月の損益</h3>
+        <div class="bg-green-50 p-4 rounded mb-4">
+          <ul class="space-y-2">
+            <li class="text-lg md:text-xl font-mono">月の売上： 200万円</li>
+            <li class="text-lg md:text-xl font-mono text-green-700">月の経費： 150万円（利益を下回る）</li>
+            <li class="text-lg md:text-xl font-mono">月の融資返済： 10万円</li>
+            <li class="text-lg md:text-xl font-mono text-green-700 font-bold">月の利益： +50万円（黒字）</li>
+            <li class="text-lg md:text-xl font-mono text-green-700 font-bold">月の現金増加： 40万円（利益50万円 - 返済10万円）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-2 border-green-300 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-green-700">現金残高の推移</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+            <thead class="bg-green-600 text-white">
+              <tr>
+                <th class="p-3 text-left text-lg md:text-xl">月</th>
+                <th class="p-3 text-right text-lg md:text-xl">現金残高</th>
+                <th class="p-3 text-left text-lg md:text-xl">状態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">開始時</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">600万円</td>
+                <td class="p-3 text-lg md:text-xl text-blue-600">融資受取直後</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="p-3 text-lg md:text-xl">1ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">640万円</td>
+                <td class="p-3 text-lg md:text-xl text-green-600">+40万円</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">3ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">720万円</td>
+                <td class="p-3 text-lg md:text-xl text-green-600">+120万円</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="p-3 text-lg md:text-xl">6ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold">840万円</td>
+                <td class="p-3 text-lg md:text-xl text-green-600">+240万円（増加中）</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-3 text-lg md:text-xl">10ヶ月後</td>
+                <td class="p-3 text-right text-lg md:text-xl font-bold text-green-700">1,000万円</td>
+                <td class="p-3 text-lg md:text-xl text-green-700 font-bold">→ 事業成長中</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">✅ 正しいパターン</h3>
+        <p class="text-lg md:text-xl text-green-900 leading-relaxed">
+          10ヶ月後には現金が1,000万円に増え、事業が成長しています。<br>
+          返済も順調で、さらなる投資も可能です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 月次損益シミュレーター -->
+    <section id="simulator" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次損益シミュレーター</h2>
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        あなたの事業の数字を入力して、現金残高がどう推移するかシミュレーションしてみましょう。<br>
+        赤字が続くとどうなるか、リアルに体感できます。
+      </p>
+
+      <div class="bg-white border-2 border-blue-300 rounded-lg p-6 mb-6 shadow-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">💡 シミュレーション設定</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 font-bold">手元現金（万円）</label>
+            <input type="number" id="initialCash" class="w-full border border-gray-300 rounded px-4 py-3 text-lg md:text-xl" placeholder="100" value="100">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 font-bold">融資受取額（万円）</label>
+            <input type="number" id="loanAmount" class="w-full border border-gray-300 rounded px-4 py-3 text-lg md:text-xl" placeholder="500" value="500">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 font-bold">月の売上（万円）</label>
+            <input type="number" id="monthlySales" class="w-full border border-gray-300 rounded px-4 py-3 text-lg md:text-xl" placeholder="200" value="200">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 font-bold">月の経費（万円）</label>
+            <input type="number" id="monthlyExpense" class="w-full border border-gray-300 rounded px-4 py-3 text-lg md:text-xl" placeholder="250" value="250">
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 font-bold">月の融資返済額（万円）</label>
+            <input type="number" id="monthlyRepayment" class="w-full border border-gray-300 rounded px-4 py-3 text-lg md:text-xl" placeholder="10" value="10">
+          </div>
+        </div>
+
+        <button onclick="runSimulation()" class="bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded hover:bg-blue-700 w-full font-bold transition shadow-lg">
+          シミュレーション実行
+        </button>
+
+        <div id="simulationResult" class="mt-6 hidden">
+          <h4 class="text-xl md:text-2xl font-bold mb-4">シミュレーション結果</h4>
+          <div id="monthlyProfit" class="p-4 rounded mb-4"></div>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+              <thead id="tableHead">
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
+          <div id="conclusion" class="mt-6 p-4 rounded"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション5: まとめ -->
+    <section id="summary" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        月の利益と経費の関係について、理解が深まったでしょうか？<br>
+        シミュレーションで実際の数字を見ることで、その危険性がより明確になったと思います。
+      </p>
+
+      <div class="bg-blue-50 border-2 border-blue-300 rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">絶対に覚えておくこと</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl leading-relaxed flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">1.</span>
+            <span>月の利益 > 月の経費 を必ず守る</span>
+          </li>
+          <li class="text-lg md:text-xl leading-relaxed flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">2.</span>
+            <span>赤字が続けば、融資があっても必ず倒産する</span>
+          </li>
+          <li class="text-lg md:text-xl leading-relaxed flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">3.</span>
+            <span>返済は毎月必ず発生し、止まらない</span>
+          </li>
+          <li class="text-lg md:text-xl leading-relaxed flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">4.</span>
+            <span>黒字経営なら現金は増え続け、事業は成長する</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        次のセクションでは、「やってはいけない融資の使い方（ワースト10）」を具体的に見ていきましょう。<br>
+        わからないことがあれば、何度でも読み返してくださいね。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-16">
+      <a href="section-04.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        次のセクションへ：やってはいけない融資の使い方（ワースト10） →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <div class="text-center text-white p-8">
+      <p class="text-xl mb-4">この図解は準備中です</p>
+      <p class="text-lg">ファイル名: <span id="imageName"></span></p>
+    </div>
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーターのスクロール連動
+    function updateDots() {
+      const sections = document.querySelectorAll('section[id]');
+      const dots = document.querySelectorAll('.dot-item');
+
+      let currentSection = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        const dotSection = dot.getAttribute('data-section');
+        const dotCircle = dot.querySelector('div');
+        if (dotSection === currentSection) {
+          dotCircle.classList.remove('bg-gray-300');
+          dotCircle.classList.add('bg-blue-600');
+        } else {
+          dotCircle.classList.remove('bg-blue-600');
+          dotCircle.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateDots);
+    window.addEventListener('load', updateDots);
+
+    // スムーススクロール
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // 月次損益シミュレーター
+    function runSimulation() {
+      const initialCash = parseFloat(document.getElementById('initialCash').value);
+      const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+      const monthlySales = parseFloat(document.getElementById('monthlySales').value);
+      const monthlyExpense = parseFloat(document.getElementById('monthlyExpense').value);
+      const monthlyRepayment = parseFloat(document.getElementById('monthlyRepayment').value);
+
+      if (isNaN(initialCash) || isNaN(loanAmount) || isNaN(monthlySales) || isNaN(monthlyExpense) || isNaN(monthlyRepayment)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      const monthlyProfit = monthlySales - monthlyExpense;
+      const monthlyCashChange = monthlyProfit - monthlyRepayment;
+      const totalCash = initialCash + loanAmount;
+
+      // 月次利益表示
+      const profitDiv = document.getElementById('monthlyProfit');
+      if (monthlyProfit >= 0) {
+        profitDiv.className = 'p-4 rounded mb-4 bg-green-100 border-2 border-green-300';
+        profitDiv.innerHTML = `
+          <p class="text-lg md:text-xl font-bold text-green-700">月の利益: +${monthlyProfit.toLocaleString()}万円（黒字）</p>
+          <p class="text-lg md:text-xl text-green-700">月の現金変化: ${monthlyCashChange > 0 ? '+' : ''}${monthlyCashChange.toLocaleString()}万円</p>
+        `;
+      } else {
+        profitDiv.className = 'p-4 rounded mb-4 bg-red-100 border-2 border-red-300';
+        profitDiv.innerHTML = `
+          <p class="text-lg md:text-xl font-bold text-red-700">月の利益: ${monthlyProfit.toLocaleString()}万円（赤字）</p>
+          <p class="text-lg md:text-xl text-red-700">月の現金変化: ${monthlyCashChange.toLocaleString()}万円</p>
+        `;
+      }
+
+      // テーブルヘッダー
+      const tableHead = document.getElementById('tableHead');
+      const isDeficit = monthlyProfit < 0;
+      const headerColor = isDeficit ? 'bg-red-600' : 'bg-green-600';
+      tableHead.innerHTML = `
+        <tr class="${headerColor} text-white">
+          <th class="p-3 text-left text-lg md:text-xl">月</th>
+          <th class="p-3 text-right text-lg md:text-xl">現金残高</th>
+          <th class="p-3 text-left text-lg md:text-xl">状態</th>
+        </tr>
+      `;
+
+      // テーブルボディ
+      const tableBody = document.getElementById('tableBody');
+      tableBody.innerHTML = '';
+
+      let currentCash = totalCash;
+      let bankruptMonth = null;
+
+      // 開始時
+      tableBody.innerHTML += `
+        <tr class="border-b">
+          <td class="p-3 text-lg md:text-xl">開始時</td>
+          <td class="p-3 text-right text-lg md:text-xl font-bold">${currentCash.toLocaleString()}万円</td>
+          <td class="p-3 text-lg md:text-xl text-blue-600">融資受取直後</td>
+        </tr>
+      `;
+
+      // 10ヶ月分のシミュレーション
+      for (let month = 1; month <= 10; month++) {
+        currentCash += monthlyCashChange;
+
+        if (currentCash <= 0 && bankruptMonth === null) {
+          bankruptMonth = month;
+        }
+
+        const rowClass = month % 2 === 0 ? 'border-b bg-gray-50' : 'border-b';
+        const cashDisplay = currentCash > 0 ? `${currentCash.toLocaleString()}万円` : '0万円';
+        const statusColor = currentCash > totalCash ? 'text-green-600' : (currentCash < totalCash / 2 ? 'text-red-600' : 'text-orange-600');
+        const statusText = currentCash <= 0 ? '→ 倒産' : (currentCash > totalCash ? '+' : '') + (currentCash - totalCash).toLocaleString() + '万円';
+
+        tableBody.innerHTML += `
+          <tr class="${rowClass}">
+            <td class="p-3 text-lg md:text-xl">${month}ヶ月後</td>
+            <td class="p-3 text-right text-lg md:text-xl font-bold ${currentCash <= 0 ? 'text-red-700' : ''}">${cashDisplay}</td>
+            <td class="p-3 text-lg md:text-xl ${statusColor} ${currentCash <= 0 ? 'font-bold' : ''}">${statusText}</td>
+          </tr>
+        `;
+
+        if (currentCash <= 0) {
+          break;
+        }
+      }
+
+      // 結論
+      const conclusionDiv = document.getElementById('conclusion');
+      if (bankruptMonth) {
+        conclusionDiv.className = 'mt-6 p-4 rounded bg-red-100 border-2 border-red-300';
+        conclusionDiv.innerHTML = `
+          <p class="text-lg md:text-xl font-bold text-red-700">⚠️ 警告：${bankruptMonth}ヶ月後に倒産します</p>
+          <p class="text-lg md:text-xl text-red-900 mt-2">このままでは事業を続けられません。早急に改善が必要です。</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1 text-lg md:text-xl text-red-900">
+            <li>経費を削減する</li>
+            <li>売上を増やす</li>
+            <li>専門家に相談する</li>
+          </ul>
+        `;
+      } else if (monthlyCashChange > 0) {
+        conclusionDiv.className = 'mt-6 p-4 rounded bg-green-100 border-2 border-green-300';
+        conclusionDiv.innerHTML = `
+          <p class="text-lg md:text-xl font-bold text-green-700">✅ 良好：事業は成長しています</p>
+          <p class="text-lg md:text-xl text-green-900 mt-2">現金が毎月増えており、返済も順調です。このペースを維持しましょう。</p>
+        `;
+      } else {
+        conclusionDiv.className = 'mt-6 p-4 rounded bg-yellow-100 border-2 border-yellow-300';
+        conclusionDiv.innerHTML = `
+          <p class="text-lg md:text-xl font-bold text-yellow-700">⚠️ 注意：現金が減少傾向です</p>
+          <p class="text-lg md:text-xl text-yellow-900 mt-2">黒字ですが、返済を考慮すると現金が減っています。利益を増やす必要があります。</p>
+        `;
+      }
+
+      document.getElementById('simulationResult').classList.remove('hidden');
+
+      // シミュレーション結果までスクロール
+      document.getElementById('simulationResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // 画像拡大モーダル
+    const modal = document.getElementById('imageModal');
+    const closeModal = document.getElementById('closeModal');
+    const imageName = document.getElementById('imageName');
+
+    function openModal(element) {
+      const fileName = element.querySelector('.text-sm.text-gray-500').textContent.replace('ファイル名: ', '').replace('(クリックで拡大)', '').trim();
+      imageName.textContent = fileName;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

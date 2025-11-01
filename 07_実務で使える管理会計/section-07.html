@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.7 経営ダッシュボードの作成 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← トップページへ</a>
+      <div class="flex space-x-4">
+        <a href="section-06.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← 前のセクション</a>
+        <a href="section-08.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">次のセクション →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col space-y-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-4 h-4 bg-blue-600 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          経営ダッシュボードとは
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="example">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          ダッシュボードの例
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="kpi">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          入れるべき指標
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="update">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          更新頻度と使い方
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">7.7 経営ダッシュボードの作成</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      これまで学んだ管理会計の要素を1つにまとめたものが、経営ダッシュボードです。
+      重要指標を一覧で見られるようにすることで、経営状態を素早く把握できます。
+      このセクションでは、経営ダッシュボードの作成方法を学んでいきましょう。
+    </p>
+
+    <!-- 小セクション1: 経営ダッシュボードとは -->
+    <section id="intro" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">経営ダッシュボードとは</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        経営ダッシュボードとは、<strong class="text-blue-700">重要な経営指標を1枚のシートにまとめたもの</strong>です。
+        車のダッシュボードが速度・燃料・エンジン温度を一目で確認できるように、経営ダッシュボードも経営状態を一目で確認できるようにします。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-900">経営ダッシュボードのメリット</h3>
+        <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-blue-900">
+          <li>経営状態を素早く把握できる</li>
+          <li>重要指標の推移が一目でわかる</li>
+          <li>問題点を早期発見できる</li>
+          <li>毎月の振り返りが効率的になる</li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        複数の資料を見比べる必要がなく、1枚で全体像が把握できるのが最大の利点です。
+      </p>
+    </section>
+
+    <!-- 小セクション2: ダッシュボードの例 -->
+    <section id="example" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">ダッシュボードの例</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        実際の経営ダッシュボードの例を見てみましょう。
+      </p>
+
+      <!-- ダッシュボード例 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-6 rounded-t-lg -mx-6 -mt-6 mb-6">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">【今月の状況】2024年7月</h3>
+          <p class="text-lg md:text-xl">経営ダッシュボード</p>
+        </div>
+
+        <!-- 主要指標 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+          <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+            <p class="text-lg text-gray-600 mb-1">売上</p>
+            <p class="text-3xl font-bold text-blue-700 mb-1">120万円</p>
+            <div class="flex items-center space-x-2">
+              <p class="text-lg text-gray-700">予算比 120%</p>
+              <span class="text-green-600 text-2xl">↑</span>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+            <p class="text-lg text-gray-600 mb-1">粗利</p>
+            <p class="text-3xl font-bold text-blue-700 mb-1">48万円</p>
+            <div class="flex items-center space-x-2">
+              <p class="text-lg text-gray-700">粗利率 40%</p>
+              <span class="text-gray-600 text-2xl">→</span>
+            </div>
+          </div>
+
+          <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+            <p class="text-lg text-gray-600 mb-1">営業利益</p>
+            <p class="text-3xl font-bold text-green-700 mb-1">18万円</p>
+            <div class="flex items-center space-x-2">
+              <p class="text-lg text-gray-700">予算比 180%</p>
+              <span class="text-green-600 text-2xl">↑</span>
+            </div>
+          </div>
+
+          <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+            <p class="text-lg text-gray-600 mb-1">現金残高</p>
+            <p class="text-3xl font-bold text-green-700 mb-1">200万円</p>
+            <div class="flex items-center space-x-2">
+              <p class="text-lg text-gray-700">前月比 +20万円</p>
+              <span class="text-green-600 text-2xl">↑</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 重要指標 -->
+        <div class="mb-8">
+          <h4 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">【重要指標】</h4>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+              <span class="text-lg md:text-xl text-gray-700">売上成長率（前年比）</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-lg md:text-xl font-bold text-green-700">+15%</span>
+                <span class="text-green-600 text-xl">↑</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+              <span class="text-lg md:text-xl text-gray-700">粗利率</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-lg md:text-xl font-bold text-blue-700">40%</span>
+                <span class="text-gray-600 text-xl">→</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+              <span class="text-lg md:text-xl text-gray-700">営業利益率</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-lg md:text-xl font-bold text-green-700">15%</span>
+                <span class="text-green-600 text-xl">↑</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+              <span class="text-lg md:text-xl text-gray-700">自己資本比率</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-lg md:text-xl font-bold text-blue-700">35%</span>
+                <span class="text-gray-600 text-xl">→</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+              <span class="text-lg md:text-xl text-gray-700">現金月商比</span>
+              <div class="flex items-center space-x-2">
+                <span class="text-lg md:text-xl font-bold text-green-700">1.7ヶ月</span>
+                <span class="text-green-600 text-xl">↑</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- アクション -->
+        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+          <h4 class="text-xl md:text-2xl font-bold mb-3 text-green-900">【今月のアクション】</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-green-900">
+            <li>✓ 売上好調、広告効果が出ている</li>
+            <li>✓ 粗利率は安定、原価管理OK</li>
+            <li>✓ 現金も増加、資金繰り問題なし</li>
+            <li>→ 今月も同じ戦略を継続</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        このように、1枚のシートで経営状態が一目でわかります。
+        矢印（↑→↓）で前月比を視覚的に示すことで、変化が直感的に理解できます。
+      </p>
+    </section>
+
+    <!-- 小セクション3: 入れるべき指標 -->
+    <section id="kpi" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">ダッシュボードに入れるべき指標</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        ダッシュボードに入れる指標は、ビジネスによって異なりますが、基本的な指標は共通しています。
+      </p>
+
+      <!-- 必須指標 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">必須指標</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700">
+          すべてのビジネスで必ず入れるべき指標です。
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-gray-700">
+          <li><strong>売上：</strong> 今月の売上高と前月比・予算比</li>
+          <li><strong>粗利：</strong> 今月の粗利と粗利率</li>
+          <li><strong>営業利益：</strong> 今月の営業利益と前月比・予算比</li>
+          <li><strong>現金残高：</strong> 月末の現金残高と前月比</li>
+        </ul>
+      </div>
+
+      <!-- 推奨指標 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">推奨指標</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700">
+          余裕があれば追加すると良い指標です。
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-gray-700">
+          <li><strong>売上成長率：</strong> 前年同月比で何%成長しているか</li>
+          <li><strong>粗利率：</strong> 売上に対する粗利の割合</li>
+          <li><strong>営業利益率：</strong> 売上に対する営業利益の割合</li>
+          <li><strong>顧客数：</strong> 月の来客数や契約数</li>
+          <li><strong>客単価：</strong> 1人あたりの売上</li>
+          <li><strong>自己資本比率：</strong> 財務の健全性を示す指標</li>
+          <li><strong>現金月商比：</strong> 現金残高が月商の何ヶ月分あるか</li>
+        </ul>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-orange-900">⚠️ 注意点</h3>
+        <p class="text-lg md:text-xl text-orange-900">
+          指標を増やしすぎると、かえってわかりにくくなります。
+          最初は必須指標だけで十分です。慣れてきたら徐々に追加していきましょう。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 更新頻度と使い方 -->
+    <section id="update" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">更新頻度と使い方</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        ダッシュボードを作ったら、定期的に更新して活用しましょう。
+      </p>
+
+      <!-- 更新頻度 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">更新頻度</h3>
+        <div class="mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">基本：月1回</h4>
+          <p class="text-lg md:text-xl text-gray-700">
+            月次決算後（毎月10日頃）に更新します。
+            前月の実績を確認し、今月のアクションを決めます。
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">余裕があれば：週1回</h4>
+          <p class="text-lg md:text-xl text-gray-700">
+            重要指標（売上、現金残高など）を毎週チェックします。
+            問題があれば早期に対応できます。
+          </p>
+        </div>
+      </div>
+
+      <!-- 使い方 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">ダッシュボードの使い方</h3>
+        <ol class="list-decimal pl-6 space-y-3 text-lg md:text-xl text-gray-700">
+          <li>月次決算後、ダッシュボードを更新する</li>
+          <li>前月比・予算比を確認し、変化を把握する</li>
+          <li>問題点を洗い出す（売上減、利益減、現金減など）</li>
+          <li>今月のアクションを決める（集客強化、経費削減など）</li>
+          <li>ダッシュボードを印刷またはPDF化して保存する</li>
+        </ol>
+      </div>
+
+      <!-- Excelテンプレートダウンロード -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-900">📥 Excelテンプレートをダウンロード</h3>
+        <p class="text-lg md:text-xl mb-4 text-green-900">
+          経営ダッシュボードのテンプレートをご用意しています。
+          数値を入力するだけで、自動的にダッシュボードが作成されます。
+        </p>
+        <a href="../assets/templates/ダッシュボード.xlsx" class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition text-lg md:text-xl font-bold">
+          ダッシュボードテンプレート.xlsx をダウンロード
+        </a>
+        <p class="text-sm mt-2 text-green-700">※ ファイルは準備中です。後日公開予定。</p>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        経営ダッシュボードの作成方法について、理解が深まったでしょうか？
+      </p>
+
+      <ul class="list-disc pl-6 space-y-3 mb-6 text-lg md:text-xl text-gray-700">
+        <li>経営ダッシュボードとは、重要な経営指標を1枚にまとめたもの</li>
+        <li>売上・粗利・営業利益・現金残高は必須指標</li>
+        <li>前月比・予算比を矢印で視覚的に表示すると、変化がわかりやすい</li>
+        <li>月1回（月次決算後）に更新し、問題点を洗い出す</li>
+        <li>今月のアクションを明記し、実行する</li>
+      </ul>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次のセクションでは、業種別の管理会計活用法を学びます。
+        飲食店、小売店、サービス業、製造業それぞれの特性に合わせた管理方法を見ていきましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-08.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ：業種別の管理会計活用法 →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        const dotTarget = dot.getAttribute('data-target');
+        const dotCircle = dot.querySelector('div');
+        if (dotTarget === current) {
+          dotCircle.classList.remove('bg-gray-300');
+          dotCircle.classList.add('bg-blue-600');
+        } else {
+          dotCircle.classList.remove('bg-blue-600');
+          dotCircle.classList.add('bg-gray-300');
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img[data-expandable]').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

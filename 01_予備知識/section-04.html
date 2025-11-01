@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.4 簿記の超基礎 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .dot {
+      transition: all 0.3s ease;
+    }
+    .dot:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    .tooltip {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+          ← トップページへ
+        </a>
+        <div class="flex gap-4">
+          <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+            ← 前のセクション
+          </a>
+          <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+            次のセクション →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#what-is-bookkeeping" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          簿記とは何か
+        </div>
+      </a>
+      <a href="#double-entry" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          複式簿記の仕組み
+        </div>
+      </a>
+      <a href="#journal-entry" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          仕訳の基本
+        </div>
+      </a>
+      <a href="#accounts" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          勘定科目とは
+        </div>
+      </a>
+      <a href="#advice" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          小規模事業者へのアドバイス
+        </div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          まとめ
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.4 簿記の超基礎</h1>
+      <p class="text-lg md:text-xl text-gray-600">
+        簿記3級の知識は必要ありませんが、簿記の基本的な考え方を理解しておくと、会計がもっとわかりやすくなります。このセクションでは、最低限の仕組みだけを学びましょう。
+      </p>
+    </div>
+
+    <!-- 小セクション1: 簿記とは何か -->
+    <section id="what-is-bookkeeping" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">簿記とは何か</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        簿記とは、<strong>事業のお金の動きを記録する技術</strong>のことです。「帳簿記入」の略で、昔は紙の帳簿に手書きで記録していましたが、今は会計ソフトが自動でやってくれます。
+      </p>
+
+      <p class="text-lg md:text-xl mb-6">
+        経営者の皆さんが簿記3級を取る必要はありません。しかし、「お金の流れの考え方」を理解しておくと、会計ソフトのレポートを読むときや、税理士と話すときに役立ちます。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">このセクションで学ぶこと</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">複式簿記の仕組み（難しくないので安心してください）</li>
+          <li class="text-lg md:text-xl text-blue-900">仕訳の基本的な考え方</li>
+          <li class="text-lg md:text-xl text-blue-900">勘定科目とは何か</li>
+          <li class="text-lg md:text-xl text-blue-900">小規模事業者が知っておくべきポイント</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 小セクション2: 複式簿記の仕組み -->
+    <section id="double-entry" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">複式簿記の仕組み</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        簿記には「単式簿記」と「複式簿記」の2種類がありますが、会計で使われるのは<strong>複式簿記</strong>です。複式簿記の最大の特徴は、<strong>すべての取引を「2つの側面」から記録する</strong>ということです。
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">具体例で理解しましょう</h3>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h4 class="text-xl font-bold mb-4 text-purple-700">取引：現金10万円で商品を仕入れた</h4>
+        <p class="text-lg md:text-xl mb-4">
+          この取引を、2つの側面から考えてみましょう。
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-green-50 p-4 rounded">
+            <h5 class="text-lg font-bold mb-2 text-green-700">側面1: 何が増えたか</h5>
+            <p class="text-lg md:text-xl text-green-900">商品（在庫）が10万円分増えた</p>
+          </div>
+          <div class="bg-red-50 p-4 rounded">
+            <h5 class="text-lg font-bold mb-2 text-red-700">側面2: 何が減ったか</h5>
+            <p class="text-lg md:text-xl text-red-900">現金が10万円減った</p>
+          </div>
+        </div>
+        <p class="text-lg md:text-xl mt-4">
+          このように、1つの取引を「増えたもの」と「減ったもの」の2つの視点から記録するのが複式簿記です。
+        </p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">なぜ複式簿記が必要なのか</h4>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">
+          複式簿記にすることで、記録漏れやミスを防ぐことができます。また、貸借対照表と損益計算書を同時に作成できるという大きなメリットがあります。
+        </p>
+        <p class="text-lg md:text-xl text-yellow-900">
+          単式簿記（家計簿のような記録）では、「いくら使った」はわかりますが、「今、何がいくらあるか」がわかりません。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 仕訳の基本 -->
+    <section id="journal-entry" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">仕訳の基本</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        複式簿記で取引を記録することを<strong>「仕訳（しわけ）」</strong>と言います。仕訳は、左側（借方）と右側（貸方）に分けて記録します。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">仕訳の例</h3>
+        <p class="text-lg md:text-xl mb-4">取引：現金10万円で商品を仕入れた</p>
+        <div class="overflow-x-auto">
+          <table class="min-w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="border border-gray-300 px-6 py-3 text-lg md:text-xl font-bold">左側（借方）</th>
+                <th class="border border-gray-300 px-6 py-3 text-lg md:text-xl font-bold">右側（貸方）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-6 py-4 text-lg md:text-xl bg-green-50">商品 10万円</td>
+                <td class="border border-gray-300 px-6 py-4 text-lg md:text-xl bg-red-50">現金 10万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-lg md:text-xl mt-4">
+          左側（借方）には「増えたもの」、右側（貸方）には「減ったもの」を書きます。この場合、商品が増えて、現金が減ったので、このような仕訳になります。
+        </p>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">もう1つの例</h3>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <p class="text-lg md:text-xl mb-4">取引：商品を5万円で売って、現金を受け取った</p>
+        <div class="overflow-x-auto">
+          <table class="min-w-full border-collapse border border-gray-300">
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="border border-gray-300 px-6 py-3 text-lg md:text-xl font-bold">左側（借方）</th>
+                <th class="border border-gray-300 px-6 py-3 text-lg md:text-xl font-bold">右側（貸方）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 px-6 py-4 text-lg md:text-xl bg-green-50">現金 5万円</td>
+                <td class="border border-gray-300 px-6 py-4 text-lg md:text-xl bg-red-50">売上 5万円</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-lg md:text-xl mt-4">
+          現金が増えて、売上が発生したので、このような仕訳になります。
+        </p>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-blue-700">経営者が覚えるべきこと</h4>
+        <p class="text-lg md:text-xl text-blue-900">
+          仕訳の細かいルールを覚える必要はありません。会計ソフトが自動でやってくれます。ただし、「1つの取引には必ず2つの側面がある」という考え方を理解しておくと、会計の仕組みがわかりやすくなります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 勘定科目とは -->
+    <section id="accounts" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">勘定科目とは</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        仕訳で使われる「現金」「商品」「売上」といった言葉を<strong>勘定科目（かんじょうかもく）</strong>と言います。勘定科目は、取引を分類するための「ラベル」のようなものです。
+      </p>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">主な勘定科目</h3>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-green-600">資産の科目</h4>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">現金：手元にある現金</li>
+            <li class="text-lg md:text-xl">預金：銀行に預けているお金</li>
+            <li class="text-lg md:text-xl">商品：販売する商品の在庫</li>
+            <li class="text-lg md:text-xl">売掛金：後で入金予定のお金</li>
+            <li class="text-lg md:text-xl">備品：机、パソコンなど</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-red-600">負債の科目</h4>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">買掛金：後で支払う仕入れ代金</li>
+            <li class="text-lg md:text-xl">未払金：まだ払っていない経費</li>
+            <li class="text-lg md:text-xl">借入金：銀行からの借金</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-blue-600">収益の科目</h4>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">売上：商品・サービスの販売</li>
+            <li class="text-lg md:text-xl">受取利息：預金利息</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-purple-600">費用の科目</h4>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">仕入：商品の仕入れ代金</li>
+            <li class="text-lg md:text-xl">広告費：広告にかかる費用</li>
+            <li class="text-lg md:text-xl">家賃：店舗や事務所の家賃</li>
+            <li class="text-lg md:text-xl">水道光熱費：電気代、水道代など</li>
+            <li class="text-lg md:text-xl">通信費：電話代、インターネット代</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">勘定科目の選び方</h4>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">
+          勘定科目は自由に設定できますが、一般的なものを使うのが無難です。会計ソフトには標準的な勘定科目があらかじめ登録されているので、それを使えば問題ありません。
+        </p>
+        <p class="text-lg md:text-xl text-yellow-900">
+          また、税理士に依頼している場合は、税理士が適切な勘定科目を設定してくれます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション5: 小規模事業者へのアドバイス -->
+    <section id="advice" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">小規模事業者へのアドバイス</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        「簿記は難しそう」と感じたかもしれませんが、安心してください。小規模事業者の皆さんが簿記の細かいルールを覚える必要はありません。
+      </p>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">1. 会計ソフトが自動でやってくれる</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            現代の会計ソフト（freee、マネーフォワード、弥生会計など）は、銀行やクレジットカードと連携して、自動で仕訳を作ってくれます。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            例えば、「コンビニで1,000円使った」という取引があれば、ソフトが「これは消耗品費ですか？」と提案してくれます。あなたは「はい」を押すだけです。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">2. 経営者は「考え方」を理解すればOK</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            簿記の細かいルールは税理士や会計ソフトに任せて、経営者は「お金の流れの考え方」を理解すれば十分です。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            例えば、「融資を受けたら、資産（現金）が増えて、負債（借入金）も増える」という仕組みを理解しておけば、貸借対照表を見たときに納得できます。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">3. 必要なら税理士に任せる</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            月商が100万円を超えたら、税理士に依頼することを検討しましょう。税理士に任せれば、正確な会計処理と税務申告ができます。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            税理士費用は月2〜3万円程度ですが、その分、あなたは本業に集中できます。また、節税のアドバイスももらえるので、結果的にお得になることが多いです。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-blue-700">経営者が最低限やるべきこと</h4>
+        <ul class="space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">✓ レシートや領収書を保管する</li>
+          <li class="text-lg md:text-xl text-blue-900">✓ 会計ソフトに入力するか、税理士に渡す</li>
+          <li class="text-lg md:text-xl text-blue-900">✓ 月次の損益計算書とキャッシュフロー を確認する</li>
+          <li class="text-lg md:text-xl text-blue-900">✓ 問題があれば早めに対策を打つ</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        簿記の超基礎について、理解が深まったでしょうか。細かいルールを覚える必要はありませんが、基本的な考え方を理解しておくことは大切です。
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">複式簿記は、1つの取引を2つの側面から記録する仕組みです</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">仕訳は左側（借方）と右側（貸方）に分けて記録します</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">勘定科目は取引を分類するためのラベルです</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">会計ソフトや税理士を活用すれば、細かいルールを覚える必要はありません</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl">
+        次は、「損益計算書（P/L）とは」について学んでいきましょう。実際の損益計算書の見方を理解すれば、事業の健康状態が一目でわかるようになりますよ。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-05.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーターのアクティブ状態を更新
+    function updateDotIndicator() {
+      const sections = ['what-is-bookkeeping', 'double-entry', 'journal-entry', 'accounts', 'advice', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+
+      let currentSection = sections[0];
+
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    // スクロール時にドットインジケーターを更新
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', updateDotIndicator);
+
+    // 画像拡大モーダル
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Escキーでモーダルを閉じる
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>

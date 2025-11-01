@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.6 会計ソフトを使った財務諸表作成 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-07.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="software">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          主要会計ソフト
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="workflow">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          基本的な流れ
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="comparison">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          ソフト比較
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.6 会計ソフトを使った財務諸表作成</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        ここまで手作業での財務諸表の作り方を学んできましたが、実務では会計ソフトを使うことで、大幅に効率化できます。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、freee、マネーフォワード、弥生会計などの主要会計ソフトの活用方法を紹介します。
+        銀行連携やレシート撮影など、便利な機能を活用して、手作業の負担を減らしましょう。
+      </p>
+    </section>
+
+    <!-- 主要会計ソフト -->
+    <section id="software" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">主要会計ソフトの機能</h2>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-4">会計ソフトでできること</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl text-blue-900">
+            <span class="font-bold">✓ 銀行・クレカ連携：</span>取引を自動で取り込み、自動仕訳
+          </li>
+          <li class="text-lg md:text-xl text-blue-900">
+            <span class="font-bold">✓ レシート撮影：</span>スマホで撮影するだけで経費入力
+          </li>
+          <li class="text-lg md:text-xl text-blue-900">
+            <span class="font-bold">✓ ワンクリック財務諸表：</span>P/L、B/S、C/Fが自動生成
+          </li>
+          <li class="text-lg md:text-xl text-blue-900">
+            <span class="font-bold">✓ 確定申告書作成：</span>青色申告決算書も自動作成
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-6">
+        <!-- freee -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">freee</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            初心者向けで操作が簡単。銀行連携の自動化が強力。
+          </p>
+          <p class="text-base text-gray-600">
+            月額：980円〜（スタータープラン）
+          </p>
+        </div>
+
+        <!-- マネーフォワード -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">マネーフォワード</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            バランスの良い機能。使いやすさと高機能を両立。
+          </p>
+          <p class="text-base text-gray-600">
+            月額：800円〜（パーソナルミニ）
+          </p>
+        </div>
+
+        <!-- 弥生会計 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">弥生会計</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            老舗で信頼性が高い。税理士との連携に強い。
+          </p>
+          <p class="text-base text-gray-600">
+            月額：8,000円〜（セルフプラン）
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 基本的な流れ -->
+    <section id="workflow" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">会計ソフトでの基本的な流れ</h2>
+
+      <div class="space-y-6">
+        <!-- ステップ1 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              1
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">銀行口座を連携</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                会計ソフトに銀行口座やクレジットカードを登録します。
+                ネットバンキングのログイン情報を入力するだけで、自動的に取引データが取り込まれます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ステップ2 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              2
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">取引が自動で取り込まれる</h3>
+              <p class="text-lg md:text-xl text-gray-700 mb-3">
+                連携した銀行口座の入出金履歴が自動的に取り込まれます。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <p class="text-lg md:text-xl text-gray-700">
+                  例：「◯◯電力 5,000円」→ 自動的に「水道光熱費」と推測
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ステップ3 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              3
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">勘定科目を確認・修正</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                AIが自動で勘定科目を推測してくれますが、間違っている場合は手動で修正します。
+                2回目以降は学習して、正確度が上がります。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ステップ4 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              4
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">月次で確定</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                月末に、その月の取引をすべて確認して「確定」ボタンを押します。
+                これで、その月の会計処理が完了します。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ステップ5 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 flex-shrink-0">
+              5
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">財務諸表が自動生成</h3>
+              <p class="text-lg md:text-xl text-gray-700">
+                「レポート」や「決算書」のメニューから、P/L、B/S、C/Fをいつでも確認できます。
+                グラフや推移表も自動で作成されます。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">手入力が必要な項目</h3>
+        <ul class="list-disc pl-6 text-lg md:text-xl text-orange-900 space-y-2">
+          <li>現金取引（レジ売上など）</li>
+          <li>レシートのない経費</li>
+          <li>在庫の棚卸</li>
+          <li>減価償却費（初年度のみ設定）</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ソフト比較 -->
+    <section id="comparison" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">会計ソフトの選び方</h2>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6 overflow-x-auto">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">比較表</h3>
+        <table class="w-full text-base md:text-lg">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="p-3 text-left">項目</th>
+              <th class="p-3 text-left">freee</th>
+              <th class="p-3 text-left">マネーフォワード</th>
+              <th class="p-3 text-left">弥生会計</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="p-3 font-bold">操作性</td>
+              <td class="p-3">★★★</td>
+              <td class="p-3">★★☆</td>
+              <td class="p-3">★★☆</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-bold">料金</td>
+              <td class="p-3">980円〜</td>
+              <td class="p-3">800円〜</td>
+              <td class="p-3">8,000円〜</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-bold">銀行連携</td>
+              <td class="p-3">3,600以上</td>
+              <td class="p-3">3,600以上</td>
+              <td class="p-3">3,600以上</td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3 font-bold">サポート</td>
+              <td class="p-3">メール・チャット</td>
+              <td class="p-3">メール・チャット</td>
+              <td class="p-3">電話・メール</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold">無料トライアル</td>
+              <td class="p-3">30日間</td>
+              <td class="p-3">30日間</td>
+              <td class="p-3">1年間</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">freeeがおすすめの人</h3>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-green-900 space-y-2">
+            <li>初めて会計ソフトを使う人</li>
+            <li>簿記の知識がない人</li>
+            <li>シンプルで使いやすいUIが好きな人</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">マネーフォワードがおすすめの人</h3>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-blue-900 space-y-2">
+            <li>バランスの良い機能を求める人</li>
+            <li>やや簿記の知識がある人</li>
+            <li>コストパフォーマンス重視の人</li>
+          </ul>
+        </div>
+
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">弥生会計がおすすめの人</h3>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-purple-900 space-y-2">
+            <li>税理士と連携している人</li>
+            <li>電話サポートが必要な人</li>
+            <li>老舗の信頼性を重視する人</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 border-l-4 border-gray-500 p-6 rounded-r">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-700 mb-3">無料トライアルを活用</h3>
+          <p class="text-lg md:text-xl text-gray-900">
+            どのソフトも無料トライアル期間があります。
+            実際に使ってみて、自分に合ったソフトを選びましょう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        会計ソフトの活用方法について、理解が深まったでしょうか？
+        手作業に比べて大幅に効率化でき、時間を節約できます。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ 自動化で時間短縮</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            銀行連携やレシート撮影で、手入力の手間を大幅に削減できます。
+          </p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ 計算ミスが減る</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            自動計算で、人為的なミスを防げます。
+          </p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ リアルタイムで確認</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            いつでも最新の財務状況を確認できます。
+          </p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ 無料トライアルを活用</h3>
+          <p class="text-lg md:text-xl text-blue-900">
+            実際に使ってみて、自分に合ったソフトを選びましょう。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「月次決算の進め方」を学んでいきます。
+        毎月の財務諸表作成の実務スケジュールを紹介します。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-07.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        次のセクションへ：6.7 月次決算の進め方 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-blue-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-blue-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

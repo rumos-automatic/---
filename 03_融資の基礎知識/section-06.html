@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.6 金利と返済条件 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページ</a>
+      <div class="flex gap-4">
+        <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+        <a href="section-07.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">次のセクション →</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">導入</span>
+      </div>
+      <div class="dot-item group relative" data-target="interest">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">金利の種類</span>
+      </div>
+      <div class="dot-item group relative" data-target="repayment">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">返済方法</span>
+      </div>
+      <div class="dot-item group relative" data-target="grace">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">据置期間</span>
+      </div>
+      <div class="dot-item group relative" data-target="simulator">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">返済シミュレーター</span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-blue-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">まとめ</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">3.6 金利と返済条件</h1>
+
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        融資を受けると、元本（借りたお金）に加えて利息も返済する必要があります。
+        金利や返済方法によって、毎月の返済額や総返済額が変わってきます。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、金利の種類、返済方法、据置期間について学び、
+        実際に返済額を計算できるシミュレーターを使って理解を深めましょう。
+      </p>
+    </section>
+
+    <section id="interest" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">金利の種類</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        金利には「固定金利」と「変動金利」の2種類があります。
+        それぞれの特徴を理解して、自分に合った金利を選びましょう。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">固定金利</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            返済期間中、金利が変わらない方式です。
+          </p>
+          <div class="bg-blue-50 p-4 rounded mb-4">
+            <h4 class="text-lg md:text-xl font-bold text-blue-800 mb-2">メリット</h4>
+            <ul class="space-y-2 text-lg md:text-xl text-blue-900">
+              <li>✓ 返済計画が立てやすい</li>
+              <li>✓ 金利上昇のリスクがない</li>
+            </ul>
+          </div>
+          <div class="bg-red-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold text-red-800 mb-2">デメリット</h4>
+            <ul class="space-y-2 text-lg md:text-xl text-red-900">
+              <li>✗ 変動金利より高いことが多い</li>
+              <li>✗ 市場金利が下がっても恩恵を受けられない</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-6 border-t-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">変動金利</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            市場金利に応じて金利が変動する方式です。
+          </p>
+          <div class="bg-green-50 p-4 rounded mb-4">
+            <h4 class="text-lg md:text-xl font-bold text-green-800 mb-2">メリット</h4>
+            <ul class="space-y-2 text-lg md:text-xl text-green-900">
+              <li>✓ 固定金利より低いことが多い</li>
+              <li>✓ 市場金利が下がれば返済額も減る</li>
+            </ul>
+          </div>
+          <div class="bg-red-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold text-red-800 mb-2">デメリット</h4>
+            <ul class="space-y-2 text-lg md:text-xl text-red-900">
+              <li>✗ 金利上昇のリスクがある</li>
+              <li>✗ 返済計画が立てにくい</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="repayment" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">返済方法</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        返済方法には「元金均等返済」と「元利均等返済」の2種類があります。
+        どちらを選ぶかで、毎月の返済額や総返済額が変わります。
+      </p>
+
+      <div class="space-y-6">
+        <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">元金均等返済</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            元金を毎月一定額返済し、残高に応じて利息を支払う方式です。
+          </p>
+          <div class="bg-purple-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-purple-900 mb-2"><strong>特徴：</strong></p>
+            <ul class="space-y-2 text-lg md:text-xl text-purple-900">
+              <li>• 初期の返済額が多く、徐々に減っていく</li>
+              <li>• 総返済額は元利均等返済より少ない</li>
+              <li>• 初期の返済負担が大きい</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-6 border-l-4 border-orange-500">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">元利均等返済</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-4">
+            元金+利息の合計が毎月一定になる方式です。（最も一般的）
+          </p>
+          <div class="bg-orange-50 p-4 rounded">
+            <p class="text-lg md:text-xl text-orange-900 mb-2"><strong>特徴：</strong></p>
+            <ul class="space-y-2 text-lg md:text-xl text-orange-900">
+              <li>• 毎月の返済額が一定で計画しやすい</li>
+              <li>• 総返済額は元金均等返済より多い</li>
+              <li>• 小規模事業に適している（一般的に選ばれる）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="grace" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">据置期間</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        据置期間とは、最初の数ヶ月間は元金の返済をせず、利息のみを支払う期間のことです。
+        事業が軌道に乗るまでの猶予期間として設定されます。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">据置期間の仕組み</h3>
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <p class="text-lg md:text-xl text-blue-900 mb-3">
+            <strong>据置期間中（6ヶ月間の例）：</strong>
+          </p>
+          <p class="text-lg md:text-xl text-blue-900 mb-2">
+            • 利息のみを毎月支払う
+          </p>
+          <p class="text-lg md:text-xl text-blue-900 mb-2">
+            • 元金は減らない
+          </p>
+          <p class="text-lg md:text-xl text-blue-900">
+            • 返済負担が軽い
+          </p>
+        </div>
+        <div class="bg-green-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            <strong>据置期間後（返済期間）：</strong>
+          </p>
+          <p class="text-lg md:text-xl text-green-900 mb-2">
+            • 元金+利息を毎月支払う
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            • 据置期間がない場合より月次返済額は多くなる
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">💡 据置期間の活用</h3>
+        <p class="text-lg md:text-xl text-blue-900">
+          創業融資では6ヶ月〜1年の据置期間が一般的です。
+          事業が軌道に乗るまでの間、返済負担を軽くできるため、上手に活用しましょう。
+        </p>
+      </div>
+    </section>
+
+    <section id="simulator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">返済シミュレーター</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        実際に返済額を計算してみましょう。
+        借入額、金利、返済期間、据置期間を入力すると、月次返済額が計算されます。
+      </p>
+
+      <div class="bg-gradient-to-r from-blue-50 to-blue-100 shadow-xl rounded-lg p-8 mb-6">
+        <h3 class="text-2xl md:text-3xl font-bold text-blue-900 mb-6">融資返済シミュレーター</h3>
+
+        <div class="space-y-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl font-bold text-blue-900 mb-2">借入額（万円）</label>
+            <input type="number" id="loanAmount" class="w-full border-2 border-blue-300 rounded px-4 py-3 text-lg md:text-xl focus:border-blue-500 focus:outline-none" placeholder="500" value="500">
+          </div>
+
+          <div>
+            <label class="block text-lg md:text-xl font-bold text-blue-900 mb-2">金利（%）</label>
+            <input type="number" id="interestRate" step="0.1" class="w-full border-2 border-blue-300 rounded px-4 py-3 text-lg md:text-xl focus:border-blue-500 focus:outline-none" placeholder="2.0" value="2.0">
+          </div>
+
+          <div>
+            <label class="block text-lg md:text-xl font-bold text-blue-900 mb-2">返済期間（年）</label>
+            <input type="number" id="loanTerm" class="w-full border-2 border-blue-300 rounded px-4 py-3 text-lg md:text-xl focus:border-blue-500 focus:outline-none" placeholder="5" value="5">
+          </div>
+
+          <div>
+            <label class="block text-lg md:text-xl font-bold text-blue-900 mb-2">据置期間（ヶ月）</label>
+            <input type="number" id="gracePeriod" class="w-full border-2 border-blue-300 rounded px-4 py-3 text-lg md:text-xl focus:border-blue-500 focus:outline-none" placeholder="6" value="6">
+          </div>
+        </div>
+
+        <button onclick="calculateRepayment()" class="w-full bg-blue-600 text-white text-lg md:text-xl font-bold px-6 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+          計算する
+        </button>
+
+        <div id="result" class="mt-6 p-6 bg-green-50 border-2 border-green-500 rounded-lg hidden">
+          <h4 class="text-xl md:text-2xl font-bold text-green-800 mb-4">計算結果</h4>
+          <div class="space-y-3">
+            <div class="bg-white p-4 rounded">
+              <p class="text-lg md:text-xl text-gray-700 mb-2">据置期間中の月次返済額（利息のみ）</p>
+              <p class="text-3xl md:text-4xl font-bold text-green-700"><span id="gracePayment"></span>円</p>
+            </div>
+            <div class="bg-white p-4 rounded">
+              <p class="text-lg md:text-xl text-gray-700 mb-2">据置期間後の月次返済額（元金+利息）</p>
+              <p class="text-3xl md:text-4xl font-bold text-blue-700"><span id="monthlyPayment"></span>円</p>
+            </div>
+            <div class="bg-white p-4 rounded">
+              <p class="text-lg md:text-xl text-gray-700 mb-2">総返済額</p>
+              <p class="text-3xl md:text-4xl font-bold text-gray-700"><span id="totalPayment"></span>円</p>
+            </div>
+            <div class="bg-white p-4 rounded">
+              <p class="text-lg md:text-xl text-gray-700 mb-2">総利息額</p>
+              <p class="text-3xl md:text-4xl font-bold text-red-700"><span id="totalInterest"></span>円</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">⚠️ 重要な確認事項</h3>
+        <p class="text-lg md:text-xl text-orange-900">
+          計算結果の「月次返済額」が、<strong>あなたの事業の月次利益を上回っていないか</strong>を必ず確認してください。
+          月の利益 &lt; 月の返済額 になると、資金繰りが悪化します。
+        </p>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        金利と返済条件について、理解が深まったでしょうか？
+        返済シミュレーターを使って、自分の事業に合った返済計画を立てましょう。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-blue-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-800 mb-3">✓ 金利の選び方</h3>
+          <ul class="space-y-2 text-lg md:text-xl text-blue-900">
+            <li>• 固定金利：返済計画重視</li>
+            <li>• 変動金利：金利の低さ重視</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-green-800 mb-3">✓ 返済方法の選び方</h3>
+          <ul class="space-y-2 text-lg md:text-xl text-green-900">
+            <li>• 元利均等：毎月一定（一般的）</li>
+            <li>• 元金均等：総返済額少ない</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「融資の立ち位置」について学んでいきます。
+        貸借対照表で融資がどこに位置するのか、理解を深めましょう。
+      </p>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="section-07.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        次のセクションへ：3.7 融資の立ち位置 →
+      </a>
+    </div>
+
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-blue-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-blue-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 返済シミュレーター
+    function calculateRepayment() {
+      const loanAmount = parseFloat(document.getElementById('loanAmount').value) * 10000; // 万円→円
+      const annualRate = parseFloat(document.getElementById('interestRate').value) / 100; // %→小数
+      const loanTermYears = parseFloat(document.getElementById('loanTerm').value);
+      const gracePeriodMonths = parseInt(document.getElementById('gracePeriod').value);
+
+      if (isNaN(loanAmount) || isNaN(annualRate) || isNaN(loanTermYears) || isNaN(gracePeriodMonths)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      if (loanAmount <= 0 || annualRate < 0 || loanTermYears <= 0 || gracePeriodMonths < 0) {
+        alert('正しい数値を入力してください');
+        return;
+      }
+
+      // 月利
+      const monthlyRate = annualRate / 12;
+
+      // 据置期間中の利息のみの支払い
+      const gracePayment = Math.round(loanAmount * monthlyRate);
+
+      // 返済期間（月）
+      const repaymentMonths = (loanTermYears * 12) - gracePeriodMonths;
+
+      if (repaymentMonths <= 0) {
+        alert('返済期間が据置期間より長くなるように設定してください');
+        return;
+      }
+
+      // 元利均等返済の月次返済額
+      let monthlyPayment;
+      if (monthlyRate === 0) {
+        monthlyPayment = Math.round(loanAmount / repaymentMonths);
+      } else {
+        monthlyPayment = Math.round(
+          loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, repaymentMonths)) / (Math.pow(1 + monthlyRate, repaymentMonths) - 1)
+        );
+      }
+
+      // 総返済額
+      const totalPayment = (gracePayment * gracePeriodMonths) + (monthlyPayment * repaymentMonths);
+
+      // 総利息額
+      const totalInterest = totalPayment - loanAmount;
+
+      // 結果表示
+      document.getElementById('gracePayment').textContent = gracePayment.toLocaleString();
+      document.getElementById('monthlyPayment').textContent = monthlyPayment.toLocaleString();
+      document.getElementById('totalPayment').textContent = totalPayment.toLocaleString();
+      document.getElementById('totalInterest').textContent = totalInterest.toLocaleString();
+      document.getElementById('result').classList.remove('hidden');
+
+      // 結果までスクロール
+      document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6.7 月次決算の進め方 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-08.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          導入
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="what">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次決算とは
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="schedule">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          スケジュール
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="tasks">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次決算でやること
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="report">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次レポート
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="summary">
+        <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer transition-all group-hover:bg-teal-500"></div>
+        <span class="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">6.7 月次決算の進め方</h1>
+
+    <!-- 導入 -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        年度末の決算だけでなく、毎月の月次決算を行うことで、早期に問題を発見し、改善策を講じることができます。
+      </p>
+      <p class="text-lg md:text-xl mb-4 leading-relaxed">
+        このセクションでは、月次決算の実務スケジュールと、具体的に何をすべきかを学んでいきましょう。
+      </p>
+    </section>
+
+    <!-- 月次決算とは -->
+    <section id="what" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次決算とは</h2>
+
+      <div class="bg-teal-50 border-l-4 border-teal-500 p-6 mb-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-4">月次決算の目的</h3>
+        <ul class="space-y-3">
+          <li class="text-lg md:text-xl text-teal-900">
+            <span class="font-bold">✓ 毎月末に財務諸表を作成：</span>月ごとの業績を把握
+          </li>
+          <li class="text-lg md:text-xl text-teal-900">
+            <span class="font-bold">✓ 早期に問題を発見：</span>赤字や資金不足を早めに察知
+          </li>
+          <li class="text-lg md:text-xl text-teal-900">
+            <span class="font-bold">✓ 改善策を迅速に実行：</span>問題が小さいうちに対処
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        年度末だけの決算では、問題が大きくなってから気づくことになります。
+        月次決算を習慣化することで、経営の精度が大きく向上します。
+      </p>
+    </section>
+
+    <!-- スケジュール -->
+    <section id="schedule" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次決算のスケジュール</h2>
+
+      <div class="space-y-6">
+        <!-- 月初1-5日 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-teal-600 text-white rounded-lg px-4 py-2 text-lg md:text-xl font-bold mr-4 flex-shrink-0">
+              月初1-5日
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">前月の取引を確定</h3>
+              <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+                <li>前月の取引を会計ソフトに入力</li>
+                <li>銀行連携の取引を確認・修正</li>
+                <li>現金取引（レジ売上など）を手入力</li>
+                <li>経費のレシートを入力</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 月初6-10日 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-teal-600 text-white rounded-lg px-4 py-2 text-lg md:text-xl font-bold mr-4 flex-shrink-0">
+              月初6-10日
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">在庫棚卸・財務諸表作成</h3>
+              <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+                <li>在庫の棚卸（商品を数える）</li>
+                <li>未払金・売掛金の確認</li>
+                <li>減価償却費の計上</li>
+                <li>財務諸表（P/L、B/S、C/F）の作成</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 月初11-15日 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <div class="flex items-start">
+            <div class="bg-teal-600 text-white rounded-lg px-4 py-2 text-lg md:text-xl font-bold mr-4 flex-shrink-0">
+              月初11-15日
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">前月の分析・改善策検討</h3>
+              <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+                <li>P/Lで利益を分析（前月比・予算比）</li>
+                <li>B/Sで財務状況を確認</li>
+                <li>C/Fで現金の動きをチェック</li>
+                <li>問題点を洗い出して改善策を考える</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 月次決算でやること -->
+    <section id="tasks" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次決算でやること（詳細）</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- タスク1 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">1. 現金実査</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            レジや手元の現金を実際に数えて、帳簿残高と一致するか確認します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              不一致があれば、雑損失や雑収入で調整します。
+            </p>
+          </div>
+        </div>
+
+        <!-- タスク2 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">2. 銀行残高の確認</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            通帳やネットバンキングで残高を確認し、帳簿と一致するかチェックします。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              不一致があれば、記帳漏れがないか確認します。
+            </p>
+          </div>
+        </div>
+
+        <!-- タスク3 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">3. 売掛金・買掛金の確認</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            請求書や支払い予定を確認して、漏れがないかチェックします。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              回収漏れや支払い忘れを防ぎます。
+            </p>
+          </div>
+        </div>
+
+        <!-- タスク4 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">4. 在庫の棚卸</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            商品を実際に数えて、金額を計算します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              在庫数 × 仕入単価 = 棚卸資産
+            </p>
+          </div>
+        </div>
+
+        <!-- タスク5 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">5. 未払経費の計上</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            月末時点で発生しているが、まだ支払っていない経費を計上します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              例：未払いの広告費、未払いの給料など
+            </p>
+          </div>
+        </div>
+
+        <!-- タスク6 -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">6. 減価償却費の計上</h3>
+          <p class="text-lg md:text-xl text-gray-700 mb-3">
+            固定資産の減価償却費を月次で計上します。
+          </p>
+          <div class="bg-gray-50 p-4 rounded">
+            <p class="text-lg text-gray-700">
+              会計ソフトなら自動計算されます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 月次レポート -->
+    <section id="report" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次レポートの作成</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        月次決算が完了したら、以下のレポートを作成して、経営判断に活用しましょう。
+      </p>
+
+      <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">月次レポートに含める内容</h3>
+
+        <div class="space-y-4">
+          <!-- 項目1 -->
+          <div class="border-b border-gray-200 pb-4">
+            <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">1. P/L（月次・累計）</h4>
+            <p class="text-lg md:text-xl text-gray-700">
+              当月の損益と、年初からの累計損益を表示します。
+            </p>
+          </div>
+
+          <!-- 項目2 -->
+          <div class="border-b border-gray-200 pb-4">
+            <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">2. B/S（月末時点）</h4>
+            <p class="text-lg md:text-xl text-gray-700">
+              月末時点の財務状況を示します。
+            </p>
+          </div>
+
+          <!-- 項目3 -->
+          <div class="border-b border-gray-200 pb-4">
+            <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">3. C/F（月次）</h4>
+            <p class="text-lg md:text-xl text-gray-700">
+              当月の現金の動きを示します。
+            </p>
+          </div>
+
+          <!-- 項目4 -->
+          <div class="border-b border-gray-200 pb-4">
+            <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">4. 予算vs実績比較</h4>
+            <p class="text-lg md:text-xl text-gray-700">
+              予算に対して、実績がどれだけ達成できたか確認します。
+            </p>
+          </div>
+
+          <!-- 項目5 -->
+          <div>
+            <h4 class="text-lg md:text-xl font-bold text-gray-800 mb-2">5. 前年同月比較</h4>
+            <p class="text-lg md:text-xl text-gray-700">
+              前年同月と比べて、成長しているか確認します。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-teal-50 border-l-4 border-teal-500 p-6 rounded-r">
+        <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-3">ダウンロード</h3>
+        <p class="text-lg md:text-xl text-teal-900 mb-4">
+          月次決算チェックリストをダウンロードして、活用しましょう。
+        </p>
+        <a href="../../assets/templates/月次決算チェックリスト.xlsx" class="inline-block bg-teal-600 text-white text-lg px-6 py-3 rounded hover:bg-teal-700 transition">
+          月次決算チェックリスト (.xlsx)
+        </a>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 leading-relaxed">
+        月次決算の進め方について、理解が深まったでしょうか？
+        毎月のルーティンとして習慣化することが重要です。
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-teal-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-3">✓ 月初1-5日</h3>
+          <p class="text-lg md:text-xl text-teal-900">
+            前月の取引を確定し、会計ソフトに入力します。
+          </p>
+        </div>
+
+        <div class="bg-teal-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-3">✓ 月初6-10日</h3>
+          <p class="text-lg md:text-xl text-teal-900">
+            在庫棚卸を行い、財務諸表を作成します。
+          </p>
+        </div>
+
+        <div class="bg-teal-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-3">✓ 月初11-15日</h3>
+          <p class="text-lg md:text-xl text-teal-900">
+            前月の分析を行い、改善策を検討します。
+          </p>
+        </div>
+
+        <div class="bg-teal-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl md:text-2xl font-bold text-teal-800 mb-3">✓ 習慣化</h3>
+          <p class="text-lg md:text-xl text-teal-900">
+            毎月のルーティンとして定着させましょう。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        次のセクションでは、「財務諸表の読み方・分析」を学んでいきます。
+        作成した財務諸表をどう活用するか、具体的な分析手法を紹介します。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-08.html" class="inline-block bg-teal-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-teal-700 transition shadow-lg">
+        次のセクションへ：6.8 財務諸表の読み方・分析 →
+      </a>
+    </div>
+
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dotItems = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    dotItems.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const target = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(target);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    function updateActiveDot() {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dotItems.forEach(dot => {
+        const dotDiv = dot.querySelector('div');
+        if (dot.getAttribute('data-target') === current) {
+          dotDiv.classList.remove('bg-gray-300');
+          dotDiv.classList.add('bg-teal-600', 'w-4', 'h-4');
+        } else {
+          dotDiv.classList.remove('bg-teal-600', 'w-4', 'h-4');
+          dotDiv.classList.add('bg-gray-300');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveDot);
+    updateActiveDot();
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

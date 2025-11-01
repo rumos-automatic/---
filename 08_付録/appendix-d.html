@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>付録D：便利ツール・テンプレート集 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- 読み込み進捗インジケーター -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-1 bg-blue-600 z-50 transition-all duration-300" style="width: 0%;"></div>
+
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-40 mt-1">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-700 transition">
+          ← トップページへ
+        </a>
+        <div class="appendix-nav flex space-x-2 md:space-x-4 text-sm md:text-base">
+          <a href="appendix-a.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録A</a>
+          <a href="appendix-b.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録B</a>
+          <a href="appendix-c.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録C</a>
+          <a href="appendix-d.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録D</a>
+          <a href="appendix-e.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録E</a>
+          <a href="appendix-f.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録F</a>
+          <a href="appendix-g.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録G</a>
+          <a href="appendix-h.html" class="px-3 py-2 rounded hover:bg-blue-100 transition">付録H</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-6xl">
+    <!-- ページタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-800">付録D：便利ツール・テンプレート集</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      実務ですぐに使えるExcelテンプレートを用意しました。<br>
+      ダウンロードして、ご自身の事業に合わせてカスタマイズしてご利用ください。
+    </p>
+
+    <!-- Excelテンプレート -->
+    <section class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800 border-b-4 border-blue-600 pb-2">
+        📊 Excelテンプレート
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- テンプレート1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">📄</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-2">月次損益計算書</h3>
+              <p class="text-lg md:text-xl text-gray-600">簡易版・詳細版の2種類</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            月次の売上・経費・利益を管理するテンプレートです。
+            青色のセルに数値を入力すると、自動で各種利益が計算されます。
+          </p>
+          <a href="../assets/templates/月次損益計算書.xlsx" download
+             class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">⚖️</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-2">貸借対照表</h3>
+              <p class="text-lg md:text-xl text-gray-600">B/Sテンプレート</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            資産・負債・純資産を管理するテンプレートです。
+            自己資本比率や流動比率も自動計算されます。
+          </p>
+          <a href="../assets/templates/貸借対照表.xlsx" download
+             class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">💸</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-2">キャッシュフロー計算書</h3>
+              <p class="text-lg md:text-xl text-gray-600">簡易版・詳細版の2種類</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            現金の流れを把握するテンプレートです。
+            営業CF、投資CF、財務CFを分けて管理できます。
+          </p>
+          <a href="../assets/templates/キャッシュフロー計算書.xlsx" download
+             class="inline-block bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">💰</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-2">資金繰り表</h3>
+              <p class="text-lg md:text-xl text-gray-600">3ヶ月版・12ヶ月版の2種類</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            月次の収入と支出を予測し、現金残高を管理するテンプレートです。
+            資金ショートを事前に防ぐために必須のツールです。
+          </p>
+          <a href="../assets/templates/資金繰り表.xlsx" download
+             class="inline-block bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート5 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">📦</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-teal-700 mb-2">商品別損益表</h3>
+              <p class="text-lg md:text-xl text-gray-600">商品・サービス別の利益分析</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            商品ごとの売上・原価・粗利を管理するテンプレートです。
+            どの商品が利益を生んでいるか一目でわかります。
+          </p>
+          <a href="../assets/templates/商品別損益表.xlsx" download
+             class="inline-block bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート6 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">🎯</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-pink-700 mb-2">予算実績管理表</h3>
+              <p class="text-lg md:text-xl text-gray-600">目標と実績の比較</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            予算と実績を並べて管理し、達成率を自動計算します。
+            前年比較もできるので、成長を実感できます。
+          </p>
+          <a href="../assets/templates/予算実績管理表.xlsx" download
+             class="inline-block bg-pink-600 text-white px-6 py-3 rounded hover:bg-pink-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート7 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">📈</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-indigo-700 mb-2">経営ダッシュボード</h3>
+              <p class="text-lg md:text-xl text-gray-600">主要KPIを一覧表示</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            粗利率、営業利益率、運転資金などの主要KPIを一画面で確認できます。
+            健全性の判定も自動で行います。
+          </p>
+          <a href="../assets/templates/経営ダッシュボード.xlsx" download
+             class="inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+        <!-- テンプレート8 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
+          <div class="flex items-start mb-4">
+            <div class="flex-shrink-0 w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+              <span class="text-3xl">🎲</span>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-2">損益分岐点計算シート</h3>
+              <p class="text-lg md:text-xl text-gray-600">BEP分析ツール</p>
+            </div>
+          </div>
+          <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+            固定費・変動費・単価を入力すると、損益分岐点売上高と販売数を自動計算します。
+            安全余裕率の判定機能付きです。
+          </p>
+          <a href="../assets/templates/損益分岐点計算シート.xlsx" download
+             class="inline-block bg-red-600 text-white px-6 py-3 rounded hover:bg-red-700 transition w-full text-center">
+            ダウンロード
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 使い方のヒント -->
+    <section class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800 border-b-4 border-green-600 pb-2">
+        💡 テンプレートの使い方
+      </h2>
+
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-700">📝 基本の使い方</h3>
+            <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>青色のセルに数値を入力します</li>
+              <li>緑色のセルは自動計算されます（編集不要）</li>
+              <li>サンプルデータは参考程度にご覧ください</li>
+              <li>実際のデータに置き換えて使ってください</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">⚙️ カスタマイズのヒント</h3>
+            <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>勘定科目は自社に合わせて変更OK</li>
+              <li>行を追加・削除する場合は、数式のコピーを忘れずに</li>
+              <li>月次で継続的に記録することが重要です</li>
+              <li>会計ソフトと併用するとさらに効率的です</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section class="mb-16">
+      <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-600">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">🎉 テンプレートを活用しよう</h2>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          これらのテンプレートは、実務ですぐに使えるように設計されています。
+        </p>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          まずは月次損益計算書と資金繰り表から始めてみましょう。
+          毎月記録することで、数字で経営を把握する習慣が身につきます。
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+          わからないことがあれば、付録C（相談先一覧）で紹介した専門家に相談してみてください。
+        </p>
+      </div>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="flex justify-between items-center">
+      <a href="appendix-c.html"
+         class="inline-block bg-gray-500 text-white px-8 py-4 rounded-lg hover:bg-gray-600 transition">
+        ← 前へ：付録C（相談先一覧）
+      </a>
+      <a href="appendix-e.html"
+         class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition">
+        次へ：付録E（FAQ） →
+      </a>
+    </div>
+  </main>
+
+  <!-- トップへ戻るボタン -->
+  <button id="scroll-to-top"
+          class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition opacity-0 pointer-events-none">
+    ↑
+  </button>
+
+  <!-- スクリプト -->
+  <script src="../assets/js/appendix-nav.js"></script>
+  <script>
+    const scrollTopBtn = document.getElementById('scroll-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        scrollTopBtn.classList.add('opacity-100');
+      } else {
+        scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        scrollTopBtn.classList.remove('opacity-100');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

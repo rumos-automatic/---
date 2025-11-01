@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.4 キャッシュフローの重要性 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-03.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col gap-4">
+      <div class="group relative">
+        <a href="#profit-vs-cash" class="block w-4 h-4 rounded-full bg-blue-600 hover:scale-125 transition dot-indicator" data-section="profit-vs-cash"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          利益≠現金
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#black-bankruptcy" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="black-bankruptcy"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          黒字倒産の例
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#cashflow-basics" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="cashflow-basics"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          管理の基本
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#summary" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="summary"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">4.4 キャッシュフローの重要性</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      このセクションでは、利益と現金の違いを理解し、キャッシュフロー管理の重要性を学んでいきます。
+      「黒字なのに倒産」という恐ろしい事態を避けるための知識です。
+    </p>
+
+    <!-- 利益≠現金 -->
+    <section id="profit-vs-cash" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">利益≠現金の理由</h2>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-red-700">重要な事実</h3>
+        <p class="text-2xl font-bold text-red-600 mb-4">利益が出ていても、現金がなければ倒産します</p>
+        <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+          損益計算書（P/L）で黒字でも、手元に現金がなければ仕入れや人件費が払えず、倒産してしまいます。
+          これを「黒字倒産」と言います。
+        </p>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        なぜ利益と現金が一致しないのでしょうか？主な理由は以下の4つです。
+      </p>
+
+      <div class="space-y-6 mb-8">
+        <!-- 理由1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">理由1：売掛金（後払い）</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+            商品を販売すると、損益計算書では「売上」として記録されますが、
+            実際の入金は1～2ヶ月後になることが多いです。
+          </p>
+          <div class="bg-blue-50 p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-blue-800">具体例</h4>
+            <p class="text-lg text-blue-900">6月に100万円の売上 → 入金は8月（2ヶ月後）</p>
+            <p class="text-lg text-blue-900 mt-2">P/Lには6月の売上として記録されるが、現金は8月まで入らない</p>
+          </div>
+        </div>
+
+        <!-- 理由2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-700">理由2：在庫</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+            商品を仕入れると現金は減りますが、まだ売れていないので売上には計上されません。
+            在庫として持っている間は、現金だけが減った状態です。
+          </p>
+          <div class="bg-green-50 p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-green-800">具体例</h4>
+            <p class="text-lg text-green-900">6月に50万円の商品を仕入れ → 現金が50万円減る</p>
+            <p class="text-lg text-green-900 mt-2">売れるまで売上にならないが、現金は先に減っている</p>
+          </div>
+        </div>
+
+        <!-- 理由3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-purple-700">理由3：融資返済</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+            融資の返済は「経費」ではないため、損益計算書（P/L）には載りません。
+            しかし、現金は確実に減ります。
+          </p>
+          <div class="bg-purple-50 p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-purple-800">具体例</h4>
+            <p class="text-lg text-purple-900">月10万円の返済 → P/Lには載らないが、現金は10万円減る</p>
+            <p class="text-lg text-purple-900 mt-2">利益が出ていても、返済で現金が減り続ける</p>
+          </div>
+        </div>
+
+        <!-- 理由4 -->
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-orange-500">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-orange-700">理由4：設備投資</h3>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-4">
+            設備を購入すると現金は一気に減りますが、減価償却で少しずつ経費化されます。
+            現金の減少と経費計上のタイミングがズレます。
+          </p>
+          <div class="bg-orange-50 p-4 rounded">
+            <h4 class="text-lg font-bold mb-2 text-orange-800">具体例</h4>
+            <p class="text-lg text-orange-900">300万円の機械を購入 → 現金は即座に300万円減る</p>
+            <p class="text-lg text-orange-900 mt-2">減価償却で5年間、年60万円ずつ経費計上される</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 黒字倒産の例 -->
+    <section id="black-bankruptcy" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">黒字倒産の例</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        実際に、利益は出ているのに現金がなくて倒産するケースを見てみましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-red-700">事例：黒字倒産のパターン</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-3 text-gray-800">事業の状況</h4>
+          <div class="bg-gray-100 p-4 rounded mb-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-lg font-bold text-gray-700 mb-2">損益計算書（P/L）</p>
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-lg text-gray-600">月の売上</span>
+                    <span class="text-lg font-bold">500万円</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-lg text-gray-600">月の経費</span>
+                    <span class="text-lg font-bold">400万円</span>
+                  </div>
+                  <div class="flex justify-between border-t border-gray-300 pt-1">
+                    <span class="text-lg text-gray-600">月の利益</span>
+                    <span class="text-lg font-bold text-green-600">100万円（黒字）</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-gray-700 mb-2">現金の動き</p>
+                <div class="space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-lg text-gray-600">入金</span>
+                    <span class="text-lg font-bold text-red-600">0円（全て売掛、2ヶ月後入金）</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-lg text-gray-600">支払</span>
+                    <span class="text-lg font-bold">400万円（全て現金払い）</span>
+                  </div>
+                  <div class="flex justify-between border-t border-gray-300 pt-1">
+                    <span class="text-lg text-gray-600">差引</span>
+                    <span class="text-lg font-bold text-red-600">-400万円（現金不足）</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-red-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-red-700">結果</h4>
+            <p class="text-lg md:text-xl text-red-900 leading-relaxed">
+              利益は100万円出ているが、現金は400万円不足している。
+              この状態が続くと、仕入れや人件費が払えず、倒産してしまう。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-orange-50 border-l-4 border-orange-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">⚠️ 黒字倒産を避けるには</h3>
+        <p class="text-lg md:text-xl text-orange-900 leading-relaxed">
+          利益だけでなく、<strong>現金の動き（キャッシュフロー）</strong>を常に把握することが重要です。
+          次のセクションで、キャッシュフロー管理の基本を学びましょう。
+        </p>
+      </div>
+    </section>
+
+    <!-- キャッシュフロー管理の基本 -->
+    <section id="cashflow-basics" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">キャッシュフロー管理の基本</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        黒字倒産を避けるために、どのようにキャッシュフローを管理すればよいのでしょうか？
+        4つの基本原則を守りましょう。
+      </p>
+
+      <div class="space-y-6 mb-8">
+        <!-- 原則1 -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">原則1：入金サイトを短く</h3>
+          <p class="text-lg md:text-xl text-blue-900 leading-relaxed">
+            売掛金の回収をできるだけ早くしましょう。理想は現金販売や即金ですが、
+            掛売りの場合は回収期間を1ヶ月以内に短縮することを目指します。
+          </p>
+        </div>
+
+        <!-- 原則2 -->
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-700">原則2：支払サイトを長く</h3>
+          <p class="text-lg md:text-xl text-green-900 leading-relaxed">
+            仕入れの支払いをできるだけ後払いにしましょう。入金より支払いが先だと、
+            現金が不足します。支払いは後、入金は先にするのが理想です。
+          </p>
+        </div>
+
+        <!-- 原則3 -->
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-purple-700">原則3：在庫を持ちすぎない</h3>
+          <p class="text-lg md:text-xl text-purple-900 leading-relaxed">
+            在庫は「現金が商品に変わった状態」です。在庫が増えすぎると現金が減ります。
+            必要最小限の在庫で回すことを心がけましょう。
+          </p>
+        </div>
+
+        <!-- 原則4 -->
+        <div class="bg-orange-50 border-l-4 border-orange-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-orange-700">原則4：売掛金の回収を徹底</h3>
+          <p class="text-lg md:text-xl text-orange-900 leading-relaxed">
+            売掛金の回収遅れは、現金不足の大きな原因です。回収期限を厳守し、
+            遅れている場合は速やかに督促しましょう。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">キャッシュフロー改善チェックリスト</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-3 text-xl">☐</span>
+            <span class="text-lg md:text-xl text-gray-700">売掛金の回収期限を1ヶ月以内に設定している</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-3 text-xl">☐</span>
+            <span class="text-lg md:text-xl text-gray-700">仕入れの支払いは後払い（掛売り）にしている</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-3 text-xl">☐</span>
+            <span class="text-lg md:text-xl text-gray-700">在庫は必要最小限に抑えている</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-3 text-xl">☐</span>
+            <span class="text-lg md:text-xl text-gray-700">売掛金の回収遅れを定期的にチェックしている</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-3 text-xl">☐</span>
+            <span class="text-lg md:text-xl text-gray-700">現金残高を毎日確認している</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        キャッシュフローの重要性について、理解が深まったでしょうか？
+        ここで学んだ内容をもう一度振り返ってみましょう。
+      </p>
+
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              <strong>利益≠現金</strong>：黒字でも現金がなければ倒産する
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              売掛金、在庫、融資返済、設備投資が利益と現金のズレを生む
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              入金サイトを短く、支払サイトを長く、在庫を最小限に
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              現金残高を常に把握し、キャッシュフロー管理を徹底する
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次は、運転資金の計算方法について詳しく見ていきましょう。
+        事業を回すのに必要な現金を正確に計算することが重要です。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-05.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-semibold">
+        次のセクションへ：運転資金の計算 →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター - スムーススクロール
+    document.querySelectorAll('.dot-indicator').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = dot.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // スクロール位置に応じてドットインジケーターを更新
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 200;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('.dot-indicator').forEach(dot => {
+            dot.classList.remove('bg-blue-600');
+            dot.classList.add('bg-gray-300');
+          });
+          const activeDot = document.querySelector(`.dot-indicator[data-section="${sectionId}"]`);
+          if (activeDot) {
+            activeDot.classList.remove('bg-gray-300');
+            activeDot.classList.add('bg-blue-600');
+          }
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    // 画像をクリックしたら拡大表示
+    document.querySelectorAll('img[src]').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        imageModal.classList.remove('hidden');
+        imageModal.classList.add('flex');
+      });
+    });
+
+    // モーダルを閉じる
+    closeModal.addEventListener('click', () => {
+      imageModal.classList.add('hidden');
+      imageModal.classList.remove('flex');
+    });
+
+    // 背景クリックで閉じる
+    imageModal.addEventListener('click', (e) => {
+      if (e.target === imageModal) {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+      }
+    });
+
+    // Escキーで閉じる
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

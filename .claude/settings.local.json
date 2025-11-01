@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(tree:*)",
+      "Bash(nul)",
+      "Bash(if [ -d \"C:\\CLAUDE_CODE\\01_RUMOS_Project\\会社事業\\02_管理会計の基本\" ])",
+      "Bash(then ls -la \"C:\\CLAUDE_CODE\\01_RUMOS_Project\\会社事業\\02_管理会計の基本\")",
+      "Bash(else echo \"Directory does not exist\")",
+      "Bash(fi)",
+      "Bash(if exist \"assets\" ls assets)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

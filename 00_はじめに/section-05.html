@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0.5 この資料の使い方 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dot-indicator {
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 40;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #d1d5db;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .dot.active {
+      background-color: #2563eb;
+      width: 16px;
+      height: 16px;
+    }
+    .dot:hover {
+      background-color: #60a5fa;
+    }
+    .dot-label {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      font-size: 0.875rem;
+    }
+    .dot:hover .dot-label {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .dot-indicator {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700 transition">
+        ← 前のセクションへ
+      </a>
+      <a href="../index.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700 transition">
+        トップページへ
+      </a>
+      <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700 transition">
+        次のセクションへ →
+      </a>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="dot-indicator">
+    <a href="section-01.html">
+      <div class="dot" data-section="section-1">
+        <div class="dot-label">0.1 この資料について</div>
+      </div>
+    </a>
+    <a href="section-02.html">
+      <div class="dot" data-section="section-2">
+        <div class="dot-label">0.2 資料の目的</div>
+      </div>
+    </a>
+    <a href="section-03.html">
+      <div class="dot" data-section="section-3">
+        <div class="dot-label">0.3 対象読者</div>
+      </div>
+    </a>
+    <a href="section-04.html">
+      <div class="dot" data-section="section-4">
+        <div class="dot-label">0.4 資料の構成と読み方</div>
+      </div>
+    </a>
+    <div class="dot active" data-section="section-5">
+      <div class="dot-label">0.5 この資料の使い方</div>
+    </div>
+    <a href="section-06.html">
+      <div class="dot" data-section="section-6">
+        <div class="dot-label">0.6 HTML資料の特徴</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <div class="mb-12">
+      <p class="text-xl md:text-2xl text-blue-600 mb-2">第0章：はじめに</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+        0.5 この資料の使い方
+      </h1>
+    </div>
+
+    <!-- 内容 -->
+    <section id="section-5" class="mb-16">
+      <div class="prose max-w-none">
+        <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+          この資料は、さまざまな使い方ができます。
+          あなたの状況や目的に合わせて、最適な活用方法を選んでください。
+        </p>
+
+        <!-- 使い方1：辞書的に使う -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4 flex items-center">
+            <span class="mr-4">📖</span>辞書的に使う
+          </h2>
+          <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
+            困ったときや迷ったときに、該当箇所を参照する使い方です。
+            すべてを読む必要はありません。必要な部分だけをピックアップして読んでください。
+          </p>
+          <div class="bg-blue-50 rounded-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">こんなときに便利</h3>
+            <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>融資の使い方に迷ったら → 第5章を確認</li>
+              <li>損益分岐点を計算したい → 第7章を確認</li>
+              <li>会計用語がわからない → 付録の用語索引を確認</li>
+              <li>財務諸表の作り方がわからない → 第6章を確認</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 使い方2：順番に読んで体系的に学ぶ -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-green-700 mb-4 flex items-center">
+            <span class="mr-4">📚</span>順番に読んで体系的に学ぶ
+          </h2>
+          <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
+            第0章から第7章まで、順番に読み進める使い方です。
+            会計や融資について初めて学ぶ方には、この方法をおすすめします。
+          </p>
+          <div class="bg-green-50 rounded-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">こんな方におすすめ</h3>
+            <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>会計や融資の知識がほとんどない</li>
+              <li>基礎から体系的に学びたい</li>
+              <li>時間に余裕があり、じっくり学びたい</li>
+              <li>将来的に「管理会計の基本」を読む予定がある</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 使い方3：「管理会計の基本」と併用する -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-purple-700 mb-4 flex items-center">
+            <span class="mr-4">📘</span>「管理会計の基本」と併用する
+          </h2>
+          <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
+            「管理会計の基本」を読む前後に、この資料を参照する使い方です。
+            本を読む前に第1章・第2章を読んでおくと、理解がスムーズになります。
+          </p>
+          <div class="bg-purple-50 rounded-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">推奨の流れ</h3>
+            <ol class="list-decimal pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>この資料の第1章・第2章を読む</li>
+              <li>「管理会計の基本」を読む</li>
+              <li>この資料の第7章を読んで、実務で活用する</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- 使い方4：実務で迷ったときのチェックリストとして使う -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-orange-700 mb-4 flex items-center">
+            <span class="mr-4">✅</span>実務で迷ったときのチェックリストとして使う
+          </h2>
+          <p class="text-lg md:text-xl text-gray-700 mb-4 leading-relaxed">
+            経営判断に迷ったときに、この資料を参照する使い方です。
+            特に第5章「融資の適切な使い方」は、実務で迷ったときに役立ちます。
+          </p>
+          <div class="bg-orange-50 rounded-lg p-6">
+            <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-3">こんな場面で活用</h3>
+            <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-2">
+              <li>融資を受けるべきか迷ったとき</li>
+              <li>融資で受け取ったお金をどう使うか迷ったとき</li>
+              <li>現金が減っている原因がわからないとき</li>
+              <li>資金繰りで不安を感じたとき</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-8 mb-8">
+          <h2 class="text-xl md:text-2xl font-bold text-red-700 mb-4">
+            ⚠️ 重要な注意事項
+          </h2>
+          <div class="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+            <p>
+              <strong>1. この資料は一般的な原則を説明するものです</strong><br>
+              すべての事業に当てはまるわけではありません。個別の事業状況により、最適な判断は異なる場合があります。
+            </p>
+            <p>
+              <strong>2. 重要な経営判断は専門家に相談してください</strong><br>
+              融資を受けるか、どれくらいの金額を借りるか、といった重要な判断は、必ず専門家（税理士・会計士・経営コンサルタント）に相談してください。
+            </p>
+            <p>
+              <strong>3. この資料はあくまで「学習用」です</strong><br>
+              実際の経営判断には、事業の状況、市場環境、競合他社の動向など、多くの要素が関わります。
+              この資料で学んだ知識を基に、専門家と相談しながら判断してください。
+            </p>
+          </div>
+        </div>
+
+        <!-- ヒント -->
+        <div class="bg-blue-50 rounded-lg p-8 mb-8">
+          <h2 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">
+            💡 効果的な学習のヒント
+          </h2>
+          <ul class="list-disc pl-6 text-lg md:text-xl text-gray-700 space-y-3 leading-relaxed">
+            <li>
+              <strong>わからないことがあったら、何度でも読み返してください</strong><br>
+              理解できるまで繰り返し読むことが大切です。
+            </li>
+            <li>
+              <strong>実際に手を動かしてみましょう</strong><br>
+              Excelテンプレートを使って、実際に財務諸表を作成してみてください。
+            </li>
+            <li>
+              <strong>自分の事業に置き換えて考えてみましょう</strong><br>
+              資料の中の数値例を、自分の事業の数字に置き換えて計算してみると、より深く理解できます。
+            </li>
+            <li>
+              <strong>ブックマークやメモを活用してください</strong><br>
+              重要な箇所はブックマークに登録したり、メモを取ったりして、後で見返せるようにしましょう。
+            </li>
+          </ul>
+        </div>
+
+        <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+          それでは、次のセクションで、HTML資料ならではの特徴について見ていきましょう。
+        </p>
+      </div>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center border-t border-gray-300 pt-8">
+      <p class="text-lg md:text-xl text-gray-600 mb-4">次は、HTML資料ならではの特徴について説明します。</p>
+      <a href="section-06.html" class="inline-block bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">
+        0.6 HTML資料の特徴 →
+      </a>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-gray-800 text-white py-8 mt-16">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-lg md:text-xl">会社事業における融資と利益の理解 - 小規模事業経営者のための実践的ガイド</p>
+    </div>
+  </footer>
+
+</body>
+</html>

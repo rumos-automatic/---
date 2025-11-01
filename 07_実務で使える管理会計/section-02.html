@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.2 月次損益管理の実践 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← トップページへ</a>
+      <div class="flex space-x-4">
+        <a href="section-01.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">← 前のセクション</a>
+        <a href="section-03.html" class="text-blue-600 hover:text-blue-800 font-bold text-lg md:text-xl">次のセクション →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col space-y-4">
+      <div class="dot-item group relative" data-target="intro">
+        <div class="w-4 h-4 bg-blue-600 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次損益計算書（月次P/L）とは
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="create">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次P/Lの作り方
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="points">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          見るべき4つのポイント
+        </span>
+      </div>
+      <div class="dot-item group relative" data-target="habit">
+        <div class="w-4 h-4 bg-gray-300 rounded-full cursor-pointer transition-all hover:scale-125"></div>
+        <span class="absolute right-8 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-sm">
+          月次レビューの習慣化
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">7.2 月次損益管理の実践</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      前のセクションで、小規模事業に必要な管理会計を学びました。
+      このセクションでは、その中で最も重要な「月次損益管理」の具体的な実践方法を学んでいきます。
+      どうやって月次P/Lを作り、どこを見ればいいのか、一緒に確認していきましょう。
+    </p>
+
+    <!-- 小セクション1: 月次損益計算書（月次P/L）とは -->
+    <section id="intro" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次損益計算書（月次P/L）とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        月次損益計算書（月次P/L）とは、<strong class="text-blue-700">毎月の売上・経費・利益をまとめた表</strong>のことです。
+        年に一度の決算では、問題が起きてから気づくまでに時間がかかりすぎます。
+      </p>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        毎月チェックすることで、「売上が落ちてきた」「経費が増えている」といった問題を早期に発見できます。
+        これが月次損益管理の最大のメリットです。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-900">月次P/Lの役割</h3>
+        <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-blue-900">
+          <li>毎月の経営状況を把握する</li>
+          <li>売上・利益の推移を確認する</li>
+          <li>経費の無駄遣いを発見する</li>
+          <li>問題を早期に発見し、対策を打つ</li>
+          <li>融資返済後に手元に残る現金を確認する</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 小セクション2: 月次P/Lの作り方 -->
+    <section id="create" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次P/Lの作り方</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        月次P/Lは、シンプルな表形式で作成します。
+        以下は、実際の月次P/Lの例です。
+      </p>
+
+      <!-- 月次P/L表 -->
+      <div class="overflow-x-auto mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">月次P/Lの例</h3>
+        <table class="w-full border-collapse text-lg md:text-xl">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-3 text-left">項目</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">4月</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">5月</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">6月</th>
+              <th class="border border-gray-300 px-4 py-3 text-right">累計</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 px-4 py-3 font-bold">売上</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">100万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">120万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">110万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">330万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-3">仕入・原価</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">60万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">70万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">65万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">195万円</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">粗利</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">40万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">50万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">45万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">135万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-3">経費</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">30万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">32万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">31万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">93万円</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">営業利益</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">10万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">18万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">14万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold text-green-700">42万円</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 px-4 py-3">融資返済</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">5万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">5万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">5万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right">15万円</td>
+            </tr>
+            <tr class="bg-yellow-50">
+              <td class="border border-gray-300 px-4 py-3 font-bold">手元に残る</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">5万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">13万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">9万円</td>
+              <td class="border border-gray-300 px-4 py-3 text-right font-bold">27万円</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        この表を見ると、毎月の売上・利益の推移、融資返済後に手元に残る現金がひと目でわかります。
+        累計列を追加することで、年間の進捗も確認できます。
+      </p>
+
+      <!-- Excelテンプレートダウンロード -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-green-900">📥 Excelテンプレートをダウンロード</h3>
+        <p class="text-lg md:text-xl mb-4 text-green-900">
+          月次P/Lのテンプレートをご用意しています。
+          ダウンロードして、すぐに使い始めることができます。
+        </p>
+        <a href="../assets/templates/月次損益計算書.xlsx" class="inline-block bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700 transition text-lg md:text-xl font-bold">
+          月次損益計算書テンプレート.xlsx をダウンロード
+        </a>
+        <p class="text-sm mt-2 text-green-700">※ ファイルは準備中です。後日公開予定。</p>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 見るべき4つのポイント -->
+    <section id="points" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">見るべき4つのポイント</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        月次P/Lを作ったら、次の4つのポイントを必ずチェックしましょう。
+        これらを見ることで、経営の問題点が見えてきます。
+      </p>
+
+      <!-- ポイント1: 売上の推移 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">1. 売上の推移</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          売上が増えているか、減っているかを確認します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">チェックポイント</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-gray-700">
+            <li>前月と比べて増えているか、減っているか</li>
+            <li>前年同月と比べてどうか</li>
+            <li>季節変動はあるか（例：年末は売上が増える）</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-blue-900">
+            <strong>対策例：</strong> 売上が減っている場合は、集客強化、新商品の投入、キャンペーンの実施などを検討します。
+          </p>
+        </div>
+      </div>
+
+      <!-- ポイント2: 粗利率の推移 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">2. 粗利率の推移</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          粗利率が一定に保たれているかを確認します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">粗利率の計算</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            粗利率 = 粗利 ÷ 売上 × 100
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            例：4月の粗利率 = 40万円 ÷ 100万円 × 100 = 40%
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">チェックポイント</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-gray-700">
+            <li>粗利率が一定に保たれているか</li>
+            <li>下がっている場合は値引きや原価上昇の可能性</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-blue-900">
+            <strong>対策例：</strong> 粗利率が下がっている場合は、値上げ、仕入先の見直し、不採算商品の整理などを検討します。
+          </p>
+        </div>
+      </div>
+
+      <!-- ポイント3: 経費の推移 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">3. 経費の推移</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          無駄な経費が増えていないかを確認します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">チェックポイント</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg md:text-xl text-gray-700">
+            <li>前月と比べて経費が増えていないか</li>
+            <li>固定費（家賃、人件費）が適正か</li>
+            <li>変動費（広告費、外注費）が売上に見合っているか</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-blue-900">
+            <strong>対策例：</strong> 無駄な経費がある場合は、削減可能な項目を洗い出して見直しを行います。
+          </p>
+        </div>
+      </div>
+
+      <!-- ポイント4: 手元に残る現金 -->
+      <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">4. 手元に残る現金</h3>
+        <p class="text-lg md:text-xl mb-4 text-gray-700 leading-relaxed">
+          融資返済後に手元に残る現金がプラスかどうかを確認します。
+        </p>
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">手元に残る現金の計算</h4>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            手元に残る現金 = 営業利益 - 融資返済
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 mb-2">
+            例：4月 = 10万円 - 5万円 = 5万円
+          </p>
+        </div>
+        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-red-800">⚠️ 危険サイン</h4>
+          <p class="text-lg md:text-xl text-red-900">
+            手元に残る現金がマイナスの場合、現金が徐々に減っていきます。
+            このままでは資金ショートの危険があるため、早急に改善が必要です。
+          </p>
+        </div>
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="text-lg md:text-xl text-blue-900">
+            <strong>対策例：</strong> 売上を増やす、経費を削減する、融資返済額を交渉するなど、総合的な改善策を実施します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 月次レビューの習慣化 -->
+    <section id="habit" class="mb-24 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">月次レビューの習慣化</h2>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        月次P/Lは作っただけでは意味がありません。
+        <strong class="text-blue-700">定期的にレビューして、改善につなげること</strong>が大切です。
+      </p>
+
+      <!-- 月次レビューのルーティン -->
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-8 rounded">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-green-900">月次レビューのルーティン</h3>
+
+        <div class="mb-6">
+          <h4 class="text-lg md:text-xl font-bold mb-2 text-green-800">毎月10日までに実施：</h4>
+          <ol class="list-decimal pl-6 space-y-3 text-lg md:text-xl text-green-900">
+            <li>前月のP/Lを作成する</li>
+            <li>前月比・予算比を確認する</li>
+            <li>問題点を洗い出す（売上減、経費増など）</li>
+            <li>今月の対策を決める（集客強化、経費削減など）</li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-4 rounded">
+          <p class="text-lg md:text-xl text-green-900 font-bold">
+            所要時間：30分〜1時間
+          </p>
+          <p class="text-lg md:text-xl text-green-900 mt-2">
+            月にたった30分〜1時間で、経営の問題点を発見し、改善できます。
+          </p>
+        </div>
+      </div>
+
+      <!-- レビューチェックリスト -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">月次レビューチェックリスト</h3>
+        <div class="space-y-3">
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>前月のP/Lを作成した</span>
+          </label>
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>売上の推移を確認した（増えているか、減っているか）</span>
+          </label>
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>粗利率が一定に保たれているか確認した</span>
+          </label>
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>無駄な経費がないか確認した</span>
+          </label>
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>手元に残る現金がプラスか確認した</span>
+          </label>
+          <label class="flex items-start space-x-3 text-lg md:text-xl">
+            <input type="checkbox" class="mt-1 w-5 h-5">
+            <span>問題点を洗い出し、対策を決めた</span>
+          </label>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        このチェックリストを毎月実施することで、月次レビューが習慣化されます。
+        最初は少し時間がかかるかもしれませんが、慣れれば30分程度で完了できるようになります。
+      </p>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-lg">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        月次損益管理の実践方法について、理解が深まったでしょうか？
+      </p>
+
+      <ul class="list-disc pl-6 space-y-3 mb-6 text-lg md:text-xl text-gray-700">
+        <li>月次P/Lは、毎月の売上・経費・利益をまとめた表</li>
+        <li>見るべきポイントは「売上の推移」「粗利率の推移」「経費の推移」「手元に残る現金」の4つ</li>
+        <li>月次レビューは毎月10日までに実施し、問題点を発見して改善する</li>
+        <li>チェックリストを使えば、30分〜1時間で完了できる</li>
+      </ul>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次のセクションでは、資金繰り管理の実践方法を学びます。
+        現金を切らさないための管理は、経営にとって極めて重要です。一緒に学んでいきましょう。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-03.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ：資金繰り管理の実践 →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot-item');
+    const sections = document.querySelectorAll('section[id]');
+
+    // ドットクリック時のスムーススクロール
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // スクロール時のドットハイライト
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        const dotTarget = dot.getAttribute('data-target');
+        const dotCircle = dot.querySelector('div');
+        if (dotTarget === current) {
+          dotCircle.classList.remove('bg-gray-300');
+          dotCircle.classList.add('bg-blue-600');
+        } else {
+          dotCircle.classList.remove('bg-blue-600');
+          dotCircle.classList.add('bg-gray-300');
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img[data-expandable]').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

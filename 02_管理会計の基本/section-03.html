@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2.3 原価計算の基礎 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dot-indicator {
+      position: fixed;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 40;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #cbd5e1;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .dot.active {
+      background-color: #3b82f6;
+      transform: scale(1.3);
+    }
+    .dot:hover {
+      background-color: #3b82f6;
+      transform: scale(1.2);
+    }
+    .dot-label {
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #1e293b;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+      font-size: 0.875rem;
+    }
+    .dot:hover .dot-label {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .dot-indicator {
+        display: none;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-700">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-02.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          ← 前のセクション
+        </a>
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-700">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="dot-indicator">
+    <div class="dot active" data-target="intro">
+      <div class="dot-label">なぜ必要か</div>
+    </div>
+    <div class="dot" data-target="classification">
+      <div class="dot-label">原価の分類</div>
+    </div>
+    <div class="dot" data-target="formula">
+      <div class="dot-label">計算式</div>
+    </div>
+    <div class="dot" data-target="example">
+      <div class="dot-label">具体例</div>
+    </div>
+    <div class="dot" data-target="calculator">
+      <div class="dot-label">計算ツール</div>
+    </div>
+    <div class="dot" data-target="summary">
+      <div class="dot-label">まとめ</div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-800">2.3 原価計算の基礎</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      製品やサービスのコストを正確に把握することは、経営判断の基本です。
+      このセクションでは、原価計算の考え方と計算方法を学んでいきましょう。
+    </p>
+
+    <!-- 小セクション1: なぜ必要か -->
+    <section id="intro" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">なぜ原価計算が必要なのか</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        原価計算とは、<strong class="text-blue-600">製品やサービス1個あたりにかかるコストを正確に把握すること</strong>です。
+        「だいたいこれくらい」という感覚ではなく、数字で正確に把握することが重要です。
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">💰 理由1</h3>
+          <p class="text-lg md:text-xl text-gray-700 font-bold mb-2">売値を決める根拠</p>
+          <p class="text-lg text-gray-600">
+            原価がわからないと、適切な価格設定ができません。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">📊 理由2</h3>
+          <p class="text-lg md:text-xl text-gray-700 font-bold mb-2">利益の把握</p>
+          <p class="text-lg text-gray-600">
+            どの商品が儲かっているかを正確に判断できます。
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">🔍 理由3</h3>
+          <p class="text-lg md:text-xl text-gray-700 font-bold mb-2">ムダの発見</p>
+          <p class="text-lg text-gray-600">
+            不要なコストを発見して削減できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">⚠️ よくある誤解</h3>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">
+          <strong>❌ 誤り：</strong>「材料費だけが原価だ」
+        </p>
+        <p class="text-lg md:text-xl text-yellow-900">
+          <strong>✅ 正しい：</strong>「材料費 + 家賃 + 人件費など、すべてのコストを含める」
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション2: 原価の分類 -->
+    <section id="classification" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">原価の分類</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        原価は大きく2つに分類されます。この分類を理解することが、原価計算の第一歩です。
+      </p>
+
+      <!-- 変動費 -->
+      <div class="bg-orange-50 p-6 rounded-lg mb-6 border-l-4 border-orange-500">
+        <h3 class="text-xl md:text-2xl font-bold text-orange-700 mb-4">1. 変動費（へんどうひ）</h3>
+        <p class="text-lg md:text-xl text-orange-900 mb-4">
+          <strong>売上に比例して増える費用</strong>です。
+          商品を1個売るごとに、必ずかかる費用のことです。
+        </p>
+        <div class="bg-white p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold text-orange-800 mb-2">変動費の例</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li><strong>商品仕入れ費：</strong>商品を売るために仕入れたコスト</li>
+            <li><strong>材料費：</strong>製品を作るための原材料</li>
+            <li><strong>外注費：</strong>売上に応じて発生する外注コスト</li>
+            <li><strong>販売手数料：</strong>売上の○%として支払う手数料</li>
+            <li><strong>送料：</strong>商品を発送するごとにかかる費用</li>
+          </ul>
+        </div>
+        <div class="bg-orange-100 p-4 rounded">
+          <p class="text-lg text-orange-900">
+            <strong>具体例：</strong>商品1個を売るたびに材料費500円がかかる場合、
+            10個売れば5,000円、100個売れば50,000円かかります。
+          </p>
+        </div>
+      </div>
+
+      <!-- 固定費 -->
+      <div class="bg-blue-50 p-6 rounded-lg mb-6 border-l-4 border-blue-500">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">2. 固定費（こていひ）</h3>
+        <p class="text-lg md:text-xl text-blue-900 mb-4">
+          <strong>売上に関係なく、毎月一定額かかる費用</strong>です。
+          商品が売れても売れなくても、必ず支払う必要がある費用です。
+        </p>
+        <div class="bg-white p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold text-blue-800 mb-2">固定費の例</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li><strong>家賃：</strong>店舗・事務所の賃料</li>
+            <li><strong>正社員の給料：</strong>売上に関係なく支払う給与</li>
+            <li><strong>減価償却費：</strong>設備・機械の費用を分割したもの</li>
+            <li><strong>保険料：</strong>火災保険、賠償責任保険など</li>
+            <li><strong>固定回線費用：</strong>インターネット、電話の基本料金</li>
+          </ul>
+        </div>
+        <div class="bg-blue-100 p-4 rounded">
+          <p class="text-lg text-blue-900">
+            <strong>具体例：</strong>家賃が月10万円の場合、
+            商品が1個しか売れなくても、100個売れても、10万円は必ず支払います。
+          </p>
+        </div>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="bg-gray-100 p-8 rounded-lg text-center mb-6 border-2 border-dashed border-gray-300">
+        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
+        <p class="text-lg md:text-xl text-gray-700 font-bold">variable-cost-vs-fixed-cost.png</p>
+        <p class="text-lg text-gray-600 mt-2">変動費と固定費の違いを示す図解（売上増加に伴う変動費の増加、固定費は一定）</p>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">💡 分類のコツ</h3>
+        <p class="text-lg md:text-xl text-green-900 mb-3">
+          <strong>「売上がゼロでも発生する？」</strong>と自問してください。
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-lg text-green-900">
+          <li>発生する → 固定費</li>
+          <li>発生しない → 変動費</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 小セクション3: 原価計算の基本式 -->
+    <section id="formula" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">原価計算の基本式</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        製品1個あたりの原価を計算する基本式は、以下の通りです。
+      </p>
+
+      <div class="bg-blue-50 p-8 rounded-lg mb-6 border-2 border-blue-500">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4 text-center">原価計算の基本式</h3>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
+            製品1個あたりの原価 = 変動費 + (固定費 ÷ 販売個数)
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6 rounded-r-lg">
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">💡 重要なポイント</h3>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3">
+          固定費は「販売個数」で割ることで、1個あたりに配分します。
+        </p>
+        <p class="text-lg md:text-xl text-yellow-900">
+          つまり、<strong>たくさん売れば売るほど、1個あたりの原価は下がります</strong>。
+          これを「規模の経済」と呼びます。
+        </p>
+      </div>
+    </section>
+
+    <!-- 小セクション4: 具体例 -->
+    <section id="example" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">具体例で理解する</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        実際の数値を使って、原価計算をしてみましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8 border-2 border-gray-300">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">🧮 計算例</h3>
+
+        <div class="bg-gray-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold text-gray-700 mb-3">前提条件</h4>
+          <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
+            <li>材料費（変動費）：<strong class="text-orange-600">500円/個</strong></li>
+            <li>家賃・人件費（固定費）：<strong class="text-blue-600">月30万円</strong></li>
+            <li>月の販売個数：<strong class="text-green-600">100個</strong></li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold text-blue-700 mb-3">計算過程</h4>
+          <div class="space-y-3 text-lg text-gray-700">
+            <p><strong>ステップ1：</strong>変動費 = 500円/個</p>
+            <p><strong>ステップ2：</strong>1個あたり固定費 = 30万円 ÷ 100個 = 3,000円/個</p>
+            <p><strong>ステップ3：</strong>1個あたり原価 = 500円 + 3,000円 = <strong class="text-2xl text-green-600">3,500円</strong></p>
+          </div>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-green-700 mb-2">結果</h4>
+          <p class="text-lg md:text-xl text-green-900">
+            製品1個あたりの原価は<strong class="text-2xl">3,500円</strong>です。
+            この金額以上で売らないと、利益が出ません。
+          </p>
+        </div>
+      </div>
+
+      <!-- 販売個数が変わった場合 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8 border-2 border-gray-300">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-800">📈 販売個数が増えた場合</h3>
+
+        <p class="text-lg md:text-xl mb-4 text-gray-700">
+          同じ条件で、月に<strong class="text-green-600">200個</strong>売れた場合を計算してみましょう。
+        </p>
+
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold text-blue-700 mb-3">計算過程</h4>
+          <div class="space-y-3 text-lg text-gray-700">
+            <p><strong>ステップ1：</strong>変動費 = 500円/個（変わらず）</p>
+            <p><strong>ステップ2：</strong>1個あたり固定費 = 30万円 ÷ 200個 = 1,500円/個</p>
+            <p><strong>ステップ3：</strong>1個あたり原価 = 500円 + 1,500円 = <strong class="text-2xl text-green-600">2,000円</strong></p>
+          </div>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold text-green-700 mb-2">わかったこと</h4>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            販売個数が100個から200個に増えると、
+            1個あたりの原価は<strong>3,500円 → 2,000円</strong>に下がります。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            これが「規模の経済」です。たくさん売れば売るほど、1個あたりの原価が下がり、利益が増えます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 小セクション5: 計算ツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">原価計算ツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        自社の数値を入力して、原価を計算してみましょう。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8 border-2 border-blue-500">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">🧮 原価計算シミュレーター</h3>
+
+        <div class="mb-4">
+          <label class="block text-lg md:text-xl font-bold mb-2 text-gray-700">変動費（円/個）</label>
+          <input type="number" id="variableCost" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" placeholder="500" min="0">
+          <p class="text-sm text-gray-600 mt-1">例：材料費、仕入費など</p>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-lg md:text-xl font-bold mb-2 text-gray-700">固定費（円/月）</label>
+          <input type="number" id="fixedCost" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" placeholder="300000" min="0">
+          <p class="text-sm text-gray-600 mt-1">例：家賃、人件費、保険料など</p>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-lg md:text-xl font-bold mb-2 text-gray-700">月間販売個数（個）</label>
+          <input type="number" id="salesVolume" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-lg focus:border-blue-500 focus:outline-none" placeholder="100" min="1">
+          <p class="text-sm text-gray-600 mt-1">月に何個売れる見込みですか？</p>
+        </div>
+
+        <button onclick="calculateCost()" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 w-full text-lg md:text-xl font-bold transition shadow-md">
+          計算する
+        </button>
+
+        <div id="result" class="mt-6 p-6 bg-green-50 rounded-lg hidden border-2 border-green-500">
+          <h4 class="text-lg md:text-xl font-bold text-green-700 mb-4">📊 計算結果</h4>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center border-b border-green-200 pb-2">
+              <span class="text-lg text-gray-700">変動費（1個あたり）</span>
+              <span class="text-xl font-bold text-orange-600" id="resultVariable"></span>
+            </div>
+            <div class="flex justify-between items-center border-b border-green-200 pb-2">
+              <span class="text-lg text-gray-700">固定費（1個あたり）</span>
+              <span class="text-xl font-bold text-blue-600" id="resultFixed"></span>
+            </div>
+            <div class="flex justify-between items-center pt-2">
+              <span class="text-xl font-bold text-gray-800">製品1個あたりの原価</span>
+              <span class="text-3xl font-bold text-green-600" id="resultTotal"></span>
+            </div>
+          </div>
+          <div class="mt-4 bg-white p-4 rounded border-l-4 border-green-500">
+            <p class="text-lg text-gray-700">
+              <strong class="text-green-700">最低販売価格：</strong>
+              この金額以上で売る必要があります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        原価計算の基本について、理解が深まったでしょうか？
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-4">📝 このセクションで学んだこと</h3>
+        <ul class="list-disc pl-6 space-y-3 text-lg md:text-xl text-blue-900">
+          <li>原価計算は、売値設定・利益把握・ムダ発見に必要です</li>
+          <li>原価は「変動費」と「固定費」の2つに分類されます</li>
+          <li>変動費は売上に比例、固定費は売上に関係なく一定です</li>
+          <li>1個あたり原価 = 変動費 + (固定費 ÷ 販売個数)</li>
+          <li>販売個数が増えると、1個あたりの原価は下がります</li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">
+        次のセクションでは、CVP分析（損益分岐点分析）を学びます。
+        「いくつ売れば黒字になるか」を計算できるようになりますよ。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-04.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold shadow-lg">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // 原価計算ツール
+    function calculateCost() {
+      const variableCost = parseFloat(document.getElementById('variableCost').value);
+      const fixedCost = parseFloat(document.getElementById('fixedCost').value);
+      const salesVolume = parseFloat(document.getElementById('salesVolume').value);
+
+      if (isNaN(variableCost) || isNaN(fixedCost) || isNaN(salesVolume)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      if (salesVolume <= 0) {
+        alert('販売個数は1以上の数値を入力してください');
+        return;
+      }
+
+      const fixedCostPerUnit = fixedCost / salesVolume;
+      const totalCostPerUnit = variableCost + fixedCostPerUnit;
+
+      document.getElementById('resultVariable').textContent = variableCost.toLocaleString() + '円';
+      document.getElementById('resultFixed').textContent = Math.ceil(fixedCostPerUnit).toLocaleString() + '円';
+      document.getElementById('resultTotal').textContent = Math.ceil(totalCostPerUnit).toLocaleString() + '円';
+      document.getElementById('result').classList.remove('hidden');
+    }
+
+    // ドットインジケーター
+    const dots = document.querySelectorAll('.dot');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+        if (dot.getAttribute('data-target') === current) {
+          dot.classList.add('active');
+        }
+      });
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const targetId = dot.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // 画像拡大機能
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeModal = document.getElementById('closeModal');
+
+    document.querySelectorAll('img:not(#modalImage)').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalImage.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    });
+  </script>
+</body>
+</html>

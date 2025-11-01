@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.10 まとめ：管理会計の本を読む準備 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .dot { transition: all 0.3s ease; }
+    .dot:hover .tooltip { opacity: 1; visibility: visible; }
+    .tooltip { opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+    .checklist-item input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページへ</a>
+        <div class="flex gap-4">
+          <a href="section-09.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+          <a href="../index.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">トップページへ →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#review" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">振り返り</div>
+      </a>
+      <a href="#checklist" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">チェックリスト</div>
+      </a>
+      <a href="#next-chapter" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">次章へ</div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">まとめ</div>
+      </a>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.10 まとめ：管理会計の本を読む準備</h1>
+      <p class="text-lg md:text-xl text-gray-600">第1章で学んだことを振り返り、「管理会計の基本」を読む準備が整ったか確認しましょう。</p>
+    </div>
+
+    <section id="review" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">この章で学んだこと</h2>
+
+      <p class="text-lg md:text-xl mb-6">第1章では、会計の基礎知識を学びました。それぞれのセクションで学んだ重要なポイントを振り返りましょう。</p>
+
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.1 なぜ会計が必要なのか</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">会計は「事業の成績表」であり、お金の流れを見える化する仕組みです</li>
+            <li class="text-lg md:text-xl">会計をしないと、赤字に気づかず資金ショートのリスクがあります</li>
+            <li class="text-lg md:text-xl">会計をすると、早期の問題発見や計画的な経営が可能になります</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.2 財務会計と管理会計の違い</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">財務会計は外部報告用（税務署、銀行向け）で、ルールが厳格</li>
+            <li class="text-lg md:text-xl">管理会計は内部管理用（経営者自身が使う）で、自由な形式</li>
+            <li class="text-lg md:text-xl">小規模事業者こそ、両方の会計が重要です</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.3 会計の基本用語集</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">売上、原価、粗利、経費、営業利益などの基本用語を理解しました</li>
+            <li class="text-lg md:text-xl">資産、負債、純資産の関係を学びました</li>
+            <li class="text-lg md:text-xl">利益とキャッシュフローは別物であることを理解しました</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.4 簿記の超基礎</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">複式簿記は、1つの取引を2つの側面から記録する仕組みです</li>
+            <li class="text-lg md:text-xl">仕訳は左側（借方）と右側（貸方）に分けて記録します</li>
+            <li class="text-lg md:text-xl">会計ソフトや税理士を活用すれば、細かいルールを覚える必要はありません</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.5 損益計算書（P/L）とは</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">損益計算書は一定期間の利益を示します</li>
+            <li class="text-lg md:text-xl">売上 - 原価 = 粗利、粗利 - 経費 = 営業利益</li>
+            <li class="text-lg md:text-xl">売上が多くても経費がかかりすぎれば赤字になります</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.6 貸借対照表（B/S）とは</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">貸借対照表はある時点の財産状況を示します</li>
+            <li class="text-lg md:text-xl">資産 = 負債 + 純資産（必ず一致）</li>
+            <li class="text-lg md:text-xl">純資産がマイナス = 債務超過（危険）</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.7 キャッシュフロー計算書（C/F）とは</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">キャッシュフロー計算書は実際のお金の出入りを示します</li>
+            <li class="text-lg md:text-xl">利益が出ていても現金がなければ倒産します（黒字倒産）</li>
+            <li class="text-lg md:text-xl">経営者は利益よりもキャッシュフローを優先して管理すべきです</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.8 会計ソフトの活用</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">freee、マネーフォワード、弥生が主要な3つのソフトです</li>
+            <li class="text-lg md:text-xl">初心者はfreee、効率重視はマネーフォワード、安定性重視は弥生</li>
+            <li class="text-lg md:text-xl">まずは無料トライアルで試してみましょう</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-600">1.9 税理士に頼むべきか</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li class="text-lg md:text-xl">売上が少ない間は自分で会計ソフトを使うのがおすすめ</li>
+            <li class="text-lg md:text-xl">月商100万円を超えたら税理士を検討しましょう</li>
+            <li class="text-lg md:text-xl">融資を受ける予定があるなら早めに税理士を付ける</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">理解度チェックリスト</h2>
+
+      <p class="text-lg md:text-xl mb-6">以下の項目にチェックを入れて、理解度を確認しましょう。すべてチェックできたら、次の章に進む準備ができています。</p>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="space-y-4">
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check1" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check1" class="text-lg md:text-xl cursor-pointer">会計の必要性を理解した</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check2" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check2" class="text-lg md:text-xl cursor-pointer">財務会計と管理会計の違いがわかった</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check3" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check3" class="text-lg md:text-xl cursor-pointer">基本的な会計用語（売上、原価、粗利、営業利益など）を覚えた</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check4" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check4" class="text-lg md:text-xl cursor-pointer">簿記の基本的な考え方（複式簿記、仕訳）を理解した</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check5" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check5" class="text-lg md:text-xl cursor-pointer">損益計算書（P/L）の見方がわかった</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check6" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check6" class="text-lg md:text-xl cursor-pointer">貸借対照表（B/S）の見方がわかった</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check7" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check7" class="text-lg md:text-xl cursor-pointer">キャッシュフロー（C/F）の重要性を理解した</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check8" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check8" class="text-lg md:text-xl cursor-pointer">利益とキャッシュフローの違いがわかった</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check9" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check9" class="text-lg md:text-xl cursor-pointer">会計ソフトや税理士の活用を検討した</label>
+          </div>
+
+          <div class="checklist-item flex items-start">
+            <input type="checkbox" id="check10" class="mt-1 mr-4 w-5 h-5 cursor-pointer">
+            <label for="check10" class="text-lg md:text-xl cursor-pointer">自分の事業に合った会計の方法を決めた</label>
+          </div>
+        </div>
+
+        <div id="completionMessage" class="mt-8 p-6 bg-green-50 border-l-4 border-green-500 hidden">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">おめでとうございます！</h3>
+          <p class="text-lg md:text-xl text-green-900">すべての項目をチェックできました。次の章に進む準備が整っています。「管理会計の基本」を読む土台ができましたね。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="next-chapter" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">次章へ</h2>
+
+      <p class="text-lg md:text-xl mb-6">予備知識が身についたら、次章で「管理会計の基本」の内容をさっくり理解しましょう。</p>
+
+      <div class="bg-purple-50 border-l-4 border-purple-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-purple-700 mb-3">第2章で学ぶこと</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-purple-900">管理会計とは何か（もっと詳しく）</li>
+          <li class="text-lg md:text-xl text-purple-900">CVP分析（損益分岐点分析）</li>
+          <li class="text-lg md:text-xl text-purple-900">変動費と固定費の違い</li>
+          <li class="text-lg md:text-xl text-purple-900">限界利益の考え方</li>
+          <li class="text-lg md:text-xl text-purple-900">予算管理の基本</li>
+        </ul>
+      </div>
+
+      <div class="text-center">
+        <a href="../02_管理会計の基本/section-01.html" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg md:text-xl font-bold">第2章へ進む →</a>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">最後に</h2>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">第1章のまとめ</h3>
+        <p class="text-lg md:text-xl mb-4 text-blue-900">第1章では、会計の基礎知識を学びました。会計は難しそうに見えますが、基本的な考え方を理解すれば、それほど難しくありません。</p>
+        <p class="text-lg md:text-xl mb-4 text-blue-900">重要なのは、「利益とキャッシュフローは別物」「売上が多くても利益が出るとは限らない」「純資産がマイナスは危険」といった基本的なポイントを押さえることです。</p>
+        <p class="text-lg md:text-xl text-blue-900">これらの知識があれば、「管理会計の基本」の本を読んだときに、内容がスムーズに理解できるはずです。</p>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">わからないことがあれば</h4>
+        <p class="text-lg md:text-xl text-yellow-900">何度でも読み返してください。会計は一度で完璧に理解できなくても大丈夫です。実際に会計ソフトを使ったり、損益計算書を見たりしながら、徐々に慣れていきましょう。</p>
+      </div>
+
+      <div class="bg-green-50 border-l-4 border-green-500 p-6">
+        <h4 class="text-xl font-bold mb-2 text-green-700">次のステップ</h4>
+        <p class="text-lg md:text-xl text-green-900 mb-3">1. 会計ソフトの無料トライアルを試してみる</p>
+        <p class="text-lg md:text-xl text-green-900 mb-3">2. 月次で損益計算書を作成してみる</p>
+        <p class="text-lg md:text-xl text-green-900 mb-3">3. 第2章「管理会計の基本」を読む</p>
+        <p class="text-lg md:text-xl text-green-900">4. 実際の経営に活かしていく</p>
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="../index.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">トップページへ戻る</a>
+    </div>
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    function updateDotIndicator() {
+      const sections = ['review', 'checklist', 'next-chapter', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+      let currentSection = sections[0];
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    // チェックリストの進捗を監視
+    function checkProgress() {
+      const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+      const totalChecked = Array.from(checkboxes).filter(cb => cb.checked).length;
+      const completionMessage = document.getElementById('completionMessage');
+
+      if (totalChecked === checkboxes.length) {
+        completionMessage.classList.remove('hidden');
+      } else {
+        completionMessage.classList.add('hidden');
+      }
+    }
+
+    // すべてのチェックボックスにイベントリスナーを追加
+    document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
+      checkbox.addEventListener('change', checkProgress);
+    });
+
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', updateDotIndicator);
+
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

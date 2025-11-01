@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.6 貸借対照表（B/S）とは | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .dot { transition: all 0.3s ease; }
+    .dot:hover .tooltip { opacity: 1; visibility: visible; }
+    .tooltip { opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">← トップページへ</a>
+        <div class="flex gap-4">
+          <a href="section-05.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">← 前のセクション</a>
+          <a href="section-07.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">次のセクション →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#intro" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">貸借対照表とは</div>
+      </a>
+      <a href="#structure" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">B/Sの構造</div>
+      </a>
+      <a href="#diagnosis" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">健全性診断ツール</div>
+      </a>
+      <a href="#how-to-read" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">見方のポイント</div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">まとめ</div>
+      </a>
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.6 貸借対照表（B/S）とは</h1>
+      <p class="text-lg md:text-xl text-gray-600">貸借対照表は「ある時点で会社がどんな財産を持っているか」を示す表です。会社の健全性を判断する重要な資料です。</p>
+    </div>
+
+    <section id="intro" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">貸借対照表とは</h2>
+      <p class="text-lg md:text-xl mb-6">貸借対照表（Balance Sheet）は、通常<strong>「B/S」</strong>と略されます。P/Lが「一定期間の利益」を示すのに対し、B/Sは<strong>「ある時点の財産状況」</strong>を示します。</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">B/Sで何がわかるか</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">今、会社にどれだけの財産があるか</li>
+          <li class="text-lg md:text-xl text-blue-900">どれだけの借金（負債）があるか</li>
+          <li class="text-lg md:text-xl text-blue-900">正味の財産（純資産）はいくらか</li>
+          <li class="text-lg md:text-xl text-blue-900">会社の健全性（債務超過かどうか）</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+        <h4 class="text-xl font-bold mb-2 text-yellow-700">P/LとB/Sの違い</h4>
+        <p class="text-lg md:text-xl text-yellow-900 mb-3"><strong>P/L:</strong> 一定期間（1ヶ月、1年）の成績表。「どれだけ儲かったか」</p>
+        <p class="text-lg md:text-xl text-yellow-900"><strong>B/S:</strong> ある時点（月末、年度末）のスナップショット。「今、何を持っているか」</p>
+      </div>
+    </section>
+
+    <section id="structure" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">貸借対照表の構造</h2>
+      <p class="text-lg md:text-xl mb-6">貸借対照表は左右に分かれていて、必ず左右の合計が一致します。これを「貸借平衡の原則」と言います。</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-center">標準的なB/Sの構造</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-green-50 p-6 rounded-lg border-2 border-green-300">
+            <h4 class="text-xl font-bold mb-4 text-green-700 text-center">資産の部（左側）</h4>
+            <div class="space-y-2 text-lg">
+              <div class="flex justify-between p-2 bg-white rounded">
+                <span>現金・預金</span>
+                <span class="font-bold">500,000円</span>
+              </div>
+              <div class="flex justify-between p-2 bg-white rounded">
+                <span>売掛金</span>
+                <span class="font-bold">200,000円</span>
+              </div>
+              <div class="flex justify-between p-2 bg-white rounded">
+                <span>商品</span>
+                <span class="font-bold">300,000円</span>
+              </div>
+              <div class="flex justify-between p-2 bg-white rounded">
+                <span>備品</span>
+                <span class="font-bold">200,000円</span>
+              </div>
+              <div class="border-t-2 border-gray-300 my-2"></div>
+              <div class="flex justify-between p-2 bg-green-100 rounded font-bold">
+                <span>合計</span>
+                <span>1,200,000円</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="bg-red-50 p-6 rounded-lg border-2 border-red-300 mb-4">
+              <h4 class="text-xl font-bold mb-4 text-red-700 text-center">負債の部（右側上）</h4>
+              <div class="space-y-2 text-lg">
+                <div class="flex justify-between p-2 bg-white rounded">
+                  <span>買掛金</span>
+                  <span class="font-bold">100,000円</span>
+                </div>
+                <div class="flex justify-between p-2 bg-white rounded">
+                  <span>借入金</span>
+                  <span class="font-bold">700,000円</span>
+                </div>
+                <div class="border-t-2 border-gray-300 my-2"></div>
+                <div class="flex justify-between p-2 bg-red-100 rounded font-bold">
+                  <span>小計</span>
+                  <span>800,000円</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-lg border-2 border-blue-300">
+              <h4 class="text-xl font-bold mb-4 text-blue-700 text-center">純資産の部（右側下）</h4>
+              <div class="space-y-2 text-lg">
+                <div class="flex justify-between p-2 bg-white rounded">
+                  <span>資本金</span>
+                  <span class="font-bold">300,000円</span>
+                </div>
+                <div class="flex justify-between p-2 bg-white rounded">
+                  <span>利益剰余金</span>
+                  <span class="font-bold">100,000円</span>
+                </div>
+                <div class="border-t-2 border-gray-300 my-2"></div>
+                <div class="flex justify-between p-2 bg-blue-100 rounded font-bold">
+                  <span>小計</span>
+                  <span>400,000円</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 p-4 bg-yellow-100 rounded-lg border-2 border-yellow-400 font-bold text-lg text-center">
+              負債+純資産 = 1,200,000円
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 p-4 bg-purple-50 rounded-lg text-center">
+          <p class="text-xl font-bold text-purple-700">資産 = 負債 + 純資産</p>
+          <p class="text-lg text-purple-900 mt-2">この式は必ず成り立ちます</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnosis" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">健全性診断ツール</h2>
+      <p class="text-lg md:text-xl mb-6">あなたの会社の数値を入力して、財務の健全性をチェックしてみましょう。</p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">数値を入力してください</h3>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <h4 class="text-lg font-bold mb-3 text-green-700">資産</h4>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-md mb-1">現金・預金（円）</label>
+                <input type="number" id="cash" class="w-full border-2 border-gray-300 rounded px-3 py-2" value="500000" oninput="diagnoseBS()">
+              </div>
+              <div>
+                <label class="block text-md mb-1">その他の資産（円）</label>
+                <input type="number" id="otherAssets" class="w-full border-2 border-gray-300 rounded px-3 py-2" value="700000" oninput="diagnoseBS()">
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold mb-3 text-red-700">負債</h4>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-md mb-1">借入金（円）</label>
+                <input type="number" id="debt" class="w-full border-2 border-gray-300 rounded px-3 py-2" value="700000" oninput="diagnoseBS()">
+              </div>
+              <div>
+                <label class="block text-md mb-1">その他の負債（円）</label>
+                <input type="number" id="otherLiabilities" class="w-full border-2 border-gray-300 rounded px-3 py-2" value="100000" oninput="diagnoseBS()">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="bsResult" class="bg-blue-50 p-6 rounded-lg">
+          <h4 class="text-xl font-bold mb-4 text-blue-700">診断結果</h4>
+          <div class="space-y-3">
+            <div class="flex justify-between p-3 bg-white rounded text-lg">
+              <span>総資産:</span>
+              <span id="totalAssets" class="font-bold">1,200,000円</span>
+            </div>
+            <div class="flex justify-between p-3 bg-white rounded text-lg">
+              <span>総負債:</span>
+              <span id="totalLiabilities" class="font-bold">800,000円</span>
+            </div>
+            <div class="flex justify-between p-3 bg-yellow-50 rounded text-lg font-bold">
+              <span>純資産:</span>
+              <span id="netAssets">400,000円</span>
+            </div>
+            <div class="flex justify-between p-3 bg-purple-50 rounded text-lg font-bold">
+              <span>自己資本比率:</span>
+              <span id="equityRatio">33.3%</span>
+            </div>
+          </div>
+
+          <div id="healthStatus" class="mt-6 p-4 bg-green-100 border-l-4 border-green-500">
+            <p class="text-lg font-bold text-green-700">健全性: 良好</p>
+            <p class="text-md text-green-900 mt-2">純資産がプラスで、自己資本比率も適正です。この調子で経営を続けましょう。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-read" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">見方のポイント</h2>
+
+      <div class="space-y-6">
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-yellow-700 mb-3">1. 左右の合計は必ず一致する</h3>
+          <p class="text-lg md:text-xl text-yellow-900">資産 = 負債 + 純資産。この式が成り立たない場合、どこかで計算ミスがあります。</p>
+        </div>
+
+        <div class="bg-red-50 border-l-4 border-red-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">2. 純資産がマイナス = 債務超過（危険！）</h3>
+          <p class="text-lg md:text-xl text-red-900 mb-3">純資産がマイナスということは、負債が資産を上回っている状態です。これは非常に危険な状態で、早急に改善が必要です。</p>
+          <p class="text-lg md:text-xl text-red-900">債務超過の状態では、新規融資を受けることがほぼ不可能になります。</p>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">3. 現金が少ないと資金繰りが苦しい</h3>
+          <p class="text-lg md:text-xl text-blue-900">資産の中で現金・預金がどれくらいあるかを確認しましょう。現金が少ないと、支払いができなくなる恐れがあります。</p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">4. 自己資本比率を確認する</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">自己資本比率 = 純資産 ÷ 総資産 × 100</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li class="text-lg md:text-xl text-green-900">40%以上: 優良</li>
+            <li class="text-lg md:text-xl text-green-900">20〜40%: 普通</li>
+            <li class="text-lg md:text-xl text-green-900">20%未満: 改善が必要</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">貸借対照表（B/S）はある時点の財産状況を示します</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">資産 = 負債 + 純資産（必ず一致）</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">純資産がマイナス = 債務超過（危険）</span></li>
+          <li class="flex items-start"><span class="text-2xl mr-3">✓</span><span class="text-lg md:text-xl">自己資本比率は高いほど健全です</span></li>
+        </ul>
+      </div>
+      <p class="text-lg md:text-xl">次は、「キャッシュフロー計算書（C/F）とは」について学んでいきましょう。</p>
+    </section>
+
+    <div class="text-center">
+      <a href="section-07.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">次のセクションへ →</a>
+    </div>
+  </main>
+
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <script>
+    function updateDotIndicator() {
+      const sections = ['intro', 'structure', 'diagnosis', 'how-to-read', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+      let currentSection = sections[0];
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    function diagnoseBS() {
+      const cash = parseFloat(document.getElementById('cash').value) || 0;
+      const otherAssets = parseFloat(document.getElementById('otherAssets').value) || 0;
+      const debt = parseFloat(document.getElementById('debt').value) || 0;
+      const otherLiabilities = parseFloat(document.getElementById('otherLiabilities').value) || 0;
+
+      const totalAssets = cash + otherAssets;
+      const totalLiabilities = debt + otherLiabilities;
+      const netAssets = totalAssets - totalLiabilities;
+      const equityRatio = totalAssets > 0 ? (netAssets / totalAssets * 100).toFixed(1) : 0;
+
+      document.getElementById('totalAssets').textContent = totalAssets.toLocaleString() + '円';
+      document.getElementById('totalLiabilities').textContent = totalLiabilities.toLocaleString() + '円';
+      document.getElementById('netAssets').textContent = netAssets.toLocaleString() + '円';
+      document.getElementById('equityRatio').textContent = equityRatio + '%';
+
+      const healthStatus = document.getElementById('healthStatus');
+      if (netAssets < 0) {
+        healthStatus.className = 'mt-6 p-4 bg-red-100 border-l-4 border-red-500';
+        healthStatus.innerHTML = '<p class="text-lg font-bold text-red-700">健全性: 危険（債務超過）</p><p class="text-md text-red-900 mt-2">純資産がマイナスです。早急に改善が必要です。</p>';
+      } else if (equityRatio < 20) {
+        healthStatus.className = 'mt-6 p-4 bg-yellow-100 border-l-4 border-yellow-500';
+        healthStatus.innerHTML = '<p class="text-lg font-bold text-yellow-700">健全性: 要改善</p><p class="text-md text-yellow-900 mt-2">自己資本比率が低いです。利益を積み重ねて純資産を増やしましょう。</p>';
+      } else if (equityRatio >= 40) {
+        healthStatus.className = 'mt-6 p-4 bg-green-100 border-l-4 border-green-500';
+        healthStatus.innerHTML = '<p class="text-lg font-bold text-green-700">健全性: 優良</p><p class="text-md text-green-900 mt-2">純資産がプラスで、自己資本比率も高いです。素晴らしい状態です。</p>';
+      } else {
+        healthStatus.className = 'mt-6 p-4 bg-blue-100 border-l-4 border-blue-500';
+        healthStatus.innerHTML = '<p class="text-lg font-bold text-blue-700">健全性: 良好</p><p class="text-md text-blue-900 mt-2">純資産がプラスで、自己資本比率も適正です。この調子で経営を続けましょう。</p>';
+      }
+    }
+
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', () => {
+      updateDotIndicator();
+      diagnoseBS();
+    });
+
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

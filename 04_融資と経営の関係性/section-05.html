@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4.5 運転資金の計算 | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+        ← トップページ
+      </a>
+      <div class="flex gap-4">
+        <a href="section-04.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          ← 前のセクション
+        </a>
+        <a href="section-06.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+          次のセクション →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 hidden lg:block z-40">
+    <div class="flex flex-col gap-4">
+      <div class="group relative">
+        <a href="#definition" class="block w-4 h-4 rounded-full bg-blue-600 hover:scale-125 transition dot-indicator" data-section="definition"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          運転資金とは
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#formula" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="formula"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          計算式
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#by-industry" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="by-industry"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          業種別の特徴
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#calculator" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="calculator"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          計算ツール
+        </span>
+      </div>
+      <div class="group relative">
+        <a href="#summary" class="block w-4 h-4 rounded-full bg-gray-300 hover:scale-125 transition dot-indicator" data-section="summary"></a>
+        <span class="absolute right-6 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap text-sm">
+          まとめ
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <h1 class="text-5xl md:text-6xl font-bold mb-8 text-gray-900">4.5 運転資金の計算</h1>
+
+    <p class="text-lg md:text-xl mb-12 text-gray-700 leading-relaxed">
+      このセクションでは、事業を回すのに必要な現金「運転資金」の計算方法を学んでいきます。
+      適切な運転資金を確保することで、資金ショートを防ぐことができます。
+    </p>
+
+    <!-- 運転資金とは -->
+    <section id="definition" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">運転資金とは</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        運転資金とは、日々の事業運営に必要な現金のことです。
+        商品の仕入れ、人件費の支払い、家賃、光熱費など、事業を続けるために欠かせないお金です。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">運転資金に含まれるもの</h3>
+        <ul class="space-y-2">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-blue-900">仕入れ代金：商品や原材料の購入費用</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-blue-900">人件費：従業員への給与・賞与</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-blue-900">家賃：店舗や事務所の賃料</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-blue-900">光熱費：電気・ガス・水道代</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-xl">•</span>
+            <span class="text-lg md:text-xl text-blue-900">その他の経費：広告費、通信費、消耗品費など</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-yellow-800">💡 重要なポイント</h3>
+        <p class="text-lg md:text-xl text-yellow-900 leading-relaxed">
+          運転資金が不足すると、仕入れができなくなったり、従業員への給与が払えなくなったりします。
+          これが続くと、事業が立ち行かなくなります。
+        </p>
+      </div>
+    </section>
+
+    <!-- 運転資金の計算式 -->
+    <section id="formula" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">運転資金の計算式</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        運転資金は、以下の計算式で求めることができます。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-lg text-white mb-6">
+          <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center">運転資金の計算式</h3>
+          <p class="text-3xl md:text-4xl font-bold text-center">
+            運転資金 = 売掛金 + 在庫 - 買掛金
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="bg-gray-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">売掛金とは？</h4>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+              商品を販売したが、まだ代金を受け取っていない金額です。
+              売掛金が多いと、その分だけ現金が必要になります。
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">在庫とは？</h4>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+              仕入れた商品のうち、まだ売れていない分です。
+              在庫が多いと、その分だけ現金が商品に変わっている状態です。
+            </p>
+          </div>
+
+          <div class="bg-gray-50 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">買掛金とは？</h4>
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+              商品を仕入れたが、まだ支払っていない金額です。
+              買掛金があると、その分だけ現金の支払いを猶予されているため、運転資金は少なくて済みます。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">具体例で理解する</h3>
+
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <h4 class="text-lg md:text-xl font-bold mb-3 text-blue-800">前提条件</h4>
+          <ul class="space-y-2">
+            <li class="text-lg md:text-xl text-blue-900">売掛金：100万円（まだ回収していない売上）</li>
+            <li class="text-lg md:text-xl text-blue-900">在庫：50万円（まだ売れていない商品）</li>
+            <li class="text-lg md:text-xl text-blue-900">買掛金：30万円（まだ払っていない仕入れ）</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded">
+          <h4 class="text-lg md:text-xl font-bold mb-3 text-green-800">計算</h4>
+          <p class="text-2xl font-bold text-green-700 mb-2">運転資金 = 100万円 + 50万円 - 30万円 = 120万円</p>
+          <p class="text-lg md:text-xl text-green-900 mt-4">
+            → この事業を回すには、120万円の現金が必要です
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 業種別の運転資金 -->
+    <section id="by-industry" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">業種別の運転資金</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        業種によって、必要な運転資金の額が大きく異なります。
+        それぞれの業種の特徴を理解しましょう。
+      </p>
+
+      <div class="space-y-6 mb-8">
+        <!-- 運転資金が多い業種 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-red-700">運転資金が多い業種</h3>
+
+          <div class="space-y-4">
+            <div class="bg-red-50 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-2 text-red-800">建設業・製造業</h4>
+              <p class="text-lg md:text-xl text-red-900 leading-relaxed mb-2">
+                売掛金の回収が遅い（2～3ヶ月後）ため、運転資金が大きくなります。
+              </p>
+              <p class="text-lg text-red-700">目安：月商の2～3ヶ月分</p>
+            </div>
+
+            <div class="bg-red-50 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-2 text-red-800">小売業</h4>
+              <p class="text-lg md:text-xl text-red-900 leading-relaxed mb-2">
+                在庫が多いため、運転資金が必要です。季節商品を扱う場合はさらに多くなります。
+              </p>
+              <p class="text-lg text-red-700">目安：月商の1～2ヶ月分</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 運転資金が少ない業種 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-green-700">運転資金が少ない業種</h3>
+
+          <div class="space-y-4">
+            <div class="bg-green-50 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-2 text-green-800">飲食業・美容業</h4>
+              <p class="text-lg md:text-xl text-green-900 leading-relaxed mb-2">
+                現金商売（即金）のため、売掛金がほとんどありません。運転資金は少なくて済みます。
+              </p>
+              <p class="text-lg text-green-700">目安：月商の0.5～1ヶ月分</p>
+            </div>
+
+            <div class="bg-green-50 p-4 rounded">
+              <h4 class="text-lg md:text-xl font-bold mb-2 text-green-800">サービス業・コンサル</h4>
+              <p class="text-lg md:text-xl text-green-900 leading-relaxed mb-2">
+                在庫がなく、原価が低いため、運転資金は最小限で済みます。
+              </p>
+              <p class="text-lg text-green-700">目安：月商の0.5ヶ月分以下</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-3 text-blue-700">融資で運転資金を確保する</h3>
+        <p class="text-lg md:text-xl text-blue-900 leading-relaxed">
+          運転資金が不足する場合、融資で補うことができます。
+          ただし、売上が増えないと返済できないため、運転資金融資は慎重に判断しましょう。
+        </p>
+      </div>
+    </section>
+
+    <!-- 運転資金計算ツール -->
+    <section id="calculator" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">運転資金計算ツール</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        あなたの事業に必要な運転資金を計算してみましょう。
+        売掛金、在庫、買掛金の金額を入力すると、必要な運転資金が計算されます。
+      </p>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">数値を入力してください</h3>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">売掛金（万円）</label>
+            <input type="number" id="accountsReceivable" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="100" value="100">
+            <p class="text-sm text-gray-500 mt-1">まだ回収していない売上</p>
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">在庫（万円）</label>
+            <input type="number" id="inventory" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="50" value="50">
+            <p class="text-sm text-gray-500 mt-1">まだ売れていない商品</p>
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">買掛金（万円）</label>
+            <input type="number" id="accountsPayable" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="30" value="30">
+            <p class="text-sm text-gray-500 mt-1">まだ払っていない仕入れ</p>
+          </div>
+          <div>
+            <label class="block text-lg md:text-xl mb-2 text-gray-700">月商（万円）</label>
+            <input type="number" id="monthlySalesWC" class="w-full border border-gray-300 rounded px-4 py-2 text-lg" placeholder="200" value="200">
+            <p class="text-sm text-gray-500 mt-1">月の売上高</p>
+          </div>
+        </div>
+
+        <button onclick="calculateWorkingCapital()" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full text-lg md:text-xl font-semibold">
+          運転資金を計算
+        </button>
+
+        <div id="wcResult" class="mt-6 hidden">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-green-700">計算結果</h3>
+
+          <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-lg text-white mb-4">
+            <h4 class="text-lg md:text-xl mb-2">必要な運転資金</h4>
+            <p class="text-4xl md:text-5xl font-bold" id="wcAmount"></p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-4 mb-4">
+            <div class="bg-blue-50 p-4 rounded">
+              <h5 class="text-lg font-bold mb-2 text-blue-800">売掛金</h5>
+              <p class="text-2xl font-bold text-blue-600" id="wcAR"></p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded">
+              <h5 class="text-lg font-bold mb-2 text-purple-800">在庫</h5>
+              <p class="text-2xl font-bold text-purple-600" id="wcInv"></p>
+            </div>
+            <div class="bg-orange-50 p-4 rounded">
+              <h5 class="text-lg font-bold mb-2 text-orange-800">買掛金</h5>
+              <p class="text-2xl font-bold text-orange-600" id="wcAP"></p>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 p-4 rounded">
+            <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-800">分析</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-lg text-gray-700">月商に対する運転資金比率</span>
+                <span class="text-lg font-bold" id="wcRatio"></span>
+              </div>
+              <div class="mt-4 p-3 rounded" id="wcJudgment">
+                <p class="text-lg" id="wcMessage"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16 scroll-mt-24">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6 text-gray-700 leading-relaxed">
+        運転資金の計算について、理解が深まったでしょうか？
+        ここで学んだ内容をもう一度振り返ってみましょう。
+      </p>
+
+      <div class="bg-gray-100 p-6 rounded-lg mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              <strong>運転資金 = 売掛金 + 在庫 - 買掛金</strong>
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              売掛金の回収が遅い、在庫が多い業種は運転資金が大きくなる
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              現金商売、在庫がない業種は運転資金が少なくて済む
+            </span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-3 text-2xl">✓</span>
+            <span class="text-lg md:text-xl text-gray-700">
+              運転資金不足は融資で補えるが、売上増が見込めないと返済が苦しくなる
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        次は、資金繰り表の作り方について詳しく見ていきましょう。
+        お金の出入りを予測し、資金ショートを防ぐ方法を学びます。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center mt-12">
+      <a href="section-06.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-semibold">
+        次のセクションへ：資金繰り表の作り方 →
+      </a>
+    </div>
+  </main>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーター - スムーススクロール
+    document.querySelectorAll('.dot-indicator').forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = dot.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // スクロール位置に応じてドットインジケーターを更新
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 200;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          document.querySelectorAll('.dot-indicator').forEach(dot => {
+            dot.classList.remove('bg-blue-600');
+            dot.classList.add('bg-gray-300');
+          });
+          const activeDot = document.querySelector(`.dot-indicator[data-section="${sectionId}"]`);
+          if (activeDot) {
+            activeDot.classList.remove('bg-gray-300');
+            activeDot.classList.add('bg-blue-600');
+          }
+        }
+      });
+    });
+
+    // 運転資金計算ツール
+    function calculateWorkingCapital() {
+      const ar = parseFloat(document.getElementById('accountsReceivable').value);
+      const inv = parseFloat(document.getElementById('inventory').value);
+      const ap = parseFloat(document.getElementById('accountsPayable').value);
+      const sales = parseFloat(document.getElementById('monthlySalesWC').value);
+
+      if (isNaN(ar) || isNaN(inv) || isNaN(ap) || isNaN(sales)) {
+        alert('すべての項目に数値を入力してください');
+        return;
+      }
+
+      // 運転資金計算
+      const wc = ar + inv - ap;
+      const wcRatio = (wc / sales * 100).toFixed(1);
+
+      // 結果を表示
+      document.getElementById('wcAmount').textContent = wc.toFixed(1) + '万円';
+      document.getElementById('wcAR').textContent = ar.toFixed(1) + '万円';
+      document.getElementById('wcInv').textContent = inv.toFixed(1) + '万円';
+      document.getElementById('wcAP').textContent = ap.toFixed(1) + '万円';
+      document.getElementById('wcRatio').textContent = wcRatio + '%';
+
+      const judgment = document.getElementById('wcJudgment');
+      const message = document.getElementById('wcMessage');
+
+      if (wcRatio < 50) {
+        judgment.className = 'mt-4 p-3 rounded bg-green-50 border-l-4 border-green-500';
+        message.className = 'text-lg text-green-900';
+        message.textContent = '運転資金比率が低く、健全な状態です。現金商売型のビジネスモデルと言えます。';
+      } else if (wcRatio < 100) {
+        judgment.className = 'mt-4 p-3 rounded bg-blue-50 border-l-4 border-blue-500';
+        message.className = 'text-lg text-blue-900';
+        message.textContent = '運転資金比率は標準的です。売掛金の回収や在庫管理を適切に行いましょう。';
+      } else if (wcRatio < 200) {
+        judgment.className = 'mt-4 p-3 rounded bg-yellow-50 border-l-4 border-yellow-500';
+        message.className = 'text-lg text-yellow-900';
+        message.textContent = '運転資金比率がやや高めです。売掛金の回収期間を短縮するか、在庫を減らす対策を検討しましょう。';
+      } else {
+        judgment.className = 'mt-4 p-3 rounded bg-red-50 border-l-4 border-red-500';
+        message.className = 'text-lg text-red-900';
+        message.textContent = '運転資金比率が非常に高く、資金繰りが厳しい状態です。売掛金回収の促進、在庫削減、買掛金交渉などの対策が必要です。';
+      }
+
+      document.getElementById('wcResult').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.1 なぜ会計が必要なのか | 会社事業における融資と利益の理解</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .dot {
+      transition: all 0.3s ease;
+    }
+    .dot:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+    .tooltip {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- ナビゲーション -->
+  <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="../index.html" class="text-lg md:text-xl font-bold text-blue-600 hover:text-blue-800 transition">
+          ← トップページへ
+        </a>
+        <div class="flex gap-4">
+          <span class="text-lg md:text-xl text-gray-400">← 前のセクション</span>
+          <a href="section-02.html" class="text-lg md:text-xl text-blue-600 hover:text-blue-800 transition">
+            次のセクション →
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ドットインジケーター -->
+  <div class="fixed left-8 top-1/2 transform -translate-y-1/2 z-40 hidden lg:block">
+    <div class="flex flex-col gap-4">
+      <a href="#what-is-accounting" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-blue-600 hover:bg-blue-800 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          会計とは何か
+        </div>
+      </a>
+      <a href="#without-accounting" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          会計をしないとどうなるか
+        </div>
+      </a>
+      <a href="#benefits" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          会計をするメリット
+        </div>
+      </a>
+      <a href="#summary" class="dot group relative">
+        <div class="w-4 h-4 rounded-full bg-gray-400 hover:bg-blue-600 transition"></div>
+        <div class="tooltip absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded text-sm whitespace-nowrap">
+          まとめ
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- メインコンテンツ -->
+  <main class="container mx-auto px-4 py-24 max-w-4xl">
+    <!-- セクションタイトル -->
+    <div class="mb-12">
+      <p class="text-lg md:text-xl text-blue-600 mb-2">第1章 予備知識 - 本を読む前に知っておきたいこと</p>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">1.1 なぜ会計が必要なのか</h1>
+      <p class="text-lg md:text-xl text-gray-600">
+        会計は事業を経営するうえで欠かせない仕組みです。このセクションでは、会計がなぜ必要なのか、会計をしないとどんな問題が起こるのかを学んでいきましょう。
+      </p>
+    </div>
+
+    <!-- 小セクション1: 会計とは何か -->
+    <section id="what-is-accounting" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">会計とは何か</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        会計とは、簡単に言えば<strong>「事業の成績表」</strong>です。学校のテストで点数が出るように、事業も「今月どれだけ売上があったか」「どれだけ利益が出たか」「どれだけお金が残っているか」といった成績を数字で表します。
+      </p>
+
+      <p class="text-lg md:text-xl mb-6">
+        もう少し詳しく説明すると、会計は<strong>お金の流れを見える化する仕組み</strong>です。事業を運営していると、毎日たくさんのお金が出入りしますよね。商品を仕入れたり、従業員に給料を払ったり、お客様から売上を受け取ったり。これらすべての動きを記録し、整理して、「今、事業がどういう状態なのか」を把握できるようにするのが会計の役割です。
+      </p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-blue-700 mb-3">会計の主な役割</h3>
+        <ul class="list-disc pl-6 space-y-2">
+          <li class="text-lg md:text-xl text-blue-900">お金の出入りを記録する</li>
+          <li class="text-lg md:text-xl text-blue-900">売上や利益を計算する</li>
+          <li class="text-lg md:text-xl text-blue-900">財産の状況を把握する</li>
+          <li class="text-lg md:text-xl text-blue-900">経営判断の材料を提供する</li>
+          <li class="text-lg md:text-xl text-blue-900">税金の申告に必要な資料を作る</li>
+          <li class="text-lg md:text-xl text-blue-900">融資を受ける際の信頼性を示す</li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6">
+        会計は難しそうに感じるかもしれませんが、本質的には「事業のお金の動きを正しく記録して、今どういう状態なのかを知る」ということです。これができていないと、正しい経営判断ができなくなってしまいます。
+      </p>
+    </section>
+
+    <!-- 小セクション2: 会計をしないとどうなるか -->
+    <section id="without-accounting" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">会計をしないとどうなるか</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        「会計は面倒だから、売上だけ把握しておけばいいんじゃないの？」と思う方もいるかもしれません。しかし、会計をせずに事業を続けると、非常に危険な状況に陥る可能性があります。
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
+        <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-3">失敗事例：小売店A店の場合</h3>
+        <div class="mb-4">
+          <h4 class="text-xl font-bold mb-2 text-red-900">状況</h4>
+          <p class="text-lg md:text-xl text-red-900 mb-4">
+            小売店Aは開業して半年、毎月の売上は順調に100万円ほどありました。経営者のBさんは「売上が順調だから大丈夫」と思い、会計をほとんどしていませんでした。通帳の残高だけを時々確認する程度です。
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-xl font-bold mb-2 text-red-900">問題の発覚</h4>
+          <p class="text-lg md:text-xl text-red-900 mb-4">
+            ある日、Bさんは通帳残高が急激に減っていることに気づきました。調べてみると、実は毎月赤字だったのです。売上100万円に対して、仕入れや経費で合計110万円使っていたため、毎月10万円ずつ現金が減っていたのです。
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-xl font-bold mb-2 text-red-900">結果</h4>
+          <p class="text-lg md:text-xl text-red-900 mb-4">
+            気づいた時には、すでに現金がほとんどなくなっており、次月の仕入れ代金を払えない状態に。急いで融資を申し込みましたが、会計資料がなかったため審査が通らず、泣く泣く閉店することになりました。
+          </p>
+        </div>
+        <div class="bg-red-100 p-4 rounded">
+          <h4 class="text-xl font-bold mb-2 text-red-700">この失敗から学ぶこと</h4>
+          <p class="text-lg md:text-xl text-red-900">
+            会計をしていれば、毎月の赤字に早く気づき、経費削減や値上げなどの対策を打てたはずです。売上だけを見ていても、事業の本当の健康状態はわかりません。
+          </p>
+        </div>
+      </div>
+
+      <h3 class="text-xl md:text-2xl font-bold mb-4">会計をしない場合の具体的なリスク</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-red-600">1. 赤字に気づかない</h4>
+          <p class="text-lg md:text-xl">
+            売上があっても、経費がそれ以上にかかっていれば赤字です。会計をしないと、この事実に気づくのが遅れてしまいます。
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-red-600">2. 資金ショート</h4>
+          <p class="text-lg md:text-xl">
+            現金の残高を正確に把握していないと、突然「支払いができない」という状況に陥ります。これが資金ショートです。
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-red-600">3. 融資が受けられない</h4>
+          <p class="text-lg md:text-xl">
+            銀行から融資を受けるには、正確な会計資料が必須です。資料がないと、審査すらしてもらえません。
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3 text-red-600">4. 税務トラブル</h4>
+          <p class="text-lg md:text-xl">
+            税務申告に必要な資料が揃っていないと、税務署からの指摘を受けたり、正しい節税ができなかったりします。
+          </p>
+        </div>
+      </div>
+
+      <p class="text-lg md:text-xl mb-6">
+        これらのリスクは、すべて「会計をしていれば防げたはず」のものばかりです。会計は面倒に感じるかもしれませんが、事業を守るために絶対に必要な仕組みなのです。
+      </p>
+    </section>
+
+    <!-- 小セクション3: 会計をするメリット -->
+    <section id="benefits" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">会計をするメリット</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        では、会計をきちんとすると、どんな良いことがあるのでしょうか。具体的なメリットを見ていきましょう。
+      </p>
+
+      <div class="space-y-6 mb-8">
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">1. 早期の問題発見</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            毎月の会計をきちんとしていれば、「今月は赤字だ」「経費が増えている」といった問題にすぐ気づくことができます。早く気づけば、早く対策を打てますよね。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            例えば、「広告費が予想以上にかかっている」と気づいたら、広告の出し方を見直したり、費用対効果を計算したりして、無駄な支出を減らすことができます。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">2. 計画的な経営ができる</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            過去の会計データがあれば、「来月の売上はこれくらい見込める」「このくらいの経費がかかる」という予測が立てやすくなります。これにより、計画的な経営が可能になります。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            例えば、「3ヶ月後に新商品を仕入れたい。そのために100万円必要だから、今から貯めておこう」といった計画が立てられます。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">3. 融資が受けやすくなる</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            銀行は「この人にお金を貸しても大丈夫か」を判断するために、会計資料を見ます。きちんとした会計資料があれば、「この人は信頼できる経営者だ」と評価されやすくなります。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            逆に、会計資料がない、または不正確だと、「この人に貸しても返ってこないかもしれない」と判断されてしまいます。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">4. 適切な節税ができる</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            正確な会計をしていれば、経費として認められるものを漏れなく計上できます。これにより、払いすぎの税金を防ぐことができます。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            また、税理士に相談する際も、正確な会計資料があれば適切なアドバイスをもらいやすくなります。
+          </p>
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">5. 経営の見える化</h3>
+          <p class="text-lg md:text-xl text-green-900 mb-3">
+            会計をすると、「どの商品が一番利益を生んでいるか」「どの経費が一番かかっているか」といったことが数字で見えるようになります。
+          </p>
+          <p class="text-lg md:text-xl text-green-900">
+            これにより、「利益率の高い商品に力を入れよう」「無駄な経費を削減しよう」といった具体的な戦略が立てられます。
+          </p>
+        </div>
+      </div>
+
+      <!-- 図解プレースホルダー -->
+      <div class="mb-8">
+        <div class="bg-white p-6 rounded-lg shadow-md cursor-pointer hover:shadow-lg transition" onclick="openModal('accounting-benefits.png')">
+          <p class="text-center text-gray-500 text-lg mb-2">【図解：会計のメリット】</p>
+          <div class="bg-gray-200 h-64 flex items-center justify-center rounded">
+            <p class="text-gray-600 text-xl">画像プレースホルダー: accounting-benefits.png</p>
+          </div>
+          <p class="text-center text-sm text-gray-500 mt-2">クリックで拡大</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- まとめ -->
+    <section id="summary" class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">このセクションのまとめ</h2>
+
+      <p class="text-lg md:text-xl mb-6">
+        会計がなぜ必要なのか、理解が深まったでしょうか。
+      </p>
+
+      <div class="bg-blue-50 p-6 rounded-lg mb-6">
+        <h3 class="text-xl md:text-2xl font-bold mb-4 text-blue-700">重要ポイント</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">会計は「事業の成績表」であり、お金の流れを見える化する仕組みです</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">会計をしないと、赤字に気づかず資金ショートのリスクがあります</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">会計をすると、早期の問題発見や計画的な経営が可能になります</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-2xl mr-3">✓</span>
+            <span class="text-lg md:text-xl">融資を受ける際にも、正確な会計資料が必須です</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-lg md:text-xl">
+        次は、「財務会計と管理会計の違い」について学んでいきましょう。会計には大きく分けて2つの種類があり、それぞれ目的が異なります。わからないことがあれば、何度でも読み返してくださいね。
+      </p>
+    </section>
+
+    <!-- 次のセクションへのリンク -->
+    <div class="text-center">
+      <a href="section-02.html" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg md:text-xl font-bold">
+        次のセクションへ →
+      </a>
+    </div>
+  </main>
+
+  <!-- 画像拡大モーダル -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+    <button id="closeModal" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition">&times;</button>
+    <img id="modalImage" class="max-w-full max-h-full p-4" src="" alt="">
+  </div>
+
+  <!-- スクリプト -->
+  <script>
+    // ドットインジケーターのアクティブ状態を更新
+    function updateDotIndicator() {
+      const sections = ['what-is-accounting', 'without-accounting', 'benefits', 'summary'];
+      const dots = document.querySelectorAll('.dot');
+
+      let currentSection = sections[0];
+
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            currentSection = sectionId;
+          }
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        const circle = dot.querySelector('div');
+        if (sections[index] === currentSection) {
+          circle.classList.remove('bg-gray-400');
+          circle.classList.add('bg-blue-600');
+        } else {
+          circle.classList.remove('bg-blue-600');
+          circle.classList.add('bg-gray-400');
+        }
+      });
+    }
+
+    // スクロール時にドットインジケーターを更新
+    window.addEventListener('scroll', updateDotIndicator);
+    window.addEventListener('load', updateDotIndicator);
+
+    // 画像拡大モーダル
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('flex');
+      modal.classList.add('hidden');
+    }
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Escキーでモーダルを閉じる
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
