@@ -117,9 +117,110 @@
 
       <!-- 図解プレースホルダー -->
       <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">融資の仕組み（金融機関 → 事業者 → 返済の流れ）</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: financing-flow-diagram.png</p>
+      <!-- 融資の仕組みフロー図 -->
+      <div class="mb-8 bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl shadow-xl">
+        <div class="relative">
+          <!-- フローステップ -->
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <!-- ステップ1: 金融機関 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-t-4 border-blue-500">
+              <div class="text-center">
+                <div class="text-5xl mb-3">🏦</div>
+                <div class="font-bold text-xl text-blue-700 mb-3">金融機関</div>
+                <div class="text-gray-700 space-y-2">
+                  <p class="text-sm">・銀行</p>
+                  <p class="text-sm">・信用金庫</p>
+                  <p class="text-sm">・日本政策金融公庫</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ステップ2: 事業者（融資実行） -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-t-4 border-green-500">
+              <div class="text-center">
+                <div class="text-5xl mb-3">👤</div>
+                <div class="font-bold text-xl text-green-700 mb-3">事業者</div>
+                <div class="text-gray-700 space-y-2">
+                  <p class="text-sm font-bold text-green-600">融資金を受け取る</p>
+                  <p class="text-sm">・設備投資</p>
+                  <p class="text-sm">・運転資金</p>
+                  <p class="text-sm">・事業拡大</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ステップ3: 返済 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition duration-300 border-t-4 border-orange-500">
+              <div class="text-center">
+                <div class="text-5xl mb-3">💰</div>
+                <div class="font-bold text-xl text-orange-700 mb-3">返済</div>
+                <div class="text-gray-700 space-y-2">
+                  <p class="text-sm font-bold text-orange-600">元金＋利息を返す</p>
+                  <p class="text-sm">・毎月の返済額</p>
+                  <p class="text-sm">・返済期間</p>
+                  <p class="text-sm">・金利負担</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 矢印とラベル -->
+          <div class="relative">
+            <svg class="w-full h-24" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- 矢印1: 金融機関 → 事業者 -->
+              <defs>
+                <marker id="arrowhead1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                  <polygon points="0 0, 10 3, 0 6" fill="#3b82f6" />
+                </marker>
+                <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                  <polygon points="0 0, 10 3, 0 6" fill="#f97316" />
+                </marker>
+              </defs>
+              
+              <!-- 融資の流れ（上段） -->
+              <line x1="140" y1="30" x2="390" y2="30" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead1)" />
+              <text x="265" y="20" text-anchor="middle" fill="#3b82f6" font-weight="bold" font-size="14">融資実行</text>
+              
+              <line x1="410" y1="30" x2="660" y2="30" stroke="#10b981" stroke-width="3" marker-end="url(#arrowhead1)" />
+              <text x="535" y="20" text-anchor="middle" fill="#10b981" font-weight="bold" font-size="14">投資・運用</text>
+              
+              <!-- 返済の流れ（下段） -->
+              <line x1="660" y1="70" x2="140" y2="70" stroke="#f97316" stroke-width="3" stroke-dasharray="5,5" marker-end="url(#arrowhead2)" />
+              <text x="400" y="90" text-anchor="middle" fill="#f97316" font-weight="bold" font-size="14">返済（元金＋利息）</text>
+            </svg>
+          </div>
+
+          <!-- 具体例 -->
+          <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-l-4 border-yellow-500">
+            <h4 class="text-lg font-bold text-yellow-800 mb-3">📊 具体例</h4>
+            <div class="grid md:grid-cols-3 gap-4 text-sm">
+              <div class="bg-white p-4 rounded-lg">
+                <p class="font-bold text-blue-700 mb-2">融資条件</p>
+                <p class="text-gray-700">借入額: 500万円</p>
+                <p class="text-gray-700">金利: 年2.5%</p>
+                <p class="text-gray-700">期間: 5年</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <p class="font-bold text-green-700 mb-2">資金使途</p>
+                <p class="text-gray-700">設備投資: 300万円</p>
+                <p class="text-gray-700">運転資金: 150万円</p>
+                <p class="text-gray-700">予備費: 50万円</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <p class="font-bold text-orange-700 mb-2">返済計画</p>
+                <p class="text-gray-700">月々返済額: 約8.8万円</p>
+                <p class="text-gray-700">総返済額: 約530万円</p>
+                <p class="text-gray-700">利息総額: 約30万円</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 重要ポイント -->
+          <div class="mt-6 bg-red-50 p-4 rounded-xl border-l-4 border-red-500">
+            <p class="text-red-800 font-bold">⚠️ 重要：融資は「借金」であり、必ず返済する義務があります</p>
+            <p class="text-red-700 text-sm mt-2">受け取った融資金は、事業に投資して売上・利益を増やし、そこから返済する必要があります。単なる「手元の現金」ではありません。</p>
+          </div>
+        </div>
       </div>
     </section>
 

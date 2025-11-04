@@ -156,13 +156,225 @@
         </div>
       </div>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 text-center">
-        <div class="inline-block bg-gray-200 p-8 rounded-lg cursor-pointer hover:shadow-lg transition" onclick="openModal(this)">
-          <p class="text-lg md:text-xl text-gray-600 mb-2">📊 図解</p>
-          <p class="text-lg md:text-xl font-bold text-gray-800">投資と経費の違い 概念図</p>
-          <p class="text-sm text-gray-500 mt-2">ファイル名: investment-vs-expense-diagram.png</p>
-          <p class="text-sm text-gray-500">(クリックで拡大)</p>
+
+      <!-- 投資と経費の違い 概念図 -->
+      <div class="mb-8 bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">投資 vs 経費：何が違うのか？</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- 左: 投資 -->
+          <div class="relative">
+            <div class="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl shadow-2xl p-8 border-4 border-green-500 hover:shadow-3xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-6">
+                <div class="text-6xl mb-4">💰</div>
+                <h4 class="text-3xl font-bold text-green-700 mb-2">投資</h4>
+                <p class="text-sm text-green-800">Investment</p>
+              </div>
+
+              <!-- 目的 -->
+              <div class="bg-white rounded-xl p-4 mb-4 shadow">
+                <p class="font-bold text-green-700 mb-2 text-lg">🎯 目的</p>
+                <p class="text-gray-800 font-bold">売上・利益を増やす</p>
+              </div>
+
+              <!-- リターン -->
+              <div class="bg-white rounded-xl p-4 mb-4 shadow">
+                <p class="font-bold text-green-700 mb-2 text-lg">📈 リターン</p>
+                <p class="text-gray-800">将来的に回収可能</p>
+                <div class="mt-2 bg-green-50 p-2 rounded">
+                  <p class="text-xs text-green-700">使ったお金以上が返ってくる</p>
+                </div>
+              </div>
+
+              <!-- 融資の使い道 -->
+              <div class="bg-green-50 rounded-xl p-4 mb-4 border-2 border-green-400">
+                <p class="font-bold text-green-700 mb-2 text-lg flex items-center">
+                  <span class="text-2xl mr-2">✅</span>
+                  融資の使い道として
+                </p>
+                <p class="text-green-800 font-bold text-xl">適切</p>
+              </div>
+
+              <!-- 具体例 -->
+              <div class="bg-white rounded-xl p-4 shadow">
+                <p class="font-bold text-green-700 mb-3 text-lg">📋 具体例</p>
+                <div class="space-y-2">
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2 text-xl">✓</span>
+                    <div>
+                      <p class="font-bold text-sm">商品仕入れ</p>
+                      <p class="text-xs text-gray-600">→売上が増える</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2 text-xl">✓</span>
+                    <div>
+                      <p class="font-bold text-sm">設備購入</p>
+                      <p class="text-xs text-gray-600">→生産性が上がる</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2 text-xl">✓</span>
+                    <div>
+                      <p class="font-bold text-sm">広告宣伝</p>
+                      <p class="text-xs text-gray-600">→顧客が増える</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2 text-xl">✓</span>
+                    <div>
+                      <p class="font-bold text-sm">人材採用</p>
+                      <p class="text-xs text-gray-600">→売上が増える</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2 text-xl">✓</span>
+                    <div>
+                      <p class="font-bold text-sm">運転資金</p>
+                      <p class="text-xs text-gray-600">→事業が回る</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- フロー図 -->
+              <div class="mt-6 bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-xl">
+                <div class="flex items-center justify-between text-sm font-bold text-green-800">
+                  <span>投資</span>
+                  <span class="text-2xl">→</span>
+                  <span>売上増</span>
+                  <span class="text-2xl">→</span>
+                  <span>利益増</span>
+                  <span class="text-2xl">→</span>
+                  <span>返済可能</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右: 経費 -->
+          <div class="relative">
+            <div class="bg-gradient-to-br from-gray-100 to-slate-100 rounded-2xl shadow-2xl p-8 border-4 border-gray-500 hover:shadow-3xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-6">
+                <div class="text-6xl mb-4">📋</div>
+                <h4 class="text-3xl font-bold text-gray-700 mb-2">経費</h4>
+                <p class="text-sm text-gray-800">Expense</p>
+              </div>
+
+              <!-- 目的 -->
+              <div class="bg-white rounded-xl p-4 mb-4 shadow">
+                <p class="font-bold text-gray-700 mb-2 text-lg">🎯 目的</p>
+                <p class="text-gray-800 font-bold">事業を維持する</p>
+              </div>
+
+              <!-- リターン -->
+              <div class="bg-white rounded-xl p-4 mb-4 shadow">
+                <p class="font-bold text-gray-700 mb-2 text-lg">📉 リターン</p>
+                <p class="text-gray-800">回収できない</p>
+                <div class="mt-2 bg-gray-50 p-2 rounded">
+                  <p class="text-xs text-gray-700">使ったら消えてしまう</p>
+                </div>
+              </div>
+
+              <!-- 融資の使い道 -->
+              <div class="bg-red-50 rounded-xl p-4 mb-4 border-2 border-red-400">
+                <p class="font-bold text-red-700 mb-2 text-lg flex items-center">
+                  <span class="text-2xl mr-2">❌</span>
+                  融資の使い道として
+                </p>
+                <p class="text-red-800 font-bold text-xl">不適切</p>
+              </div>
+
+              <!-- 具体例 -->
+              <div class="bg-white rounded-xl p-4 shadow">
+                <p class="font-bold text-gray-700 mb-3 text-lg">📋 具体例</p>
+                <div class="space-y-2">
+                  <div class="flex items-start">
+                    <span class="text-gray-400 mr-2 text-xl">●</span>
+                    <div>
+                      <p class="font-bold text-sm">家賃</p>
+                      <p class="text-xs text-gray-600">→必要だが売上増に直結しない</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-gray-400 mr-2 text-xl">●</span>
+                    <div>
+                      <p class="font-bold text-sm">光熱費</p>
+                      <p class="text-xs text-gray-600">→同上</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-gray-400 mr-2 text-xl">●</span>
+                    <div>
+                      <p class="font-bold text-sm">消耗品</p>
+                      <p class="text-xs text-gray-600">→同上</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-gray-400 mr-2 text-xl">●</span>
+                    <div>
+                      <p class="font-bold text-sm">通信費</p>
+                      <p class="text-xs text-gray-600">→同上</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <span class="text-gray-400 mr-2 text-xl">●</span>
+                    <div>
+                      <p class="font-bold text-sm">保険料</p>
+                      <p class="text-xs text-gray-600">→同上</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- フロー図 -->
+              <div class="mt-6 bg-gradient-to-r from-gray-100 to-slate-100 p-4 rounded-xl">
+                <div class="flex items-center justify-between text-sm font-bold text-gray-700">
+                  <span>経費</span>
+                  <span class="text-2xl">→</span>
+                  <span>消える</span>
+                  <span class="text-2xl">→</span>
+                  <span>回収不可</span>
+                  <span class="text-2xl">→</span>
+                  <span>返済困難</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 重要なポイント -->
+        <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-xl border-l-4 border-yellow-500">
+          <h4 class="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+            <span class="text-2xl mr-2">💡</span>
+            融資を使うときの判断基準
+          </h4>
+          <div class="space-y-3">
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-bold text-green-700 mb-2">✅ 融資を使うべき場合</p>
+              <p class="text-sm text-gray-700">その支出が<strong class="text-green-700">将来の売上・利益増</strong>に繋がる場合（投資）</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg">
+              <p class="font-bold text-red-700 mb-2">❌ 融資を使うべきでない場合</p>
+              <p class="text-sm text-gray-700">その支出が<strong class="text-red-700">売上増に直結しない</strong>場合（経費）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 具体的なシナリオ -->
+        <div class="mt-6 grid md:grid-cols-2 gap-4">
+          <div class="bg-green-50 p-4 rounded-xl border-l-4 border-green-500">
+            <p class="font-bold text-green-700 mb-2 text-sm">🎉 成功パターン</p>
+            <p class="text-xs text-gray-700">
+              500万円の融資で設備を購入 → 生産性2倍 → 売上1.5倍 → 月20万円の利益増 → 返済月8.8万円を楽々カバー
+            </p>
+          </div>
+          <div class="bg-red-50 p-4 rounded-xl border-l-4 border-red-500">
+            <p class="font-bold text-red-700 mb-2 text-sm">💀 失敗パターン</p>
+            <p class="text-xs text-gray-700">
+              500万円の融資で家賃・光熱費に使用 → 売上変わらず → 利益増えず → 返済月8.8万円が払えない → 倒産
+            </p>
+          </div>
         </div>
       </div>
     </section>

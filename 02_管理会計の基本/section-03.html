@@ -214,11 +214,137 @@
       </div>
 
       <!-- 図解プレースホルダー -->
-      <div class="bg-gray-100 p-8 rounded-lg text-center mb-6 border-2 border-dashed border-gray-300">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-700 font-bold">variable-cost-vs-fixed-cost.png</p>
-        <p class="text-lg text-gray-600 mt-2">変動費と固定費の違いを示す図解（売上増加に伴う変動費の増加、固定費は一定）</p>
+
+      <!-- 図解：変動費vs固定費グラフ -->
+      <div class="mb-8 bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-xl md:text-2xl font-bold mb-6 text-center text-gray-800">変動費と固定費の違い</h3>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg mb-6">
+          <canvas id="costComparisonChart"></canvas>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+            <h4 class="font-bold text-orange-700 mb-2">🔶 変動費（オレンジ線）</h4>
+            <p class="text-sm text-gray-700">売上に比例して増加します。売れば売るほど増える費用です。</p>
+          </div>
+          <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+            <h4 class="font-bold text-blue-700 mb-2">🔷 固定費（青線）</h4>
+            <p class="text-sm text-gray-700">売上に関係なく一定です。売れても売れなくても発生します。</p>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document.getElementById('costComparisonChart');
+          const salesUnits = [0, 50, 100, 150, 200, 250, 300];
+          const variableCostPerUnit = 2000;
+          const fixedCost = 300000;
+
+          new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: salesUnits,
+              datasets: [
+                {
+                  label: '変動費',
+                  data: salesUnits.map(x => x * variableCostPerUnit),
+                  borderColor: 'rgb(251, 146, 60)',
+                  backgroundColor: 'rgba(251, 146, 60, 0.1)',
+                  borderWidth: 3,
+                  tension: 0.1,
+                  fill: true
+                },
+                {
+                  label: '固定費',
+                  data: salesUnits.map(x => fixedCost),
+                  borderColor: 'rgb(59, 130, 246)',
+                  backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                  borderWidth: 3,
+                  borderDash: [10, 5],
+                  fill: false
+                },
+                {
+                  label: '総費用（変動費+固定費）',
+                  data: salesUnits.map(x => (x * variableCostPerUnit) + fixedCost),
+                  borderColor: 'rgb(168, 85, 247)',
+                  backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                  borderWidth: 3,
+                  tension: 0.1,
+                  fill: false
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              interaction: {
+                mode: 'index',
+                intersect: false,
+              },
+              plugins: {
+                legend: {
+                  display: true,
+                  position: 'top',
+                  labels: {
+                    font: {
+                      size: 14
+                    },
+                    padding: 15,
+                    usePointStyle: true
+                  }
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function(context) {
+                      let label = context.dataset.label || '';
+                      if (label) {
+                        label += ': ';
+                      }
+                      label += context.parsed.y.toLocaleString() + '円';
+                      return label;
+                    }
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: '販売個数',
+                    font: {
+                      size: 14,
+                      weight: 'bold'
+                    }
+                  },
+                  ticks: {
+                    callback: function(value, index) {
+                      return this.getLabelForValue(value) + '個';
+                    }
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: '費用（円）',
+                    font: {
+                      size: 14,
+                      weight: 'bold'
+                    }
+                  },
+                  ticks: {
+                    callback: function(value) {
+                      return value.toLocaleString() + '円';
+                    }
+                  },
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
       </div>
+
 
       <div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6 rounded-r-lg">
         <h3 class="text-xl md:text-2xl font-bold text-green-700 mb-3">💡 分類のコツ</h3>

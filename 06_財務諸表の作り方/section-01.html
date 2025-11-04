@@ -108,11 +108,149 @@
         毎月の経営判断には欠かせない資料です。
       </p>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">損益計算書（P/L）のサンプル</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: pl-sample.png</p>
+
+      <!-- 損益計算書（P/L）のサンプル -->
+      <div class="mb-8 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">損益計算書（P/L）サンプル</h3>
+        <p class="text-center text-gray-600 mb-6 text-sm">2024年4月度（単位：円）</p>
+
+        <!-- P/L表 -->
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+          <table class="w-full">
+            <!-- ヘッダー -->
+            <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+              <tr>
+                <th class="px-6 py-4 text-left text-lg font-bold">勘定科目</th>
+                <th class="px-6 py-4 text-right text-lg font-bold">金額</th>
+                <th class="px-6 py-4 text-right text-lg font-bold">構成比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 売上高 -->
+              <tr class="border-b-2 border-blue-200 bg-blue-50">
+                <td class="px-6 py-4 text-lg font-bold text-blue-800">売上高</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-blue-800">5,000,000</td>
+                <td class="px-6 py-4 text-right text-sm text-gray-600">100.0%</td>
+              </tr>
+
+              <!-- 売上原価 -->
+              <tr class="border-b">
+                <td class="px-6 py-3 text-base pl-10">売上原価</td>
+                <td class="px-6 py-3 text-right text-base text-red-700">2,000,000</td>
+                <td class="px-6 py-3 text-right text-sm text-gray-600">40.0%</td>
+              </tr>
+
+              <!-- 売上総利益（粗利） -->
+              <tr class="border-b-2 border-gray-300 bg-green-50">
+                <td class="px-6 py-4 text-base font-bold text-green-800">売上総利益（粗利）</td>
+                <td class="px-6 py-4 text-right text-base font-bold text-green-800">3,000,000</td>
+                <td class="px-6 py-4 text-right text-sm text-gray-600 font-bold">60.0%</td>
+              </tr>
+
+              <!-- 販売費及び一般管理費 -->
+              <tr class="bg-gray-50">
+                <td class="px-6 py-3 text-base font-semibold">販売費及び一般管理費</td>
+                <td class="px-6 py-3 text-right text-base"></td>
+                <td class="px-6 py-3 text-right text-sm text-gray-600"></td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">広告宣伝費</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">300,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">6.0%</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">給料手当</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">800,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">16.0%</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">地代家賃</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">400,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">8.0%</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">水道光熱費</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">100,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">2.0%</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">その他経費</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">200,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">4.0%</td>
+              </tr>
+              <tr class="border-b-2 border-gray-300">
+                <td class="px-6 py-3 text-base pl-10 font-semibold">販管費合計</td>
+                <td class="px-6 py-3 text-right text-base font-semibold text-red-700">1,800,000</td>
+                <td class="px-6 py-3 text-right text-sm text-gray-600 font-semibold">36.0%</td>
+              </tr>
+
+              <!-- 営業利益 -->
+              <tr class="border-b-2 border-blue-400 bg-gradient-to-r from-green-100 to-emerald-100">
+                <td class="px-6 py-4 text-lg font-bold text-green-800">営業利益</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-green-800">1,200,000</td>
+                <td class="px-6 py-4 text-right text-sm text-gray-700 font-bold">24.0%</td>
+              </tr>
+
+              <!-- 営業外収益 -->
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">受取利息</td>
+                <td class="px-6 py-2 text-right text-sm text-blue-600">5,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">0.1%</td>
+              </tr>
+
+              <!-- 営業外費用 -->
+              <tr class="border-b-2 border-gray-300">
+                <td class="px-6 py-2 text-sm pl-10">支払利息</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">55,000</td>
+                <td class="px-6 py-2 text-right text-xs text-gray-500">1.1%</td>
+              </tr>
+
+              <!-- 経常利益 -->
+              <tr class="border-b-2 border-blue-500 bg-gradient-to-r from-blue-100 to-indigo-100">
+                <td class="px-6 py-4 text-lg font-bold text-blue-800">経常利益</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-blue-800">1,150,000</td>
+                <td class="px-6 py-4 text-right text-sm text-gray-700 font-bold">23.0%</td>
+              </tr>
+
+              <!-- 当期純利益 -->
+              <tr class="bg-gradient-to-r from-green-200 to-emerald-200 border-t-4 border-green-600">
+                <td class="px-6 py-5 text-xl font-bold text-green-900">当期純利益</td>
+                <td class="px-6 py-5 text-right text-xl font-bold text-green-900">1,150,000</td>
+                <td class="px-6 py-5 text-right text-base text-gray-800 font-bold">23.0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 解説 -->
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p class="text-sm font-bold text-blue-700 mb-2">📊 粗利率</p>
+            <p class="text-2xl font-bold text-blue-800">60.0%</p>
+            <p class="text-xs text-gray-600 mt-1">売上から原価を引いた利益率</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-green-500">
+            <p class="text-sm font-bold text-green-700 mb-2">💰 営業利益率</p>
+            <p class="text-2xl font-bold text-green-800">24.0%</p>
+            <p class="text-xs text-gray-600 mt-1">本業で稼いだ利益率</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-purple-500">
+            <p class="text-sm font-bold text-purple-700 mb-2">✨ 純利益率</p>
+            <p class="text-2xl font-bold text-purple-800">23.0%</p>
+            <p class="text-xs text-gray-600 mt-1">最終的に残った利益率</p>
+          </div>
+        </div>
+
+        <!-- ポイント -->
+        <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+          <p class="text-sm font-bold text-yellow-800 mb-2">💡 P/Lのチェックポイント</p>
+          <ul class="text-xs text-gray-700 space-y-1">
+            <li>・粗利率60%は健全（業種により異なる）</li>
+            <li>・販管費36%を抑えて営業利益24%を確保</li>
+            <li>・純利益115万円が手元に残る</li>
+            <li>・この利益から融資返済や再投資を行う</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -141,11 +279,158 @@
         融資を受ける際、金融機関が必ずチェックする資料でもあります。
       </p>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">貸借対照表（B/S）のサンプル</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: bs-sample.png</p>
+
+      <!-- 貸借対照表（B/S）のサンプル -->
+      <div class="mb-8 bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">貸借対照表（B/S）サンプル</h3>
+        <p class="text-center text-gray-600 mb-6 text-sm">2024年4月30日現在（単位：円）</p>
+
+        <!-- B/S表 -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- 左側：資産の部 -->
+          <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-4">
+              <h4 class="text-lg font-bold">資産の部</h4>
+              <p class="text-sm opacity-90">会社が持っているもの</p>
+            </div>
+            <table class="w-full">
+              <tbody>
+                <!-- 流動資産 -->
+                <tr class="bg-green-50 border-b-2 border-green-300">
+                  <td class="px-6 py-3 text-base font-bold text-green-800">流動資産</td>
+                  <td class="px-6 py-3 text-right text-base font-bold text-green-800">7,500,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">現金預金</td>
+                  <td class="px-6 py-2 text-right text-sm">3,000,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">売掛金</td>
+                  <td class="px-6 py-2 text-right text-sm">2,500,000</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                  <td class="px-6 py-2 text-sm pl-10">商品在庫</td>
+                  <td class="px-6 py-2 text-right text-sm">2,000,000</td>
+                </tr>
+
+                <!-- 固定資産 -->
+                <tr class="bg-green-50 border-b-2 border-green-300">
+                  <td class="px-6 py-3 text-base font-bold text-green-800">固定資産</td>
+                  <td class="px-6 py-3 text-right text-base font-bold text-green-800">5,000,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">建物</td>
+                  <td class="px-6 py-2 text-right text-sm">2,000,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">機械装置</td>
+                  <td class="px-6 py-2 text-right text-sm">2,500,000</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                  <td class="px-6 py-2 text-sm pl-10">車両運搬具</td>
+                  <td class="px-6 py-2 text-right text-sm">500,000</td>
+                </tr>
+
+                <!-- 資産合計 -->
+                <tr class="bg-gradient-to-r from-green-200 to-emerald-200 border-t-4 border-green-600">
+                  <td class="px-6 py-5 text-xl font-bold text-green-900">資産合計</td>
+                  <td class="px-6 py-5 text-right text-xl font-bold text-green-900">12,500,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 右側：負債・純資産の部 -->
+          <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+            <div class="bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-4">
+              <h4 class="text-lg font-bold">負債・純資産の部</h4>
+              <p class="text-sm opacity-90">資金の調達元</p>
+            </div>
+            <table class="w-full">
+              <tbody>
+                <!-- 負債の部 -->
+                <tr class="bg-red-50 border-b-2 border-red-300">
+                  <td class="px-6 py-3 text-base font-bold text-red-800">負債の部</td>
+                  <td class="px-6 py-3 text-right text-base font-bold text-red-800">7,000,000</td>
+                </tr>
+                <tr class="bg-orange-50">
+                  <td class="px-6 py-2 text-sm pl-6 font-semibold text-orange-800">流動負債</td>
+                  <td class="px-6 py-2 text-right text-sm font-semibold text-orange-800">2,500,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">買掛金</td>
+                  <td class="px-6 py-2 text-right text-sm">1,500,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">短期借入金</td>
+                  <td class="px-6 py-2 text-right text-sm">1,000,000</td>
+                </tr>
+                <tr class="bg-orange-50">
+                  <td class="px-6 py-2 text-sm pl-6 font-semibold text-orange-800">固定負債</td>
+                  <td class="px-6 py-2 text-right text-sm font-semibold text-orange-800">4,500,000</td>
+                </tr>
+                <tr class="border-b-2 border-gray-300">
+                  <td class="px-6 py-2 text-sm pl-10">長期借入金</td>
+                  <td class="px-6 py-2 text-right text-sm">4,500,000</td>
+                </tr>
+
+                <!-- 純資産の部 -->
+                <tr class="bg-blue-50 border-b-2 border-blue-300">
+                  <td class="px-6 py-3 text-base font-bold text-blue-800">純資産の部</td>
+                  <td class="px-6 py-3 text-right text-base font-bold text-blue-800">5,500,000</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="px-6 py-2 text-sm pl-10">資本金</td>
+                  <td class="px-6 py-2 text-right text-sm">3,000,000</td>
+                </tr>
+                <tr class="border-b-2 border-gray-200">
+                  <td class="px-6 py-2 text-sm pl-10">利益剰余金</td>
+                  <td class="px-6 py-2 text-right text-sm">2,500,000</td>
+                </tr>
+
+                <!-- 負債・純資産合計 -->
+                <tr class="bg-gradient-to-r from-purple-200 to-pink-200 border-t-4 border-purple-600">
+                  <td class="px-6 py-5 text-xl font-bold text-purple-900">負債・純資産合計</td>
+                  <td class="px-6 py-5 text-right text-xl font-bold text-purple-900">12,500,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 重要な指標 -->
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p class="text-sm font-bold text-blue-700 mb-2">💪 自己資本比率</p>
+            <p class="text-2xl font-bold text-blue-800">44.0%</p>
+            <p class="text-xs text-gray-600 mt-1">純資産 ÷ 総資産</p>
+            <p class="text-xs text-green-600 mt-1">✅ 30%以上で健全</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-orange-500">
+            <p class="text-sm font-bold text-orange-700 mb-2">💰 流動比率</p>
+            <p class="text-2xl font-bold text-orange-800">300.0%</p>
+            <p class="text-xs text-gray-600 mt-1">流動資産 ÷ 流動負債</p>
+            <p class="text-xs text-green-600 mt-1">✅ 200%以上で安全</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-red-500">
+            <p class="text-sm font-bold text-red-700 mb-2">📊 負債比率</p>
+            <p class="text-2xl font-bold text-red-800">56.0%</p>
+            <p class="text-xs text-gray-600 mt-1">負債 ÷ 総資産</p>
+            <p class="text-xs text-orange-600 mt-1">⚠️ 60%以下が理想</p>
+          </div>
+        </div>
+
+        <!-- ポイント -->
+        <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+          <p class="text-sm font-bold text-yellow-800 mb-2">💡 B/Sのチェックポイント</p>
+          <ul class="text-xs text-gray-700 space-y-1">
+            <li>・左右が必ず一致する（資産合計 = 負債+純資産）</li>
+            <li>・現金300万円で当面の支払いは可能</li>
+            <li>・借入金550万円（短期100万+長期450万）を返済中</li>
+            <li>・自己資本比率44%で財務は比較的健全</li>
+            <li>・流動比率300%で短期的な支払い能力は十分</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -174,11 +459,138 @@
         利益が出ていても現金が減っていることもあるため、P/Lと合わせて確認することが重要です。
       </p>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">キャッシュフロー計算書（C/F）のサンプル</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: cf-sample.png</p>
+
+      <!-- キャッシュフロー計算書（C/F）のサンプル -->
+      <div class="mb-8 bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">キャッシュフロー計算書（C/F）サンプル</h3>
+        <p class="text-center text-gray-600 mb-6 text-sm">2024年4月度（単位：円）</p>
+
+        <!-- C/F表 -->
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+          <table class="w-full">
+            <tbody>
+              <!-- 営業活動によるキャッシュフロー -->
+              <tr class="bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+                <td colspan="2" class="px-6 py-4">
+                  <h4 class="text-lg font-bold">営業活動によるキャッシュフロー</h4>
+                  <p class="text-sm opacity-90">本業で稼いだ現金</p>
+                </td>
+              </tr>
+              <tr class="bg-green-50 border-b">
+                <td class="px-6 py-3 text-base pl-10">税引前当期純利益</td>
+                <td class="px-6 py-3 text-right text-base">1,150,000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">減価償却費</td>
+                <td class="px-6 py-2 text-right text-sm text-blue-600">+ 200,000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">売掛金の増減</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">- 300,000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">在庫の増減</td>
+                <td class="px-6 py-2 text-right text-sm text-red-700">- 200,000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-2 text-sm pl-10">買掛金の増減</td>
+                <td class="px-6 py-2 text-right text-sm text-blue-600">+ 150,000</td>
+              </tr>
+              <tr class="bg-gradient-to-r from-green-100 to-emerald-100 border-b-4 border-green-600">
+                <td class="px-6 py-4 text-lg font-bold text-green-800">営業CF小計</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-green-800">1,000,000</td>
+              </tr>
+
+              <!-- 投資活動によるキャッシュフロー -->
+              <tr class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                <td colspan="2" class="px-6 py-4">
+                  <h4 class="text-lg font-bold">投資活動によるキャッシュフロー</h4>
+                  <p class="text-sm opacity-90">設備投資などの支出</p>
+                </td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-3 text-base pl-10">有形固定資産の取得</td>
+                <td class="px-6 py-3 text-right text-base text-red-700">- 500,000</td>
+              </tr>
+              <tr class="bg-gradient-to-r from-blue-100 to-indigo-100 border-b-4 border-blue-600">
+                <td class="px-6 py-4 text-lg font-bold text-blue-800">投資CF小計</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-blue-800">- 500,000</td>
+              </tr>
+
+              <!-- 財務活動によるキャッシュフロー -->
+              <tr class="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                <td colspan="2" class="px-6 py-4">
+                  <h4 class="text-lg font-bold">財務活動によるキャッシュフロー</h4>
+                  <p class="text-sm opacity-90">融資の借入・返済</p>
+                </td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-3 text-base pl-10">短期借入金の増減</td>
+                <td class="px-6 py-3 text-right text-base text-blue-600">+ 0</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-6 py-3 text-base pl-10">長期借入金の返済</td>
+                <td class="px-6 py-3 text-right text-base text-red-700">- 100,000</td>
+              </tr>
+              <tr class="bg-gradient-to-r from-purple-100 to-pink-100 border-b-4 border-purple-600">
+                <td class="px-6 py-4 text-lg font-bold text-purple-800">財務CF小計</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-purple-800">- 100,000</td>
+              </tr>
+
+              <!-- 現金の増減 -->
+              <tr class="bg-gray-50 border-b-2 border-gray-400">
+                <td class="px-6 py-4 text-lg font-bold text-gray-800">現金の増減額</td>
+                <td class="px-6 py-4 text-right text-lg font-bold text-gray-800">+ 400,000</td>
+              </tr>
+
+              <!-- 現金期首残高 -->
+              <tr class="border-b">
+                <td class="px-6 py-3 text-base">現金期首残高</td>
+                <td class="px-6 py-3 text-right text-base">2,600,000</td>
+              </tr>
+
+              <!-- 現金期末残高 -->
+              <tr class="bg-gradient-to-r from-yellow-200 to-orange-200 border-t-4 border-orange-600">
+                <td class="px-6 py-5 text-xl font-bold text-orange-900">現金期末残高</td>
+                <td class="px-6 py-5 text-right text-xl font-bold text-orange-900">3,000,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 3つのCFの解説 -->
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-green-500">
+            <p class="text-sm font-bold text-green-700 mb-2">💚 営業CF</p>
+            <p class="text-2xl font-bold text-green-800">+100万円</p>
+            <p class="text-xs text-gray-600 mt-1">本業で現金を稼いでいる</p>
+            <p class="text-xs text-green-600 mt-1">✅ プラスが理想</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+            <p class="text-sm font-bold text-blue-700 mb-2">💙 投資CF</p>
+            <p class="text-2xl font-bold text-blue-800">-50万円</p>
+            <p class="text-xs text-gray-600 mt-1">設備投資で現金支出</p>
+            <p class="text-xs text-blue-600 mt-1">✅ マイナスは成長の証</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow border-l-4 border-purple-500">
+            <p class="text-sm font-bold text-purple-700 mb-2">💜 財務CF</p>
+            <p class="text-2xl font-bold text-purple-800">-10万円</p>
+            <p class="text-xs text-gray-600 mt-1">融資返済で現金支出</p>
+            <p class="text-xs text-purple-600 mt-1">✅ 計画的に返済中</p>
+          </div>
+        </div>
+
+        <!-- ポイント -->
+        <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+          <p class="text-sm font-bold text-yellow-800 mb-2">💡 C/Fのチェックポイント</p>
+          <ul class="text-xs text-gray-700 space-y-1">
+            <li>・営業CF +100万円で本業は健全</li>
+            <li>・投資CF -50万円で成長のための設備投資を実施</li>
+            <li>・財務CF -10万円で融資を計画的に返済</li>
+            <li>・現金は月初260万円 → 月末300万円に増加</li>
+            <li>・B/Sの現金300万円と期末残高が一致</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -218,11 +630,197 @@
         </div>
       </div>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">3つの財務諸表の関係図（P/L → B/S ← C/Fの繋がり）</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: pl-bs-cf-relationship.png</p>
+
+      <!-- 3つの財務諸表の関係図 -->
+      <div class="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">3つの財務諸表の関係性</h3>
+        <p class="text-center text-gray-700 mb-8">P/L、B/S、C/Fは密接に繋がっています</p>
+
+        <!-- 関係図 -->
+        <div class="relative">
+          <!-- 3つの表を配置 -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- P/L -->
+            <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-6 rounded-xl shadow-lg border-4 border-blue-500 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">📊</div>
+                <h4 class="text-xl font-bold text-blue-800 mb-2">損益計算書</h4>
+                <p class="text-sm text-blue-700">P/L</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 text-sm space-y-2">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">売上高</span>
+                  <span class="font-bold text-blue-700">500万円</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">経費</span>
+                  <span class="font-bold text-red-700">-380万円</span>
+                </div>
+                <div class="flex justify-between bg-green-50 p-2 rounded">
+                  <span class="font-bold text-green-800">当期純利益</span>
+                  <span class="font-bold text-green-800">115万円</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- B/S -->
+            <div class="bg-gradient-to-br from-green-100 to-emerald-100 p-6 rounded-xl shadow-lg border-4 border-green-500 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">⚖️</div>
+                <h4 class="text-xl font-bold text-green-800 mb-2">貸借対照表</h4>
+                <p class="text-sm text-green-700">B/S</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 text-sm space-y-2">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">現金預金</span>
+                  <span class="font-bold text-green-700">300万円</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">その他資産</span>
+                  <span class="font-bold text-gray-700">950万円</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">負債</span>
+                  <span class="font-bold text-red-700">700万円</span>
+                </div>
+                <div class="flex justify-between bg-blue-50 p-2 rounded">
+                  <span class="font-bold text-blue-800">純資産</span>
+                  <span class="font-bold text-blue-800">550万円</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- C/F -->
+            <div class="bg-gradient-to-br from-orange-100 to-amber-100 p-6 rounded-xl shadow-lg border-4 border-orange-500 hover:shadow-2xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">💰</div>
+                <h4 class="text-xl font-bold text-orange-800 mb-2">キャッシュフロー</h4>
+                <p class="text-sm text-orange-700">C/F</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 text-sm space-y-2">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">営業CF</span>
+                  <span class="font-bold text-green-700">+100万円</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">投資CF</span>
+                  <span class="font-bold text-blue-700">-50万円</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                  <span class="text-gray-700">財務CF</span>
+                  <span class="font-bold text-purple-700">-10万円</span>
+                </div>
+                <div class="flex justify-between bg-orange-50 p-2 rounded">
+                  <span class="font-bold text-orange-800">期末現金</span>
+                  <span class="font-bold text-orange-800">300万円</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 関係性の矢印と説明 -->
+          <div class="space-y-6">
+            <!-- 関係1: P/L → B/S -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl mr-4">①</div>
+                <h4 class="text-lg font-bold text-blue-800">P/L（利益） → B/S（純資産）</h4>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <div class="bg-blue-50 px-4 py-2 rounded">
+                  <p class="font-bold text-blue-800">P/L：当期純利益</p>
+                  <p class="text-blue-700">115万円</p>
+                </div>
+                <div class="text-4xl text-blue-500 mx-4">→</div>
+                <div class="bg-green-50 px-4 py-2 rounded">
+                  <p class="font-bold text-green-800">B/S：利益剰余金に加算</p>
+                  <p class="text-green-700">純資産が増える</p>
+                </div>
+              </div>
+              <p class="text-xs text-gray-600 mt-3">💡 P/Lで稼いだ利益は、B/Sの純資産（利益剰余金）に蓄積されます</p>
+            </div>
+
+            <!-- 関係2: C/F → B/S -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl mr-4">②</div>
+                <h4 class="text-lg font-bold text-orange-800">C/F（期末現金） = B/S（現金預金）</h4>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <div class="bg-orange-50 px-4 py-2 rounded">
+                  <p class="font-bold text-orange-800">C/F：期末現金</p>
+                  <p class="text-orange-700">300万円</p>
+                </div>
+                <div class="text-4xl text-orange-500 mx-4">=</div>
+                <div class="bg-green-50 px-4 py-2 rounded">
+                  <p class="font-bold text-green-800">B/S：現金預金</p>
+                  <p class="text-green-700">300万円</p>
+                </div>
+              </div>
+              <p class="text-xs text-gray-600 mt-3">💡 C/Fの期末現金残高とB/Sの現金預金は必ず一致します</p>
+            </div>
+
+            <!-- 関係3: P/L → C/F -->
+            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+              <div class="flex items-center mb-4">
+                <div class="text-3xl mr-4">③</div>
+                <h4 class="text-lg font-bold text-green-800">P/L（利益） → C/F（営業CF）</h4>
+              </div>
+              <div class="flex items-center justify-between text-sm">
+                <div class="bg-blue-50 px-4 py-2 rounded">
+                  <p class="font-bold text-blue-800">P/L：当期純利益</p>
+                  <p class="text-blue-700">115万円</p>
+                </div>
+                <div class="text-4xl text-green-500 mx-4">→</div>
+                <div class="bg-green-50 px-4 py-2 rounded">
+                  <p class="font-bold text-green-800">C/F：営業CFの起点</p>
+                  <p class="text-green-700">100万円（調整後）</p>
+                </div>
+              </div>
+              <p class="text-xs text-gray-600 mt-3">💡 P/Lの利益をベースに、売掛金・在庫などを調整してC/Fの営業CFを計算します</p>
+            </div>
+          </div>
+
+          <!-- 循環図 -->
+          <div class="mt-8 bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-l-4 border-purple-500">
+            <h4 class="text-xl font-bold text-purple-800 mb-4 text-center">🔄 財務諸表の循環</h4>
+            <div class="flex items-center justify-center space-x-4 text-sm">
+              <div class="bg-white px-4 py-3 rounded-lg shadow">
+                <p class="font-bold text-blue-700 text-center">P/L</p>
+                <p class="text-xs text-gray-600">利益を計算</p>
+              </div>
+              <span class="text-2xl text-purple-600">→</span>
+              <div class="bg-white px-4 py-3 rounded-lg shadow">
+                <p class="font-bold text-green-700 text-center">B/S</p>
+                <p class="text-xs text-gray-600">純資産に蓄積</p>
+              </div>
+              <span class="text-2xl text-purple-600">→</span>
+              <div class="bg-white px-4 py-3 rounded-lg shadow">
+                <p class="font-bold text-orange-700 text-center">C/F</p>
+                <p class="text-xs text-gray-600">現金の動き</p>
+              </div>
+              <span class="text-2xl text-purple-600">→</span>
+              <div class="bg-white px-4 py-3 rounded-lg shadow">
+                <p class="font-bold text-blue-700 text-center">P/L</p>
+                <p class="text-xs text-gray-600">次の利益へ</p>
+              </div>
+            </div>
+            <p class="text-xs text-center text-gray-700 mt-4">
+              3つの表を見て初めて、会社の全体像が分かります
+            </p>
+          </div>
+
+          <!-- 重要メッセージ -->
+          <div class="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+            <p class="text-sm font-bold text-yellow-800 mb-2">💡 3表を見るときのポイント</p>
+            <ul class="text-xs text-gray-700 space-y-1">
+              <li>・P/Lだけでは現金の動きが分からない → C/Fで確認</li>
+              <li>・C/Fだけでは利益が分からない → P/Lで確認</li>
+              <li>・B/Sだけでは変化の理由が分からない → P/LとC/Fで確認</li>
+              <li>・<strong>必ず3つセットで見る</strong>ことで、会社の健全性が判断できます</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6 rounded-r">

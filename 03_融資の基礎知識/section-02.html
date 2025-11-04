@@ -222,11 +222,157 @@
         </table>
       </div>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 p-8 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg text-center">
-        <p class="text-lg md:text-xl text-gray-600 mb-2">【図解プレースホルダー】</p>
-        <p class="text-lg md:text-xl text-gray-500">融資と資本の対比図（天秤のイメージ）</p>
-        <p class="text-base text-gray-400 mt-2">画像ファイル名: financing-vs-equity-balance.png</p>
+
+      <!-- 融資と資本の対比図（天秤） -->
+      <div class="mb-8 bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">融資 vs 資本：どちらを選ぶ？</h3>
+        
+        <!-- 天秤の支点 -->
+        <div class="relative mb-12">
+          <!-- 天秤の棒 -->
+          <div class="flex justify-center mb-4">
+            <div class="w-3/4 h-3 bg-gray-700 rounded-full relative" style="box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+              <!-- 中央の支点 -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 -bottom-12">
+                <div class="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[40px] border-b-gray-700"></div>
+                <div class="text-center mt-2">
+                  <div class="text-3xl">⚖️</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 左右の比較カード -->
+        <div class="grid md:grid-cols-2 gap-8 mt-16">
+          <!-- 左: 融資（借入） -->
+          <div class="relative">
+            <!-- チェーン -->
+            <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+              <div class="w-1 h-12 bg-gray-400"></div>
+              <div class="text-2xl">🔗</div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-2xl p-6 border-t-4 border-red-500 hover:shadow-3xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-4">
+                <div class="text-5xl mb-3">💰</div>
+                <h4 class="text-2xl font-bold text-red-700 mb-2">融資（借入）</h4>
+                <p class="text-sm text-gray-600">Financial Institution Loan</p>
+              </div>
+              
+              <div class="space-y-3 text-left">
+                <div class="flex items-start">
+                  <span class="text-red-500 mr-2">✓</span>
+                  <div>
+                    <p class="font-bold text-gray-800">返済義務あり</p>
+                    <p class="text-sm text-gray-600">必ず返さなければならない</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-red-500 mr-2">✓</span>
+                  <div>
+                    <p class="font-bold text-gray-800">利息を払う</p>
+                    <p class="text-sm text-gray-600">借りた額＋利息を支払う</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-500 mr-2">○</span>
+                  <div>
+                    <p class="font-bold text-gray-800">経営権を保持</p>
+                    <p class="text-sm text-gray-600">自分で経営判断できる</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-red-500 mr-2">✗</span>
+                  <div>
+                    <p class="font-bold text-gray-800">倒産リスク</p>
+                    <p class="text-sm text-gray-600">返せないと倒産の危機</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-500 mr-2">○</span>
+                  <div>
+                    <p class="font-bold text-gray-800">調達しやすい</p>
+                    <p class="text-sm text-gray-600">小規模事業でも借りられる</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4 pt-4 border-t border-gray-200">
+                <p class="text-center text-sm font-bold text-gray-700">貸借対照表：負債の部</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右: 資本（出資） -->
+          <div class="relative">
+            <!-- チェーン -->
+            <div class="absolute -top-16 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+              <div class="w-1 h-12 bg-gray-400"></div>
+              <div class="text-2xl">🔗</div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-2xl p-6 border-t-4 border-blue-500 hover:shadow-3xl hover:-translate-y-2 transition duration-300">
+              <div class="text-center mb-4">
+                <div class="text-5xl mb-3">📈</div>
+                <h4 class="text-2xl font-bold text-blue-700 mb-2">資本（出資）</h4>
+                <p class="text-sm text-gray-600">Equity Investment</p>
+              </div>
+              
+              <div class="space-y-3 text-left">
+                <div class="flex items-start">
+                  <span class="text-green-500 mr-2">○</span>
+                  <div>
+                    <p class="font-bold text-gray-800">返済義務なし</p>
+                    <p class="text-sm text-gray-600">返す必要がない</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-500 mr-2">○</span>
+                  <div>
+                    <p class="font-bold text-gray-800">配当のみ</p>
+                    <p class="text-sm text-gray-600">利益が出たら配当を払う</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-red-500 mr-2">✗</span>
+                  <div>
+                    <p class="font-bold text-gray-800">経営権を分ける</p>
+                    <p class="text-sm text-gray-600">出資者の意見も聞く必要</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-500 mr-2">○</span>
+                  <div>
+                    <p class="font-bold text-gray-800">リスク低い</p>
+                    <p class="text-sm text-gray-600">倒産リスクが低い</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-red-500 mr-2">✗</span>
+                  <div>
+                    <p class="font-bold text-gray-800">調達が難しい</p>
+                    <p class="text-sm text-gray-600">小規模事業には困難</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-4 pt-4 border-t border-gray-200">
+                <p class="text-center text-sm font-bold text-gray-700">貸借対照表：純資産の部</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 結論 -->
+        <div class="mt-8 bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl border-l-4 border-green-500">
+          <h4 class="text-xl font-bold text-green-800 mb-3">💡 小規模事業の選択</h4>
+          <p class="text-lg text-gray-800">
+            小規模事業の場合、<strong class="text-red-600">「融資（借入）」が現実的</strong>です。
+            出資を受けるのは難しく、また経営権を保持したい場合も融資が適しています。
+            ただし、<strong class="text-orange-600">返済義務と倒産リスク</strong>をしっかり理解した上で利用しましょう。
+          </p>
+        </div>
       </div>
     </section>
 

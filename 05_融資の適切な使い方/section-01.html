@@ -237,13 +237,168 @@
         </p>
       </div>
 
-      <!-- 図解プレースホルダー -->
-      <div class="my-8 text-center">
-        <div class="inline-block bg-gray-200 p-8 rounded-lg cursor-pointer hover:shadow-lg transition" onclick="openModal(this)">
-          <p class="text-lg md:text-xl text-gray-600 mb-2">📊 図解</p>
-          <p class="text-lg md:text-xl font-bold text-gray-800">融資と経費の仕訳フロー図</p>
-          <p class="text-sm text-gray-500 mt-2">ファイル名: loan-expense-flow-diagram.png</p>
-          <p class="text-sm text-gray-500">(クリックで拡大)</p>
+
+      <!-- 融資と経費の仕訳フロー図 -->
+      <div class="mb-8 bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">❌ 危険：融資を経費として使うと...</h3>
+        
+        <!-- 3ステップのフロー -->
+        <div class="space-y-8">
+          <!-- ステップ1: 融資受取 -->
+          <div class="relative">
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-blue-100 text-blue-700 font-bold text-xl px-4 py-2 rounded-full mr-4">Step 1</div>
+                <h4 class="text-xl font-bold text-gray-800">融資を受け取る</h4>
+              </div>
+              
+              <div class="grid md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                  <p class="text-sm text-gray-600 mb-1">資産（現金）</p>
+                  <p class="text-2xl font-bold text-green-600">+500万円</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                  <p class="text-sm text-gray-600 mb-1">負債（借入金）</p>
+                  <p class="text-2xl font-bold text-red-600">+500万円</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  <p class="text-sm text-gray-600 mb-1">利益</p>
+                  <p class="text-2xl font-bold text-gray-600">±0円</p>
+                </div>
+              </div>
+              
+              <div class="bg-blue-50 p-3 rounded">
+                <p class="text-sm text-blue-800">💡 現金が増えても、同時に借金も増える。利益は変わらない</p>
+              </div>
+            </div>
+            
+            <!-- 矢印 -->
+            <div class="flex justify-center my-4">
+              <div class="text-4xl text-red-500 animate-bounce">⬇️</div>
+            </div>
+          </div>
+
+          <!-- ステップ2: 経費として使用 -->
+          <div class="relative">
+            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-orange-100 text-orange-700 font-bold text-xl px-4 py-2 rounded-full mr-4">Step 2</div>
+                <h4 class="text-xl font-bold text-gray-800">経費として使ってしまう</h4>
+              </div>
+              
+              <div class="grid md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                  <p class="text-sm text-gray-600 mb-1">資産（現金）</p>
+                  <p class="text-2xl font-bold text-red-600">-500万円</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg border border-orange-200">
+                  <p class="text-sm text-gray-600 mb-1">経費</p>
+                  <p class="text-2xl font-bold text-orange-600">+500万円</p>
+                </div>
+                <div class="bg-red-100 p-4 rounded-lg border border-red-300">
+                  <p class="text-sm text-gray-600 mb-1">利益</p>
+                  <p class="text-2xl font-bold text-red-700">-500万円</p>
+                </div>
+              </div>
+              
+              <div class="bg-orange-50 p-3 rounded">
+                <p class="text-sm text-orange-800">⚠️ 経費を計上すると利益が減る。500万円の赤字になる</p>
+              </div>
+            </div>
+            
+            <!-- 矢印 -->
+            <div class="flex justify-center my-4">
+              <div class="text-4xl text-red-600 animate-bounce">⬇️</div>
+            </div>
+          </div>
+
+          <!-- ステップ3: 結果 -->
+          <div class="relative">
+            <div class="bg-gradient-to-r from-red-100 to-red-200 rounded-xl shadow-2xl p-6 border-4 border-red-500">
+              <div class="flex items-center mb-4">
+                <div class="bg-red-600 text-white font-bold text-xl px-4 py-2 rounded-full mr-4">Result</div>
+                <h4 class="text-xl font-bold text-red-800">最終状態：倒産への道</h4>
+              </div>
+              
+              <div class="grid md:grid-cols-3 gap-4 mb-4">
+                <div class="bg-white p-4 rounded-lg border-2 border-red-400">
+                  <p class="text-sm text-gray-600 mb-1">現金残高</p>
+                  <p class="text-3xl font-bold text-red-700">0円</p>
+                  <p class="text-xs text-red-600 mt-1">支払い能力ゼロ</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-2 border-red-400">
+                  <p class="text-sm text-gray-600 mb-1">借入金残高</p>
+                  <p class="text-3xl font-bold text-red-700">500万円</p>
+                  <p class="text-xs text-red-600 mt-1">返済義務は残る</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg border-2 border-red-400">
+                  <p class="text-sm text-gray-600 mb-1">累積利益</p>
+                  <p class="text-3xl font-bold text-red-700">-500万円</p>
+                  <p class="text-xs text-red-600 mt-1">赤字</p>
+                </div>
+              </div>
+              
+              <div class="bg-red-200 p-4 rounded-lg mt-4">
+                <div class="flex items-center justify-center space-x-4 text-red-900 font-bold">
+                  <span class="text-2xl">💸</span>
+                  <span class="text-lg">現金ゼロ</span>
+                  <span class="text-2xl">→</span>
+                  <span class="text-lg">返済不能</span>
+                  <span class="text-2xl">→</span>
+                  <span class="text-lg">倒産</span>
+                  <span class="text-2xl">💀</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 正しい使い方との比較 -->
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <!-- 誤った使い方 -->
+          <div class="bg-red-50 p-6 rounded-xl border-2 border-red-400">
+            <h4 class="text-xl font-bold text-red-700 mb-4 flex items-center">
+              <span class="text-3xl mr-2">❌</span>
+              誤った使い方
+            </h4>
+            <div class="space-y-2 text-sm">
+              <p class="text-red-900">・融資を経費に使う</p>
+              <p class="text-red-900">・生活費に使う</p>
+              <p class="text-red-900">・赤字の補填に使う</p>
+              <p class="text-red-900">・売上に繋がらない支出</p>
+            </div>
+            <div class="mt-4 bg-red-100 p-3 rounded">
+              <p class="text-xs font-bold text-red-800">結果：借金だけ残り、返済不能に</p>
+            </div>
+          </div>
+
+          <!-- 正しい使い方 -->
+          <div class="bg-green-50 p-6 rounded-xl border-2 border-green-400">
+            <h4 class="text-xl font-bold text-green-700 mb-4 flex items-center">
+              <span class="text-3xl mr-2">✅</span>
+              正しい使い方
+            </h4>
+            <div class="space-y-2 text-sm">
+              <p class="text-green-900">・設備投資（資産）に使う</p>
+              <p class="text-green-900">・広告宣伝で売上増を狙う</p>
+              <p class="text-green-900">・仕入れ資金として使う</p>
+              <p class="text-green-900">・売上・利益に繋がる投資</p>
+            </div>
+            <div class="mt-4 bg-green-100 p-3 rounded">
+              <p class="text-xs font-bold text-green-800">結果：利益が生まれ、返済可能に</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 重要メッセージ -->
+        <div class="mt-6 bg-gradient-to-r from-purple-100 to-pink-100 p-6 rounded-xl border-l-4 border-purple-500">
+          <p class="text-lg font-bold text-purple-800 mb-2">💡 覚えておくべきこと</p>
+          <p class="text-gray-800 text-sm leading-relaxed">
+            <strong class="text-purple-700">融資 ≠ 経費</strong>。融資は「借金」であり、必ず返済する必要があります。
+            融資を経費として使うことは、「借金で赤字を作る」ことと同じです。
+            返済の原資（利益）が生まれないため、必ず倒産に至ります。
+            融資は必ず<strong class="text-green-700">「投資」</strong>に使い、その投資から利益を生み出して返済しましょう。
+          </p>
         </div>
       </div>
     </section>
